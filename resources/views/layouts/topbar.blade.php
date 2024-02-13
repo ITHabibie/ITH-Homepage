@@ -7,8 +7,8 @@
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
             <a href="{{$contact->twitter}}" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="{{$contact->facebook}}" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="{{$contact->instagram}}" class="instagram"><i class="bi bi-instagram"></i></a>
+            <!-- <a href="{{$contact->facebook}}" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="{{$contact->instagram}}" class="instagram"><i class="bi bi-instagram"></i></a> -->
             <!-- <a href="{{$contact->linkedin}}" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
         </div>
         @endisset
