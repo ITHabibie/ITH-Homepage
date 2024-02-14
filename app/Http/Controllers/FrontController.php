@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Category, Tag, Post, Page, FrontNavbar, typesatu, Contact, Jumbotron, Link, PmbLink};
+use App\Models\{Topbar, Category, Tag, Post, Page, FrontNavbar, typesatu, Contact, Jumbotron, Link, PmbLink};
 
 class FrontController extends Controller
 {
@@ -13,6 +13,7 @@ class FrontController extends Controller
         $data = [
         'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
         'contact' => Contact::first(),
+        'topbar' => Topbar::first(),
         'pmb' => PmbLink::first(),
         'jumbotron' => Jumbotron::first(),
         'postsNews' => Post::where('category_id', 2)->latest()->limit(4)->get(),
@@ -39,7 +40,19 @@ class FrontController extends Controller
 
         return view('contact', $data);
     }
+    
+    public function topbar()
+    {
+        $data = [
+        'topbar' => Topbar::first(),
+        'page' => Page::first(),
+        'pmb' => PmbLink::first(),
+        'link' => Link::get(),
+        'navbarmenu' => FrontNavbar::get(),
+        ];
 
+        return view('topbar', $data);
+    }
     public function show($slug)
     {
         $getPost = Post::where('slug', $slug)->first();
@@ -58,6 +71,7 @@ class FrontController extends Controller
             'link' => Link::get(),
             'judul' => $judul,
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
         'pmb' => PmbLink::first(),
         'isi' => $isi,
             ];
@@ -89,6 +103,7 @@ class FrontController extends Controller
             'isi' => $isi,
             'link' => Link::get(),
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
         'pmb' => PmbLink::first(),
         'slug' => $slug,
             ];
@@ -120,6 +135,7 @@ class FrontController extends Controller
             'isi' => $isi,
             'link' => Link::get(),
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
         'pmb' => PmbLink::first(),
         'slug' => $slug,
             ];
@@ -141,6 +157,7 @@ class FrontController extends Controller
         'pmb' => PmbLink::first(),
         'link' => Link::get(),
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
             'navbarmenu' => FrontNavbar::get(),
             ];
         return view ('showTags',compact('tag','posts'),$data);
@@ -160,6 +177,7 @@ class FrontController extends Controller
             'link' => Link::get(),
             'navbarmenu' => FrontNavbar::get(),
                 'contact' => Contact::first(),
+                'topbar' => Topbar::first(),
                 'serchPost' => $post->paginate(6)->withQueryString(),
                 ];
         }else{
@@ -168,6 +186,7 @@ class FrontController extends Controller
         'pmb' => PmbLink::first(),
             'link' => Link::get(),
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
             'navbarmenu' => FrontNavbar::get(),
                 // 'serchPost' => $post->paginate(4)->withQueryString(),
                 ];
@@ -189,6 +208,7 @@ class FrontController extends Controller
         'pmb' => PmbLink::first(),
         'link' => Link::get(),
             'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
             'titles' => $titles,
             'serchPost' => $post->paginate(6)->withQueryString(),
             ];
