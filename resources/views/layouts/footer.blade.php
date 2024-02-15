@@ -1,6 +1,6 @@
  <!-- ======= Footer ======= -->
  <footer id="footer" style="background: {{$page->alt1}};">
-    <div class="footer-newsletter">
+    {{-- <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6" style="color: black">
@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     <div class="footer-top">
       <div class="container">
         <div class="row">
