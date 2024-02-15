@@ -45,7 +45,7 @@ class TopbarController extends Controller
             'upload' => 'image|mimes:jpg,png,jpeg|max:3024',
         ]);
 
-        $topbar = new topBar();
+        $topbar = new Topbar();
         $topbar->alamat = $request->alamat;
         $topbar->email = $request->email;
         $topbar->telepon = $request->phone;
@@ -95,7 +95,7 @@ class TopbarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $topbar = topBar::findOrFail($id);
+        $topbar = Topbar::findOrFail($id);
         $topbar->alamat = $request->alamat;
         $topbar->email = $request->email;
         $topbar->telepon = $request->phone;

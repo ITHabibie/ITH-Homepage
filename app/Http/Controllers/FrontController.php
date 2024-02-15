@@ -40,7 +40,7 @@ class FrontController extends Controller
 
         return view('contact', $data);
     }
-    
+
     public function topbar()
     {
         $data = [
@@ -51,8 +51,10 @@ class FrontController extends Controller
         'navbarmenu' => FrontNavbar::get(),
         ];
 
-        return view('topbar', $data);
+        return view('contact', $data);
     }
+    
+
     public function show($slug)
     {
         $getPost = Post::where('slug', $slug)->first();

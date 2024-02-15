@@ -1,16 +1,16 @@
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <!-- <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo">
         <a href="{{route('homepage')}}">
               <img src="{{ asset('storage')}}/{{$contact->logo }}" style="max-height: 55px">
           </a>
-        </h1>
+        </h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="{{asset('assets')}}/img/logo.png" alt=""></a>-->
+      <!-- <a href="index.html" class="logo"><img src="{{asset('assets')}}/img/logo.png" alt=""></a> -->
       <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link {{ request()->is('/') ? 'active' : '' }}"  href="{{route('homepage')}}">{{$language == 'id' ? 'Beranda':'Home'}}</a></li>
+            <!-- <li><a class="nav-link {{ request()->is('/') ? 'active' : '' }}"  href="{{route('homepage')}}">{{$language == 'id' ? 'Beranda':'Home'}}</a></li>
             @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
                 @if ($loop1->format == 1)
                     <li class="dropdown"><a href="#" class="{{ request()->is($loop1->slug.'/*') ? 'active' : '' }}"><span>{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
@@ -47,7 +47,7 @@
             </li>
             <li>
                 <a class="nav-link {{ request()->is('contacts') ? 'active' : '' }}"  href="{{route('contacts')}}">{{__('cek.kontak-1')}}</a>
-            </li>
+            </li> -->
           <li class="dropdown">
               <a href="#">
                   <img class="rounded border border-secondary" src="{{$language == 'id' ? asset('assets/img/id.png'):asset('assets/img/en.png')}}" style="height: 15px;">
@@ -66,9 +66,8 @@
                 </li>
             </ul>
           </li>
-
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
       </nav><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+    <!-- </div>
+  </header>End Header -->

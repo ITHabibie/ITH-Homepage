@@ -113,9 +113,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
-#topbar {
+#topbar,.top-bar {
   background: #106eea;
-  height: 40px;
+  height: 60px;
   font-size: 14px;
   transition: all 0.5s;
   color: #fff;
@@ -125,11 +125,27 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   color: #fff;
 }
-#topbar .contact-info i a, #topbar .contact-info i span {
+#topbar .contact-info i a, #topbar .contact-info i span, .top-bar nav ul li a {
   padding-left: 5px;
   color: #fff;
 }
-#topbar .contact-info i a {
+
+.useful-links .link {
+  color: #fff;
+}
+
+.top-bar .useful-links a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+.top-bar nav ul li ul li a{
+  color: #282D34;
+}
+
+#topbar .contact-info i a{
   line-height: 0;
   transition: 0.3s;
   transition: 0.3s;
@@ -138,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   text-decoration: underline;
 }
-#topbar .social-links a {
+#topbar .social-links a  {
   color: rgba(255, 255, 255, 0.7);
   line-height: 0;
   transition: 0.3s;
@@ -224,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
   margin-left: 5px;
 }
-.navbar > ul > li > a:before {
+.navbar > ul > li > a:before{
   content: "";
   position: absolute;
   width: 100%;
@@ -499,10 +515,10 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
+/* section {
   padding: 60px 0;
   overflow: hidden;
-}
+} */
 
 .section-bg {
   background-color: #f6f9fe;
