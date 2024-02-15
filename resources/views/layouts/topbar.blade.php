@@ -36,7 +36,7 @@
             <nav class="navbar" id="navbar">
                 <ul>
                     <li class="dropdown">
-                        <a href="">{{$topbar->Layanan}} <i class="bi bi-chevron-down"></i></a>
+                        <a class="link" href="">{{$topbar->Layanan}} <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li>
                                 <a href="">lorem</a>
