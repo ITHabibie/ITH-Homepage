@@ -30,6 +30,16 @@
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->staff_dosen}}</a>
         </div>
         <div class="useful-links d-flex align-items-center">
+            <div class="lang d-flex">
+                <a href="{{route('lang','id')}}">
+                    <!-- <img class="rounded border border-secondary" src="{{$language == 'id' ? asset('assets/img/id.png'):asset('assets/img/en.png')}}" style="height: 15px;"> -->
+                    <img class="rounded border border-secondary" src="{{asset('assets/img/id.png')}}" style="height: 20px;">
+                </a>
+                <a href="{{route('lang','en')}}">
+                    <!-- <img class="rounded border border-secondary" src="{{$language == 'id' ? asset('assets/img/id.png'):asset('assets/img/en.png')}}" style="height: 15px;"> -->
+                    <img class="rounded border border-secondary" src="{{asset('assets/img/en.png')}}" style="height: 20px;">
+                </a>
+            </div>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->virtual_tour}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->InformasiPublik}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->Direktori}}</a>
