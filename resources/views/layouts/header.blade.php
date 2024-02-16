@@ -18,7 +18,6 @@
 
                           </span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
-                          <p style="color:red;">{{$language == 'id' ? $loop1->short_desc : 'bjir'}}
                           </p>
                           @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
                           @if ($loop2->format == 3)
@@ -91,21 +90,32 @@
                       <a class="judul" href="">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a>
                       <ul class="menu-container">
                           <li class="menu-desc">
-                            {{$loop1->short_desc}}
+                              {{$loop1->short_desc}}
                           </li>
                           <div class="menu-opt">
                               <ul>
+                                  @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
+                                  @if ($loop2->format == 3)
                                   <li>
                                       {{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}
                                   </li>
-                                  <!-- <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li>
-                                  <li>halo</li> -->
+                                  @else
+                                  <ul>
+                                      <div class="kolom">
+                                          <!-- <a class="nav-link {{ request()->is($loop1->slug) ? 'active' : '' }}" href="{{ route('showNavs', [$loop1->slug]) }}">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a> -->
+                                          <li href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}">{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</li>
+
+                                          <!-- <li>halo</li> -->
+                                          <!-- <li>halo</li> -->
+                                          <!-- <li>halo</li> -->
+                                      </div>
+                                  </ul>
+                                  <!-- <a href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}">{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</a> -->
+
+                                  <!-- <a class="nav-link {{ request()->is($loop1->slug) ? 'active' : '' }}" href="{{ route('showNavs', [$loop1->slug]) }}">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a> -->
+
+                                  @endif
+                                  @endforeach
                               </ul>
                           </div>
                       </ul>
