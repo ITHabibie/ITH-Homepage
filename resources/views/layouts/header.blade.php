@@ -14,11 +14,16 @@
                   <!-- <li><a class="nav-link {{ request()->is('/') ? 'active' : '' }}"  href="{{route('homepage')}}">{{$language == 'id' ? 'Beranda':'Home'}}</a></li> -->
                   @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
                   @if ($loop1->format == 1)
-                  <li class="dropdown title"><a href="#" class="{{ request()->is($loop1->slug.'/*') ? 'active' : '' }} title"><span>{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
+                  <li class="dropdown title"><a href="#" class="{{ request()->is($loop1->slug.'/*') ? 'active' : '' }} title"><span>{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}
+
+                          </span> <i class="bi bi-chevron-down"></i></a>
                       <ul>
+                          <p style="color:red;">{{$language == 'id' ? $loop1->short_desc : 'bjir'}}
+                          </p>
                           @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
                           @if ($loop2->format == 3)
-                          <li class="dropdown"><a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
+                          <li class="dropdown">
+                              <a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
                               <ul>
                                   @foreach ($navbarmenu->where('ops2',$loop2->id)->whereIn('format',[4])->where('view','1')->sortBy('order') as $loop3)
                                   <li>
@@ -80,12 +85,29 @@
           <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
           <nav class="navigasi">
               <ul class="d-flex">
+                  @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
+                  @if ($loop1->format == 1)
                   <li class="submenu">
-                      <a href="">halo</a>
-                      <ul>
-                          <li>ha</li>
-                          <li>he</li>
-                          <li>ho</li>
+                      <a class="judul" href="">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a>
+                      <ul class="menu-container">
+                          <li class="menu-desc">
+                            {{$loop1->short_desc}}
+                          </li>
+                          <div class="menu-opt">
+                              <ul>
+                                  <li>
+                                      {{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}
+                                  </li>
+                                  <!-- <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li>
+                                  <li>halo</li> -->
+                              </ul>
+                          </div>
                       </ul>
                   </li>
                   <!-- <li class="submenu">
@@ -96,6 +118,8 @@
                           <li>ho</li>
                       </ul>
                   </li> -->
+                  @endif
+                  @endforeach
               </ul>
               <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
           </nav>

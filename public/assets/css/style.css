@@ -282,10 +282,21 @@ h1, h2, h3, h4, h5, h6 {
 .navigasi ul li.submenu a{
   z-index: 10000;
 }
-.navigasi .submenu ul{
-  display: block;
+.navigasi ul li a.judul{
+  color: #fff;
+}
+.navigasi .submenu ul.menu-container .menu-desc{
+  font-size: 16px;
+  width: 50%;
+}
+.navigasi .submenu ul.menu-container .menu-opt ul{
+  display:grid;
+  grid-template-columns: auto auto auto;
+}
+.navigasi .submenu ul.menu-container{
+  display: flex;
   position: fixed; /* Mengubah posisi menjadi fixed */
-  top: 34vh; 
+  top: 48.8vh; 
   /* overflow: -1; */
   /* Menempatkan submenu di tengah vertikal */
   left: 50%; /* Menempatkan submenu di tengah horizontal */
@@ -293,14 +304,14 @@ h1, h2, h3, h4, h5, h6 {
   /* Menggeser submenu ke tengah */
   visibility: hidden;
   /* margin-left: 10rem; */
-  width: 50vw;
+  width: 75vw;
   /* padding: 10px 0; */
   z-index: 999;
   opacity: 0;
-  background: #065FA6;
-  transition: 0.3s;
+  background: #fff;
+  transition: 0.3s; 
 }
-.navigasi .submenu:hover ul{
+.navigasi .submenu:hover ul.menu-container{
   visibility: visible;
   opacity: 1;
 }
