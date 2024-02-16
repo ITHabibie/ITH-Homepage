@@ -85,7 +85,7 @@
                         </div>
                       </div>
                     </div>
-                
+
                   </section>
             @elseif ($jumbotron->style == 1)
             <section id="hero" class="d-flex align-items-center">
@@ -167,7 +167,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2 style="color: {{$page->alt1}}">{{__('cek.berita-1')}}</h2>
-                    <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3>
+                    {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 <div class="row">
                 @foreach ($postsNews as $item)
