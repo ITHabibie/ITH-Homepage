@@ -128,9 +128,9 @@ h1, h2, h3, h4, h5, h6 {
 .top-bar .container .useful-links .lang a{
   margin:0 0 0 1rem;
 }
-.top-bar .container{
-  margin: 0 10rem 0 10rem;
-}
+/* .top-bar .container{ */
+  /* margin: 0 10rem 0 5rem; */
+/* } */
 #topbar .contact-info i a, #topbar .contact-info i span, .top-bar nav ul li a {
   padding-left: 5px;
   color: #fff;
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar .useful-links a:hover{
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -174,10 +174,11 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: #065FA6;
   transition: all 0.5s;
   z-index: 997;
   height: 86px;
+  /* color: #fff; */
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #header.fixed-top {
@@ -198,9 +199,9 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo a span {
   color: #106eea;
 }
-#header .logo img {
-  max-height: 40px;
-}
+/* #header .logo img { */
+  /* max-height: 40px; */
+/* } */
 
 .scrolled-offset {
   margin-top: 70px;
@@ -229,17 +230,22 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   padding: 10px 0 10px 28px;
 }
-.navbar a, .navbar a:focus {
+.navbar a, .navbar a:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 3px;
   font-size: 15px;
   font-weight: 600;
-  color: #222222;
+  color: #111;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
+}
+.navbar a.title, .navbar a.title:focus{
+  color:#fff;
+  font-weight: bolder;
+
 }
 .navbar a i, .navbar a:focus i {
   font-size: 12px;
@@ -253,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #106eea;
+  background-color: #F18516;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -263,9 +269,42 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #106eea;
+  color: #F18516;
 }
-.navbar .dropdown ul {
+.navbar ul li.dropdown{ 
+  color:#fff;
+}
+/* dropdown */
+.navigasi ul li{
+  list-style-type: none;
+  margin: 1.5rem 2rem;
+}
+.navigasi ul li.submenu a{
+  z-index: 10000;
+}
+.navigasi .submenu ul{
+  display: block;
+  position: fixed; /* Mengubah posisi menjadi fixed */
+  top: 34vh; 
+  /* overflow: -1; */
+  /* Menempatkan submenu di tengah vertikal */
+  left: 50%; /* Menempatkan submenu di tengah horizontal */
+  transform: translate(-50%, -50%); 
+  /* Menggeser submenu ke tengah */
+  visibility: hidden;
+  /* margin-left: 10rem; */
+  width: 50vw;
+  /* padding: 10px 0; */
+  z-index: 999;
+  opacity: 0;
+  background: #065FA6;
+  transition: 0.3s;
+}
+.navigasi .submenu:hover ul{
+  visibility: visible;
+  opacity: 1;
+}
+.navbar .dropdown ul{
   display: block;
   position: absolute;
   left: 28px;
@@ -316,6 +355,7 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
   }
 }
+
 
 /**
 * Mobile Navigation
