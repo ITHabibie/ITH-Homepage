@@ -1,5 +1,4 @@
-
-<?php // controller with topbar
+<?php 
 
 namespace App\Http\Controllers;
 
