@@ -67,6 +67,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Frontend
+Route::get('/topbars', [App\Http\Controllers\FrontController::class, 'topbar'])->name('topbars'); // route
 Route::get('search', [App\Http\Controllers\FrontController::class, 'search'])->name('search');
 Route::get('search-category', [App\Http\Controllers\FrontController::class, 'byCategory'])->name('searchByCategory');
 Route::get('tag/{tag:slug}', [App\Http\Controllers\FrontController::class, 'tag'])->name('tag');
