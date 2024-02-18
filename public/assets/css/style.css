@@ -257,16 +257,11 @@ h6 {
     color: #106eea;
 }
 
-.navbar .dropdown ul {
-  justify-content: space-around;
+/* .navbar .dropdown ul {
     display: flex;
-    /* display: grid;
-  grid-auto-flow: column;
-  justify-content: center;
-  grid-template-rows: repeat(6, minmax(0, 1fr)); */
-    position: fixed; /* Menggunakan position fixed agar tetap di satu titik */
-    left: 50%; /*Menetapkan posisi horizontal di tengah*/
-    top: 50%; /*Menetapkan posisi vertikal di tengah*/
+    position: fixed; 
+    left: 50%;
+    top: 50%; 
     transform: translate(-50%, -287%);
     background: #fff;
     margin: 0;
@@ -278,15 +273,15 @@ h6 {
     background: #fff;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
-}
-
-.navbar .dropdown ul .tes{
-    display: grid ; 
-    grid-auto-flow: column ;
-    justify-content: center ;
-    grid-template-rows: repeat(6, minmax(0, 1fr)) ;
+} */
+/* .navbar .dropdown ul { */
+  /* display nanti ganti ke grid ygy */
+    /* display: none;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-template-rows: repeat(6, minmax(0, 1fr)); */
     /* min-width: 20px; */
-}
+/* } */
 .navbar .dropdown ul a {
     padding: 10px 20px;
     font-weight: 400;
@@ -299,12 +294,12 @@ h6 {
 .navbar .dropdown ul li:hover > a {
     color: #106eea;
 }
-.navbar .dropdown:hover > ul {
+/* .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
-    background:#fff;
+    background: #fff;
     visibility: visible;
-}
+} */
 .navbar .dropdown .dropdown ul {
     top: 0;
     left: calc(100% - 30px);
@@ -316,6 +311,42 @@ h6 {
     left: 100%;
     visibility: visible;
 }
+
+/* coba coba */
+
+.navbar ul li .container{
+  /* position: fixed; */
+  /* left:50%; */
+  /* top: 15%; */
+  background:#fff;
+  width: 10%;
+  /* transform: translate(-50%, -50%); */
+  z-index: 99;
+  /* margin-top:10rem; */
+  /* left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%) ; */
+  /* font-size: 100rem; */
+  visibility: hidden;
+}
+.navbar ul a:hover + .container{
+  visibility: visible;
+}
+.navigasi ul li .container{
+  display:none;
+}
+.navigasi .container{
+  display: flex;
+}
+.navigasi .container .desc{
+  width: 20rem;
+}
+.navigasi ul li a:hover + .container{
+  top:100%;
+  z-index: 100000;
+  display:flex;
+}
+
 @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
         left: -90%;
