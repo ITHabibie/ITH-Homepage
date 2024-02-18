@@ -431,10 +431,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-
+.tombol-mobile{
+  display:none;
+}
 @media (max-width: 991px) {
-  .mobile-nav-toggle {
+  .mobile-nav-toggle,.tombol-mobile {
     display: block;
+    visibility: hidden;
+    position: absolute;
   }
 
   .navbar ul {
@@ -1689,3 +1693,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2px 0;
   }
 }
+
+
+
+
+
+
+
+
+
+

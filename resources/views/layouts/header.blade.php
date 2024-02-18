@@ -79,8 +79,8 @@
   <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
           <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
-          <nav class="navigasi">
-              <ul class="d-flex">
+          <nav class="navigasi d-flex align-items-center" id="navbar">
+              <ul class="d-flex align-items-center nav">
                   @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
                   @if ($loop1->format == 1)
                   <li class="submenu">
@@ -106,6 +106,7 @@
                   @endif
                   @endforeach
               </ul>
+              <i style="color:red;" class="bi bi-list tombol-mobile"></i>
           </nav>
       </div>
   </header>
