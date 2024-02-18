@@ -184,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
 #header.fixed-top {
   height: 70px;
 }
+.grit{
+  /* background: red; */
+  font-size: 16px;
+  grid-auto-flow: column;
+  display:grid;
+  justify-content: center;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
 #header .logo {
   font-size: 30px;
   margin: 0;
@@ -275,6 +283,20 @@ h1, h2, h3, h4, h5, h6 {
   color:#fff;
 }
 /* dropdown */
+.navigasi ul li ul.menu-container p{
+  margin-top: 2.5rem;
+}
+.menu-container p:before{
+  content: '';
+  height: 4px;
+  width:37%;
+  display:block;
+  position: absolute;
+  margin-bottom: 2rem;
+  background: #F18516;
+  /* translate: ; */
+  margin-top: -1rem;
+}
 .navigasi ul li{
   list-style-type: none;
   margin: 1.5rem 2rem;
@@ -298,8 +320,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigasi .submenu ul.menu-container{
   display: flex;
+  /* justify-content: center; */
   position: fixed; /* Mengubah posisi menjadi fixed */
-  top: 40.8vh; 
+  top: 39.7vh; 
+  /* top:46.3%; */
   /* overflow: -1; */
   /* Menempatkan submenu di tengah vertikal */
   left: 50%; /* Menempatkan submenu di tengah horizontal */
@@ -307,13 +331,14 @@ h1, h2, h3, h4, h5, h6 {
   /* Menggeser submenu ke tengah */
   visibility: hidden;
   /* margin-left: 10rem; */
-  width: 75vw;
+  /* width: 75dvw; */
   /* padding: 10px 0; */
   z-index: 999;
   opacity: 0;
   background: #fff;
   transition: 0.3s; 
 }
+
 .navigasi .submenu:hover ul.menu-container{
   visibility: visible;
   opacity: 1;
@@ -345,7 +370,26 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
   color: #106eea;
 }
-.navbar .dropdown:hover > ul {
+.grit li .jatuh{
+  display: block;
+  visibility: visible;
+  position: absolute;
+  /* background:red;
+  width: 10px;
+  height: 10px; */
+}
+
+.grit li a:hover + .jatuh{
+  font-size: 12px;
+  visibility: visible;
+}
+
+/* .grit li a:hover >.jatuh{
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+} */
+.navbar .dropdown:hover > ul{
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -355,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
   left: calc(100% - 30px);
   visibility: hidden;
 }
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover > ul{
   opacity: 1;
   top: 0;
   left: 100%;
