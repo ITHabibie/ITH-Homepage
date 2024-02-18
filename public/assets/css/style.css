@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #106eea;
+  /* color: #106eea; */
   text-decoration: none;
 }
 
@@ -415,6 +415,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 /**
 * Mobile Navigation
 */
@@ -430,6 +431,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -438,6 +440,15 @@ h1, h2, h3, h4, h5, h6 {
   .navbar ul {
     display: none;
   }
+  /* .submenu ul{
+    display:flex;
+    flex-direction: row;
+    position: absolute; */
+    /* visibility: hidden; */
+  /* }
+  a.hamburger{
+    visibility: visible;
+  } */
 }
 .navbar-mobile {
   position: fixed;

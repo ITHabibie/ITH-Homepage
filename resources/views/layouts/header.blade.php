@@ -2,17 +2,17 @@
   <!-- <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
           <h1 class="logo">
-              <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover"> -->
-  <!-- <a href="{{route('homepage')}}">
+              <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
+  <a href="{{route('homepage')}}">
             <img src="{{ asset('storage')}}/{{$contact->logo }}" style="max-height: 55px">
-          </a> -->
-  <!-- </h1> -->
-  <!-- Uncomment below if you prefer to use an image logo -->
-  <!-- <a href="index.html" class="logo"><img src="{{asset('assets')}}/img/logo.png" alt=""></a> -->
-  <!-- <nav id="navbar" class="navbar">
-              <ul> -->
-  <!-- <li><a class="nav-link {{ request()->is('/') ? 'active' : '' }}"  href="{{route('homepage')}}">{{$language == 'id' ? 'Beranda':'Home'}}</a></li> -->
-  <!-- @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
+          </a>
+  </h1>
+  Uncomment below if you prefer to use an image logo
+  <a href="index.html" class="logo"><img src="{{asset('assets')}}/img/logo.png" alt=""></a>
+  <nav id="navbar" class="navbar">
+              <ul>
+  <li><a class="nav-link {{ request()->is('/') ? 'active' : '' }}"  href="{{route('homepage')}}">{{$language == 'id' ? 'Beranda':'Home'}}</a></li>
+  @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
                   @if ($loop1->format == 1)
                   <li class="dropdown title"><a href="#" class="{{ request()->is($loop1->slug.'/*') ? 'active' : '' }} title"><span>{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}
                           </span> <i class="bi bi-chevron-down"></i></a>
@@ -45,14 +45,14 @@
                       <a class="nav-link {{ request()->is($loop1->slug) ? 'active' : '' }}" href="{{ route('showNavs', [$loop1->slug]) }}">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a>
                   </li>
                   @endif
-                  @endforeach -->
-  <!-- <li>
+                  @endforeach
+  <li>
                       <a class="nav-link" target="blank" href="{{ $pmb->url }}">P M B</a>
                   </li>
                   <li>
                       <a class="nav-link {{ request()->is('contacts') ? 'active' : '' }}" href="{{route('contacts')}}">{{__('cek.kontak-1')}}</a>
-                  </li> -->
-  <!-- <li class="dropdown">
+                  </li>
+  <li class="dropdown">
               <a href="#">
                   <img class="rounded border border-secondary" src="{{$language == 'id' ? asset('assets/img/id.png'):asset('assets/img/en.png')}}" style="height: 15px;">
                   <i class="bi bi-chevron-down"></i>
@@ -69,14 +69,12 @@
                     </a>
                 </li>
             </ul>
-          </li> -->
-  <!-- </ul> -->
-  <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-  <!-- </nav>.navbar -->
+          </li>
+  </ul>
+  <i class="bi bi-list mobile-nav-toggle"></i> -->
+  <!-- </nav> .navbar -->
   <!-- </div> -->
 
-
-  <!-- </header> End Header -->
 
   <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
@@ -87,30 +85,7 @@
                   @if ($loop1->format == 1)
                   <li class="submenu">
                       <a class="judul" href="">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a>
-<!-- 
                       <ul class="menu-container">
-                          <p>
-                              halo
-                          </p>
-                          <div class="menu-opt">
-                              <ul class="grit">
-                                  <li>1</li>
-                                  <li>2</li>
-                                  <li>3</li>
-                                  <li>1</li>
-                                  <li>2</li>
-                                  <li>3</li>
-                                  <li>1</li>
-                                  <li>2</li>
-                                  <li>3</li>
-                                  <li>1</li>
-                                  <li>2</li>
-                                  <li>3</li>
-                              </ul>
-                          </div>
-                      </ul> -->
-
-                  <ul class="menu-container">
                           <p style="font-size: 1rem;" class="menu-desc">
                               {{$loop1->short_desc}}
                           </p>
@@ -131,7 +106,6 @@
                   @endif
                   @endforeach
               </ul>
-              <i class="bi bi-list mobile-nav-toggle"></i>
           </nav>
       </div>
   </header>
