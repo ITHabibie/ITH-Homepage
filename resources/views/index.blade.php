@@ -85,23 +85,23 @@
                         </div>
                       </div>
                     </div>
-                
+
                   </section>
             @elseif ($jumbotron->style == 1)
             <section id="hero" class="d-flex align-items-center">
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
-                        <center>
+                        {{-- <center>
                             <h1 class="mt-3">{{$language == 'id' ? $jumbotron->indtitle:$jumbotron->engtitle}}</h1>
                             <h2 class="mt-3">{{$language == 'id' ? $jumbotron->indsubtitle:$jumbotron->engsubtitle}}</h2>
-                        </center>
+                        </center> --}}
                     </div>
-                    <div class="col-lg-4 order-1 order-lg-2 hero-img">
+                    {{-- <div class="col-lg-4 order-1 order-lg-2 hero-img">
                         <center>
                             <img src="{{asset('storage')}}/{{$jumbotron->image}}" style="height: 330px;">
                         </center>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </section>
@@ -110,10 +110,10 @@
 
   <main id="main">
         <!-- ======= Header ======= -->
-        @include('layouts.top')
+        {{-- @include('layouts.top') --}}
         <!-- End Header -->
 
-        <section id="informasi" class="details">
+        {{-- <section id="informasi" class="details">
             <div class="container">
                 <div class="section-title">
                     <h2 style="color: {{$page->alt1}}">{{__('cek.info-1')}}</h2>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- ======= Header ======= -->
         @include('layouts.mid')
@@ -167,7 +167,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2 style="color: {{$page->alt1}}">{{__('cek.berita-1')}}</h2>
-                    <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3>
+                    {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 <div class="row">
                 @foreach ($postsNews as $item)
@@ -225,16 +225,16 @@
         <!-- End Team Section -->
 
         <!-- ======= Header ======= -->
-        @include('layouts.bottom')
+        {{-- @include('layouts.bottom') --}}
         <!-- End Header -->
 
-          <!-- ======= Contact Section ======= -->
+          {{-- <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
                 @include('layouts.contact')
                 </div>
             </section>
-        <!-- End Contact Section -->
+        <!-- End Contact Section --> --}}
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

@@ -1,4 +1,4 @@
-@if ($page->top == 1)
+{{-- @if ($page->top == 1)
     @if ($flatTOPbanner == 1)
     <section id="details" class="details" style="background: {{$page->alt1}}; padding: 30px 0">
         <div class="container">
@@ -18,4 +18,4 @@
     </section>
     @else
     @endif
-@endif
+@endif --}}
