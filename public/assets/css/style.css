@@ -437,12 +437,15 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle,.tombol-mobile {
     display: block;
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
   }
 
   .navbar ul {
     display: none;
+  }
+  section .top-bar{
+    display:none;
   }
   /* .submenu ul{
     display:flex;
