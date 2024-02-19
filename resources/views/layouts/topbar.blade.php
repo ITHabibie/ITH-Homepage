@@ -49,13 +49,16 @@
                         <a class="link" href="">{{$topbar->Layanan}} <i class="bi bi-caret-down-fill"></i></a>
                         <ul>
                             <li>
-                                <a href="">lorem</a>
+                                <a href="http://lppm-pm.ith.ac.id/">LPPM-PM ITH</a>
                             </li>
                             <li>
-                                <a href="">ipsum</a>
+                                <a href="http://od.ith.ac.id">DOKUMEN TERBUKA </a>
                             </li>
                             <li>
-                                <a href="">dolor sit amet</a>
+                                <a href="http://digilab.ith.ac.id/">DIGITAL LIBRARY ITH</a>
+                            </li>
+                            <li>
+                                <a href="http://simpel.ith.ac.id/">LMS ITH</a>
                             </li>
                         </ul>
                     </li>
@@ -65,3 +68,4 @@
     </div>
     @endisset
 </section>
+

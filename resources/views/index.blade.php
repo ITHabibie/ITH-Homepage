@@ -14,11 +14,16 @@
     {{-- <link href="{{asset('assets')}}/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
 
-    
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
 
     @include('style')
 
@@ -73,8 +78,9 @@
                     </div>
                 </section> --}}
             <section id="hero" class="d-flex align-items-center">
-
-                <div class="container">
+                <img src="">
+                <p>halo</p>
+                {{-- <div class="container">
                     <div class="row">
                         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 aos-init aos-animate"
                             data-aos="fade-up" data-aos-delay="200">
@@ -91,26 +97,31 @@
                             <!-- <img src="assets/img/hero-img.png" class="img-fluid animated" alt=""> -->
                         </div>
                       </div>
-                    </div>
+                    </div> --}}
 
-                  </section>
-            @elseif ($jumbotron->style == 1)
+            </section>
+        @elseif ($jumbotron->style == 1)
             <section id="hero" class="d-flex align-items-center">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
-                        {{-- <center>
-                            <h1 class="mt-3">{{$language == 'id' ? $jumbotron->indtitle:$jumbotron->engtitle}}</h1>
-                            <h2 class="mt-3">{{$language == 'id' ? $jumbotron->indsubtitle:$jumbotron->engsubtitle}}</h2>
-                        </center> --}}
+                    <div class="row">
+                        <div
+                            class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+                            <video id="myVideo" autoplay muted loop>
+                                <source
+                                    src="{{ asset('assets/ed1c37e6-f529-45b6-8034-a06732efcf00.mp4') }}"type="video/mp4">
+                            </video>
+                        </div>
                     </div>
-                    {{-- <div class="col-lg-4 order-1 order-lg-2 hero-img">
-                        <center>
-                            <img src="{{asset('storage')}}/{{$jumbotron->image}}" style="height: 330px;">
-                        </center>
-                    </div> --}}
-                  </div>
                 </div>
+                <ul>
+                    <li><a>Prestasi</a></li>
+                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
+                    <li><a>Kanal Youtube</a></li>
+                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
+                    <li><a>Pembelajaran Daring</a></li>
+                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
+                    <li><a>ITH Care</a></li>
+                </ul>
             </section>
         @endif
     @endisset
@@ -181,11 +192,39 @@
         <section id="team" class="team section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2 style="color: {{$page->alt1}}">{{__('cek.berita-1')}}</h2>
+                    <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
-                <div class="row">
+                <div class=" d-flex justify-content-between align-items-center">
                     @foreach ($postsNews as $item)
+                        <div class="article ">
+                            <div class="body text-center">
+                                <a href="{{ route('show', $item->slug) }}">
+                                <h4 style="color:rgba(16, 110, 234)">
+                                    {{ $language == 'id' ? \Str::words($item->title, 10, '...') : \Str::words($item->engtitle, 10, '...') }}
+                                </h4>
+                                </a>
+
+                                <span style="font-size: 12px;"><i class="bi bi-calendar4"
+                                        style="margin-right: .5rem;"></i>{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</span>
+                                @if ($language == 'id')
+                                    <p>{!! \Str::words($item->desc, 50) !!}</p>
+                                @else
+                                    <p>{!! \Str::words($item->eng, 50) !!}</p>
+                                @endif
+                            </div>
+                            <span class="text-start">tags: <strong>
+                                    @foreach ($item->tags as $tags)
+                                        @if ($language == 'id')
+                                            {{ $tags->name }}
+                                        @else
+                                            {{ $tags->engtitle }}
+                                        @endif
+                                    @endforeach
+                                </strong></span>
+                        </div>
+                    @endforeach
+                    {{-- @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
                             <div class="member">
@@ -205,6 +244,7 @@
                                         <h4>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
                                         </h4>
                                     </a>
+                                    <p>{{ $item->cover }}</p>
                                     <span>
                                         @if ($language == 'id')
                                             {!! \Str::words($item->desc, 30) !!}
@@ -237,25 +277,59 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @endforeach --}}
                 </div>
 
             </div>
         </section>
         <!-- End Team Section -->
+        <section id="numbers">
+            <h2 class="text-center"
+                style="font-family: 'Roboto Mono', monospace; color:white;text-shadow: 2px 2px #2f2f2f;">ITH DALAM ANGKA
+            </h2>
+            <div
+                class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
+                <div class="row">
+                    <div class="col text-center angka">
+                        <h4>535</h4>
+                        <hr>
+                        <p>Mahasiswa</p>
+                    </div>
+                    <div class="col text-center angka">
+                        <h4>10</h4>
+                        <hr>
 
+                        <p>program studi</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center angka">
+                        <h4>3</h4>
+                        <hr>
+
+                        <p>Guru Besar</p>
+                    </div>
+                    <div class="col text-center angka">
+                        <h4>4</h4>
+                        <hr>
+
+                        <p>Doktor</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ======= Header ======= -->
         {{-- @include('layouts.bottom') --}}
         <!-- End Header -->
 
-          {{-- <!-- ======= Contact Section ======= -->
+        {{-- <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact">
                 <div class="container" data-aos="fade-up">
                 @include('layouts.contact')
                 </div>
             </section>
         <!-- End Contact Section --> --}}
-  </main><!-- End #main -->
+    </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
     @include('layouts.footer')
