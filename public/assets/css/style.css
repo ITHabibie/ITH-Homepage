@@ -192,6 +192,10 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   grid-template-rows: repeat(6, minmax(0, 1fr));
 }
+.grit li a{
+  text-decoration: underline;
+  color:#0660A6;
+}
 #header .logo {
   font-size: 30px;
   margin: 0;
@@ -322,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   /* justify-content: center; */
   position: fixed; /* Mengubah posisi menjadi fixed */
-  top: 39.7vh; 
+  top: 61.9vh; 
   /* top:46.3%; */
   /* overflow: -1; */
   /* Menempatkan submenu di tengah vertikal */

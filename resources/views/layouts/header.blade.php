@@ -16,7 +16,7 @@
                                   @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
                                   @if ($loop2->format == 3)
                                   @else
-                                  <li>
+                                  <li  style="background: red;">
                                       <a class="" href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}">{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</a>
                                   </li>
                                   @endif
