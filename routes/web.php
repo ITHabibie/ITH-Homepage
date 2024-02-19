@@ -71,6 +71,7 @@ Route::get('search', [App\Http\Controllers\FrontController::class, 'search'])->n
 Route::get('search-category', [App\Http\Controllers\FrontController::class, 'byCategory'])->name('searchByCategory');
 Route::get('tag/{tag:slug}', [App\Http\Controllers\FrontController::class, 'tag'])->name('tag');
 Route::get('/contacts', [App\Http\Controllers\FrontController::class, 'kontakku'])->name('contacts');
+Route::get('/topbars', [App\Http\Controllers\FrontController::class, 'topbar'])->name('topbars');
 Route::get('post/{slug}', [App\Http\Controllers\FrontController::class, 'show'])->name('show');
 Route::get('category/{category:slug}', [App\Http\Controllers\FrontController::class, 'category'])->name('category');
 Route::get('/{slug}', [App\Http\Controllers\FrontController::class, 'showNavs'])->name('showNavs');
