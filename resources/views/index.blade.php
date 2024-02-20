@@ -298,7 +298,6 @@
                     <div class="col text-center angka">
                         <h4>10</h4>
                         <hr>
-
                         <p>program studi</p>
                     </div>
                 </div>
