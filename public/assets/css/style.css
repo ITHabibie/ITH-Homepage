@@ -1385,7 +1385,7 @@ h6 {
   position: relative;
   width: 100dvw;
   z-index: -1;
-  height: 80vh;
+  height: 100vh;
   background-size:cover ;
   background-image:url('../img/ithdalamangka.png') ;
 }
