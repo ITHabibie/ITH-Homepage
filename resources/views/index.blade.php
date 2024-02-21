@@ -51,13 +51,10 @@
 
 <body>
     @php
-        // $b = 'Hello world!';
-        // dd($b);
         $language = __('cek.lang');
         $flatTOPbanner = $top->alt3 ?? 'null';
         $flatMIDbanner = $mid->alt3 ?? 'null';
         $flatBOTbanner = $bottom->alt3 ?? 'null';
-        // echo $data;
     @endphp
     @if ($page->top_bar == 1)
         <!-- ======= Top Bar ======= -->
