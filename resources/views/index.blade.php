@@ -38,7 +38,9 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
 
-
+    <script>
+        
+    </script>
     <!-- =======================================================
   * Template Name: BizLand - v3.6.0
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -106,7 +108,7 @@
                     <div class="row">
                         <div
                             class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
-                            <video id="myVideo" autoplay muted loop>
+                            <video id="myVideo" width="1920" height="1080" controls autoplay muted loop>
                                 <source
                                     src="{{ asset('assets/ed1c37e6-f529-45b6-8034-a06732efcf00.mp4') }}"type="video/mp4">
                             </video>
@@ -195,36 +197,8 @@
                     <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
-                <div class=" d-flex justify-content-between align-items-center">
+                <div class="row">
                     @foreach ($postsNews as $item)
-                        <div class="article ">
-                            <div class="body text-center">
-                                <a href="{{ route('show', $item->slug) }}">
-                                <h4 style="color:rgba(16, 110, 234)">
-                                    {{ $language == 'id' ? \Str::words($item->title, 10, '...') : \Str::words($item->engtitle, 10, '...') }}
-                                </h4>
-                                </a>
-
-                                <span style="font-size: 12px;"><i class="bi bi-calendar4"
-                                        style="margin-right: .5rem;"></i>{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</span>
-                                @if ($language == 'id')
-                                    <p>{!! \Str::words($item->desc, 50) !!}</p>
-                                @else
-                                    <p>{!! \Str::words($item->eng, 50) !!}</p>
-                                @endif
-                            </div>
-                            <span class="text-start">tags: <strong>
-                                    @foreach ($item->tags as $tags)
-                                        @if ($language == 'id')
-                                            {{ $tags->name }}
-                                        @else
-                                            {{ $tags->engtitle }}
-                                        @endif
-                                    @endforeach
-                                </strong></span>
-                        </div>
-                    @endforeach
-                    {{-- @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
                             <div class="member">
@@ -244,7 +218,6 @@
                                         <h4>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
                                         </h4>
                                     </a>
-                                    <p>{{ $item->cover }}</p>
                                     <span>
                                         @if ($language == 'id')
                                             {!! \Str::words($item->desc, 30) !!}
@@ -277,7 +250,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach --}}
+                    @endforeach
                 </div>
 
             </div>

@@ -567,7 +567,7 @@ h6 {
 #myVideo {
   overflow: hidden;
     z-index: -1;
-    position: fixed;
+    position:absolute;
     left: 0;
     top: 80;
     min-width: 100%;

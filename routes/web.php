@@ -76,5 +76,4 @@ Route::get('post/{slug}', [App\Http\Controllers\FrontController::class, 'show'])
 Route::get('category/{category:slug}', [App\Http\Controllers\FrontController::class, 'category'])->name('category');
 Route::get('/{slug}', [App\Http\Controllers\FrontController::class, 'showNavs'])->name('showNavs');
 Route::get('/{pages?}/{slug}', [App\Http\Controllers\FrontController::class, 'showNav'])->name('showNav');
-
-
+// Route::get('/', [App\Http\Controllers\FrontController::class, 'checkSlug']);
