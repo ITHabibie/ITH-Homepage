@@ -1,6 +1,6 @@
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        <a href="{{ route('homepage') }}">
+        <a id="beranda" onclick="tes(event)">
             <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
         </a>
         <nav id="navbar" class="navbar">
@@ -11,7 +11,7 @@
                     <ul>
                         @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
                         @if ($loop2->format == 3)
-                        <li class="dropdown"><a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
+                        <!-- <li class="dropdown"><a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 @foreach ($navbarmenu->where('ops2',$loop2->id)->whereIn('format',[4])->where('view','1')->sortBy('order') as $loop3)
                                 <li>
@@ -21,7 +21,7 @@
                                 </li>
                                 @endforeach
                             </ul>
-                        </li>
+                        </li> -->
                         @else
                         <li>
                             <a href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}">{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</a>

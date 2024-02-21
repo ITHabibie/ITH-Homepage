@@ -38,7 +38,9 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
 
-
+    <script>
+        
+    </script>
     <!-- =======================================================
   * Template Name: BizLand - v3.6.0
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -49,10 +51,13 @@
 
 <body>
     @php
+        // $b = 'Hello world!';
+        // dd($b);
         $language = __('cek.lang');
         $flatTOPbanner = $top->alt3 ?? 'null';
         $flatMIDbanner = $mid->alt3 ?? 'null';
         $flatBOTbanner = $bottom->alt3 ?? 'null';
+        // echo $data;
     @endphp
     @if ($page->top_bar == 1)
         <!-- ======= Top Bar ======= -->
@@ -192,58 +197,63 @@
         <section id="team" class="team section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2 style="color: {{$page->alt1}}">{{__('cek.berita-1')}}</h2>
+                    <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 <div class="row">
-                @foreach ($postsNews as $item)
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member">
-                    <div class="member-img">
-                        <a href="{{ route('show', $item->slug) }}">
-                            <div style="height: 300px; background-image: url({{ asset('storage/'.$item->cover) }}); background-size: cover">
+                    @foreach ($postsNews as $item)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="member">
+                                <div class="member-img">
+                                    <a href="{{ route('show', $item->slug) }}">
+                                        <div
+                                            style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
+                                        </div>
+                                    </a>
+                                    <div class="social">
+                                        <a class="mb-1" href=""
+                                            style="width: 200px; background: {{ $page->alt1 }};">{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <a href="{{ route('show', $item->slug) }}">
+                                        <h4>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
+                                        </h4>
+                                    </a>
+                                    <span>
+                                        @if ($language == 'id')
+                                            {!! \Str::words($item->desc, 30) !!}
+                                        @else
+                                            {!! \Str::words($item->eng, 30) !!}
+                                        @endif
+                                    </span>
+                                    <hr class="mt-4">
+                                    <div>
+                                        <div class="social-links align-items-center" style="font-size: 12px">
+                                            <a>
+                                                <i>Tags :</i>&ensp;
+                                            </a>
+                                            @foreach ($item->tags as $tags)
+                                                <a class="mx-1" style="color: {{ $page->alt1 }};"
+                                                    href="{{ route('tag', $tags->slug) }}">
+                                                    <i>
+                                                        <strong>
+                                                            @if ($language == 'id')
+                                                                {{ $tags->name }}
+                                                            @else
+                                                                {{ $tags->engtitle }}
+                                                            @endif
+                                                        </strong>
+                                                    </i>
+                                                </a>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                        <div class="social">
-                        <a class="mb-1" href="" style="width: 200px; background: {{$page->alt1}};">{{ Carbon\Carbon::parse($item->created_at)->diffForHumans()}}</a>
                         </div>
-                    </div>
-                    <div class="member-info">
-                      <a href="{{ route('show', $item->slug) }}">
-                        <h4>{{ $language == 'id' ? \Str::words($item->title, 7, '...'):\Str::words($item->engtitle, 7, '...') }}</h4>
-                      </a>
-                        <span>
-                          @if ($language == 'id')
-                              {!! \Str::words($item->desc, 30) !!}
-                          @else
-                              {!! \Str::words($item->eng, 30) !!}
-                          @endif
-                        </span>
-                        <hr class="mt-4">
-                        <div>
-                          <div class="social-links align-items-center" style="font-size: 12px">
-                            <a>
-                              <i>Tags :</i>&ensp;
-                            </a>
-                            @foreach ($item->tags as $tags)
-                              <a class="mx-1" style="color: {{$page->alt1}};" href="{{ route('tag', $tags->slug) }}">
-                                <i>
-                                  <strong>
-                                    @if ($language == 'id')
-                                      {{ $tags->name }}
-                                    @else
-                                      {{ $tags->engtitle }}
-                                    @endif
-                                  </strong>
-                                </i>
-                              </a>
-                            @endforeach
-                          </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                @endforeach
+                    @endforeach
                 </div>
 
             </div>

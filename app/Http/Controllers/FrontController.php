@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\{Topbar, Category, Tag, Post, Page, FrontNavbar, typesatu, Contact, Jumbotron, Link, PmbLink};
 
@@ -217,5 +217,9 @@ class FrontController extends Controller
         return view('showSearch', $data);
 
     }
-
+    public function checkSlug(Request $request)
+    {
+        $halo = 'halo';
+        echo $halo;
+    }
 }
