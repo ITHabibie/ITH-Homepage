@@ -197,16 +197,18 @@
                     <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
-                <div class="row">
+                {{-- <div class="row"> --}} 
+                <div class="berita">
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
                             <div class="member">
                                 <div class="member-img">
                                     <a href="{{ route('show', $item->slug) }}">
-                                        <div
+                                        <img style="height:300px; object-fit: contain;" src="{{$item->cover}}">
+                                        {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
-                                        </div>
+                                        </div> --}}
                                     </a>
                                     <div class="social">
                                         <a class="mb-1" href=""
