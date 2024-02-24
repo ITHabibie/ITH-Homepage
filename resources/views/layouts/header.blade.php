@@ -11,7 +11,7 @@
                     <ul>
                         @foreach ($navbarmenu->where('ops1',$loop1->id)->whereIn('format',[2,3])->where('view','1')->sortBy('order') as $loop2)
                         @if ($loop2->format == 3)
-                        <li class="dropdown"><a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
+                        {{-- <li class="dropdown"><a href="#"><span>{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 @foreach ($navbarmenu->where('ops2',$loop2->id)->whereIn('format',[4])->where('view','1')->sortBy('order') as $loop3)
                                 <li>
@@ -21,7 +21,7 @@
                                 </li>
                                 @endforeach
                             </ul>
-                        </li> 
+                        </li>  --}}
                         @else
                         <li>
                             <a href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}">{{$language == 'id' ? $loop2->indtitle : $loop2->engtitle}}</a>
@@ -31,13 +31,17 @@
                     </ul>
                 </li>
                 @else
-                <li>
+                {{-- <li>
                     <a class="nav-link {{ request()->is($loop1->slug) ? 'active' : '' }}" href="{{ route('showNavs', [$loop1->slug]) }}">{{$language == 'id' ? $loop1->indtitle : $loop1->engtitle}}</a>
-                </li>
+                </li> --}}
                 @endif
                 @endforeach
+                <li>
+                    <a style="color:white;" href="https://admission.ith.ac.id">Tautan<i class="bi bi-arrow-up-right-square-fill"></i></a>
+                </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
     </div>
 </header>
+

@@ -265,31 +265,55 @@
             <div
                 class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
                 <div class="row">
-                    <div class="col text-center angka">
-                        <h4>535</h4>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="535" >0</h4>
                         <hr>
                         <p>Mahasiswa</p>
                     </div>
-                    <div class="col text-center angka">
-                        <h4>10</h4>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="10" >0</h4>
                         <hr>
-                        <p>program studi</p>
+                        <p>Program Studi</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center angka">
-                        <h4>3</h4>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="3" >0</h4>
+                        <hr>
+                        <p>Guru Besar</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="4" >0</h4>
+                        <hr>
+                        <p>Doktor</p>
+                    </div>
+                </div>
+                {{-- <div class="row">
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="3" >0</h4>
+                        <hr>
+                        <p>Guru Besar</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="4" >0</h4>
+                        <hr>
+                        <p>Doktor</p>
+                    </div>
+                </div> --}}
+                {{-- <div class="row">
+                    <div class="col counter text-center angka">
+                        <h4 class="count" data-target="3">0</h4>
                         <hr>
 
                         <p>Guru Besar</p>
                     </div>
-                    <div class="col text-center angka">
-                        <h4>4</h4>
+                    <div class="col counter text-center angka">
+                        <h4 class="count"  data-target="4">0</h4>
                         <hr>
 
                         <p>Doktor</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
         <!-- ======= Header ======= -->
@@ -308,7 +332,7 @@
     <!-- ======= Footer ======= -->
     @include('layouts.footer')
     <!-- End Footer -->
-
+   
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
         style="background: {{ $page->alt1 }}"><i class="bi bi-arrow-up-short"></i></a>
@@ -324,7 +348,7 @@
     <script src="{{ asset('assets') }}/vendor/waypoints/noframework.waypoints.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets') }}/js/main.js"></script>
+    <script src="{{ asset('assets') }}/js/main.js" type="module"></script>
 
 </body>
 
