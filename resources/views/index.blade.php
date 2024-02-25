@@ -38,9 +38,7 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
 
-    <script>
-        
-    </script>
+    <script></script>
     <!-- =======================================================
   * Template Name: BizLand - v3.6.0
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -192,12 +190,17 @@
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
+            <section class="adm" style="text-align:center; background:#D9D9D9;">
+                <a href="https://admission.ith.ac.id">\
+                    <img src="{{ asset('assets/img/admm.png') }}" style="width: 32rem; object-fit: cover">
+                </a>
+            </section>
             <div class="container" data-aos="fade-up">
-                <div class="section-title">
+                <div class="section-title" style="padding-top: 2rem">
                     <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
-                {{-- <div class="row"> --}} 
+                {{-- <div class="row"> --}}
                 <div class="berita">
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
@@ -205,7 +208,7 @@
                             <div class="member">
                                 <div class="member-img">
                                     <a href="{{ route('show', $item->slug) }}">
-                                        <img style="height:300px; object-fit: contain;" src="{{$item->cover}}">
+                                        <img style="height:300px; object-fit: contain;" src="{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
@@ -265,31 +268,61 @@
             <div
                 class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
                 <div class="row">
-                    <div class="col text-center angka">
-                        <h4>535</h4>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="535">0</h4>
                         <hr>
                         <p>Mahasiswa</p>
                     </div>
-                    <div class="col text-center angka">
-                        <h4>10</h4>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="10">0</h4>
                         <hr>
-                        <p>program studi</p>
+                        <p>Program Studi</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="3">0</h4>
+                        <hr>
+                        <p>Guru Besar</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="4">0</h4>
+                        <hr>
+                        <p>Doktor</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-center angka">
-                        <h4>3</h4>
+                        <p style="font-size: 18px; background-color: #0660A6; padding: .5rem; "><i class="bi bi-book"></i> fakta lain</p>
+                    </div>
+                    
+                </div>
+                {{-- <div class="row">
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="3" >0</h4>
+                        <hr>
+                        <p>Guru Besar</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count"  data-target="4" >0</h4>
+                        <hr>
+                        <p>Doktor</p>
+                    </div>
+                </div> --}}
+                {{-- <div class="row">
+                    <div class="col counter text-center angka">
+                        <h4 class="count" data-target="3">0</h4>
                         <hr>
 
                         <p>Guru Besar</p>
                     </div>
-                    <div class="col text-center angka">
-                        <h4>4</h4>
+                    <div class="col counter text-center angka">
+                        <h4 class="count"  data-target="4">0</h4>
                         <hr>
 
                         <p>Doktor</p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
         <!-- ======= Header ======= -->
@@ -324,7 +357,7 @@
     <script src="{{ asset('assets') }}/vendor/waypoints/noframework.waypoints.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets') }}/js/main.js"></script>
+    <script src="{{ asset('assets') }}/js/main.js" type="module"></script>
 
 </body>
 

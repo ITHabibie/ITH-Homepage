@@ -4,6 +4,44 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
+
+// ith dalam angka animasi
+const counters = document.querySelectorAll('.count');
+
+const options = {
+  threshold: 1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (!entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const target = +entry.target.getAttribute('data-target');
+        let count = 0;
+        const updateCount = () => {
+          const increment = target / 200; // Speed of count animation
+          if (count < target) {
+            count += increment;
+            entry.target.innerText = Math.ceil(count);
+            setTimeout(updateCount, 1);
+          } else {
+            entry.target.innerText = target;
+          }
+        };
+        updateCount();
+      }
+    }
+  });
+}, options);
+
+counters.forEach(counter => {
+  observer.observe(counter);
+});
+
+
 const url = window.location.href
         function tes(e){
             if(url == "http://127.0.0.1:8000/"){
