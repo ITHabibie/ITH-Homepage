@@ -189,16 +189,20 @@
         <!-- ======= Header ======= -->
         @include('layouts.mid')
         <!-- End Header -->
-
+       
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
+            <section class="adm" style="text-align:center; background:#D9D9D9;">
+                    
+                <img src="{{ asset('assets/img/adm.png') }}" style="width: 32rem; object-fit: cover">
+            </section>
             <div class="container" data-aos="fade-up">
-                <div class="section-title">
+                <div class="section-title" style="padding-top: 2rem">
                     <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 {{-- <div class="row"> --}} 
-                <div class="berita">
+                <div class="berita" >
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">

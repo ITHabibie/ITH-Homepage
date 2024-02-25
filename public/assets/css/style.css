@@ -1282,7 +1282,7 @@ h6 {
 # Team
 --------------------------------------------------------------*/
 .team {
-    padding: 60px 0;
+    padding: 0 0;
 }
 .team .member {
     margin-bottom: 20px;
@@ -1355,6 +1355,9 @@ h6 {
     justify-content: space-evenly;
 }
 
+.adm{    
+    padding: 3rem 0 4rem 0;
+}
 
 /* ith dalam angka */
 #numbers {
