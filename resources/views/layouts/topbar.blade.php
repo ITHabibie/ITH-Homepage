@@ -20,7 +20,7 @@
         @endisset
     </section> -->
 
-<section  class="top-bar d-flex align-items-center" style="background: {{$page->alt1}}">
+<section  class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%)">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="useful-links d-flex align-items-center">
