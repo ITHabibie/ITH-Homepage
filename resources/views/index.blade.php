@@ -112,14 +112,14 @@
                         </div>
                     </div>
                 </div>
-                <ul>
-                    <li><a>Prestasi</a></li>
+                <ul >
+                    <li  class="small-navs"><a>Prestasi</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li><a>Kanal Youtube</a></li>
+                    <li class="small-navs"><a><i class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li><a>Pembelajaran Daring</a></li>
+                    <li class="small-navs"><a>Pembelajaran Daring</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li><a>ITH Care</a></li>
+                    <li class="small-navs"><a>ITH Care</a></li>
                 </ul>
             </section>
         @endif
@@ -196,7 +196,7 @@
             </section>
             <div class="container" data-aos="fade-up">
                 <div class="section-title" style="padding-top: 2rem">
-                    <h2 style="color: {{ $page->alt1 }}">{{ __('cek.berita-1') }}</h2>
+                    <h2 style="color:#040348;">{{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 {{-- <div class="row"> --}}
@@ -245,12 +245,12 @@
                                         @endforeach
                                     </div>
                                 </div>
-                                <div class="member-info text-center">
+                                <div class="member-info  text-center">
                                     <a href="{{ route('show', $item->slug) }}">
-                                        <h4>{{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
+                                        <h4 class="judul-berita">{{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
                                         </h4>
                                     </a>
-                                    <span>
+                                    <span class="desc-berita">
                                         @if ($language == 'id')
                                             {!! \Str::words($item->desc, 20) !!}
                                         @else
@@ -264,56 +264,56 @@
                     @endforeach
                 </div>
                 <div class="d-flex justify-content-center " style="color: #fff;">
-                    <p style="background-color: #0660A6; color: #fff;border-radius: 4px;" class="p-2 text-center"><i
+                    <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event"><i
                             class="bi bi-archive-fill"></i> Topik utama lainnya</p>
                 </div>
             </div>
             {{-- event pengumuman --}}
             <div class="container d-flex justify-content-evenly" data-aos="fade-up">
                 <div class="event">
-                    <div class="section-title" style="margin-left: 10rem;padding-top: 2rem">
-                        <h2 style="color: {{ $page->alt1 }}">{{ __('cek.event') }}</h2>
+                    <div class="section-title" style="margin-left: 10rem;padding-top: 2rem;">
+                        <h2 style="color:#040348;">{{ __('cek.event') }}</h2>
                     </div>
                     <div class="event p-2">
-                        <img src="{{ asset('assets/img/bgart.png') }}" style=" position: absolute; left:-1vw;">
+                        <img src="{{ asset('assets/img/bgart.png') }}" style=" position: absolute; left:-20vw;">
                         @foreach ($postsEvents as $item)
-                            <div class="event p-2 mb-4 shadow-sm" style="width:80%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
-                                <p style="color:#040348; margin-bottom: 0; font-size: .9rem;">
+                            <div class="event p-2 mb-4 shadow-sm" style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
+                                <p style="color:#040348; margin-bottom: 0; font-size: .9rem;" class="desc-berita">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
-                                <a style="color:#040348" href="{{ route('show', $item->slug) }}">
-                                    <p>{{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
+                                <a style="color:#040348" class="judul-berita" href="{{ route('show', $item->slug) }}">
+                                    <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
                                     </p>
                                 </a>
                             </div>
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #0660A6; color: #fff;border-radius: 4px;" class="p-2 text-center">
-                            <i class="bi bi-archive-fill"></i> event lainnya</p>
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event">
+                            <i class="bi bi-archive-fill"></i> Kegiatan ITH lainnya</p>
                     </div>
                 </div>
                 <div style="border-left:3px solid #615F5F;height:auto; width: 20px; margin: 4rem 0 1rem 0;"></div>
                 <div class="pengumuman">
                     <div class="section-title" style="padding-top: 2rem; margin-right: 10rem;">
-                        <h2 style="color: {{ $page->alt1 }}">{{ __('cek.pengumuman') }}</h2>
+                        <h2 style="color:#040348;">{{ __('cek.pengumuman') }}</h2>
                     </div>
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
                         @foreach ($postsEvents as $item)
-                            <div class="event p-2 mb-4 shadow-sm" style="width: 80%;border-radius: 14px; background:#0660a6">
-                                <p style="color:#fff; margin-bottom: 0; font-size: .9rem;">
+                            <div class="event p-2 mb-4 shadow-sm" style="width: 100%;border-radius: 14px; background:#0660a6">
+                                <p class="desc-berita" style="color:#fff; margin-bottom: 0; font-size: .9rem;">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
-                                <a style="color:#fff" href="{{ route('show', $item->slug) }}">
-                                    <p>{{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
+                                <a style="color:#fff" class="judul-berita" href="{{ route('show', $item->slug) }}">
+                                    <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
                                     </p>
                                 </a>
                             </div>
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #0660A6; color: #fff;border-radius: 4px;" class="p-2 text-center">
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event">
                             <i class="bi bi-archive-fill"></i> Pengumuman lainnya</p>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center angka">
+                    <div class="col desc-berita text-center angka">
                         <p style="font-size: 18px; background-color: #0660A6; padding: .5rem; border-radius: 4px"><i
                                 class="bi bi-book"></i> fakta lain</p>
                     </div>

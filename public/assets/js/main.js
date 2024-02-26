@@ -130,6 +130,7 @@ const url = window.location.href
    * Header fixed top on scroll
    */
   let selectHeader = select('#header')
+  console.log(select('#header'))
   if (selectHeader) {
     let headerOffset = selectHeader.offsetTop
     let nextElement = selectHeader.nextElementSibling

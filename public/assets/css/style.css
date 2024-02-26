@@ -7,7 +7,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -190,7 +190,7 @@ h6 {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #header.fixed-top {
-    height: 70px;
+    height: 130px;
 }
 .grit {
     /* background: red; */
@@ -562,6 +562,7 @@ h6 {
 #hero {
     width: 100%;
     height: 81vh;
+    margin-top: 8rem;
     /* background: url("../img/kampus.png") bottom left; */
     background-size: cover;
     position: relative;
@@ -571,10 +572,14 @@ h6 {
     z-index: -1;
     /* bottom:-5%; */
     position:absolute;
-    left: -5%;
+    left: -15vw;
     /* top: 80; */
-    min-width: 50vw;
+    min-width: 100vw;
     min-height: 100%;
+}
+.small-navs{
+    font-family: Roboto Mono, mono; 
+    font-weight:400;
 }
 #hero ul {
     list-style-type: none;
@@ -709,6 +714,7 @@ h6 {
 }
 
 .section-title {
+    color: white;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -725,7 +731,10 @@ h6 {
     text-decoration: underline;
     text-underline-offset: 1rem;
 }
-
+.btn-event{
+    font-family: Fira Sans, sans;
+    font-weight:600;
+}
 .section-title h3 {
     margin: 15px 0 0 0;
     font-size: 32px;
@@ -1358,7 +1367,14 @@ h6 {
     display: flex;
     justify-content: space-evenly;
 }
-
+.judul-berita{
+    font-family: Fira Sans, sans;
+    font-weight:800;
+}
+.desc-berita{
+    font-family:Fira Sans, sans;
+    font-weight: 400;
+}
 .adm{    
     padding: 3rem 0 4rem 0;
 }
@@ -1369,11 +1385,14 @@ h6 {
   padding: 2rem;
 }
 #numbers .container .row .col h4{
+  font-family: Calistoga; 
   color:white;
   font-size: 4rem;
   animation: countup 2s ease-out;
 }
 #numbers .container .row .col p{
+  font-family: Roboto Mono, mono;
+  font-weight: bold;
   color:white;
   font-size: 2rem;
 }

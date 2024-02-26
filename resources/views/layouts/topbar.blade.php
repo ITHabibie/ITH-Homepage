@@ -1,4 +1,4 @@
-<!-- <section id="topbar" class="d-flex align-items-center" style="background: {{$page->alt1}}">
+{{-- <!-- <section id="topbar" class="d-flex align-items-center" style="background: {{$page->alt1}}">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="contact-info d-flex align-items-center">
@@ -20,7 +20,7 @@
         @endisset
     </section> -->
 
-<section  class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%)">
+<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%)">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="useful-links d-flex align-items-center">
@@ -68,4 +68,4 @@
     </div>
     @endisset
 </section>
-
+ --}}
