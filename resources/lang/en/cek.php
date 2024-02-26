@@ -4,6 +4,8 @@ return [
 	'info-1' => 'Information',
 	'info-2' => 'New Information',
 	'berita-1' => 'Topic',
+	// 'Pengumuman' => 'Announcements',
+	// 'Event' => 'Events',
 	// 'berita-2' => 'Latest News',
 	'kontak-1' => 'Contact',
 	'kontak-2' => 'Contact Us',
