@@ -1,6 +1,6 @@
 <header id="header" class="">
     
-<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%)">
+<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%); font-size: 12px;">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="useful-links d-flex align-items-center">
@@ -26,7 +26,7 @@
             <nav class="navbar" id="navbar">
                 <ul>
                     <li class="dropdown">
-                        <a class="link" href="">{{$topbar->Layanan}} <i class="bi bi-caret-down-fill"></i></a>
+                        <a class="link" style="font-size: 12px;" href="">{{$topbar->Layanan}} <i class="bi bi-caret-down-fill"></i></a>
                         <ul>
                             <li>
                                 <a href="http://lppm-pm.ith.ac.id/">LPPM-PM ITH</a>
@@ -39,6 +39,15 @@
                             </li>
                             <li>
                                 <a href="http://simpel.ith.ac.id/">LMS ITH</a>
+                            </li>
+                            <li>
+                                <a href="http://cintasatudata.ith.ac.id/">CINTA Satu Data</a>
+                            </li>
+                            <li>
+                                <a href="http://siakad.ith.ac.id/">SIAKAD</a>
+                            </li>
+                            <li>
+                                <a href="http://sister.kemdikbud.go.id/">SISTER</a>
                             </li>
                         </ul>
                     </li>

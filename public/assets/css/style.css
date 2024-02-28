@@ -8,6 +8,7 @@
 # General
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -122,7 +123,7 @@ h6 {
 #topbar,
 .top-bar {
     background: #106eea;
-    height: 60px;
+    height: 40px;
     font-size: 14px;
     transition: all 0.5s;
     color: #fff;
@@ -182,7 +183,8 @@ h6 {
 --------------------------------------------------------------*/
 #header {
     /* hsl(197deg 81% 16%) */
-    background: hsl(197deg 82% 26%);
+    background:#0660a6;
+    /* background: hsl(197deg 82% 26%); */
     transition: all 0.5s;
     z-index: 997;
     height: 86px;
@@ -190,7 +192,7 @@ h6 {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #header.fixed-top {
-    height: 130px;
+    height: 110px;
 }
 .grit {
     /* background: red; */
@@ -567,16 +569,30 @@ h6 {
     background-size: cover;
     position: relative;
 }
-#myVideo {
+
+/* #myVideo {
   overflow: hidden;
-    z-index: -1;
-    /* bottom:-5%; */
-    position:absolute;
-    left: -15vw;
+    z-index: -1; */
+    /* bottom:95%; */
+    /* position:absolute;
+    left: -15vw; */
     /* top: 80; */
-    min-width: 100vw;
+    /* min-width: 100%;
     min-height: 100%;
+} */
+
+#myVideo {
+    z-index: -1;
+    position: fixed; /* Menggunakan position fixed agar video tetap di tengah */
+    left: 50%; /* Pusat horizontal */
+    top: 50%; /* Pusat vertikal */
+    transform: translate(-50%, -50%); /* Menggeser video kembali setengah lebar dan setengah tinggi videonya */
+    min-width: 100%; /* Gunakan lebar viewport sebagai minimum width */
+    min-height: 100%; /* Gunakan tinggi viewport sebagai minimum height */
+    width: auto; /* Menghapus atribut width yang diset sebelumnya */
+    height: auto; /* Menghapus atribut height yang diset sebelumnya */
 }
+
 .small-navs{
     font-family: Roboto Mono, mono; 
     font-weight:400;
@@ -1381,17 +1397,18 @@ h6 {
 
 /* ith dalam angka */
 #numbers {
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'IBM-Plex-Sans', sans-serif; */
   padding: 2rem;
 }
 #numbers .container .row .col h4{
-  font-family: Calistoga; 
+  font-family: "IBM-Plex-Sans", sans-serif;
+  font-weight: bold;
   color:white;
   font-size: 4rem;
   animation: countup 2s ease-out;
 }
 #numbers .container .row .col p{
-  font-family: Roboto Mono, mono;
+  font-family: "IBM-Plex-Sans", sans-serif;
   font-weight: bold;
   color:white;
   font-size: 2rem;
@@ -1401,11 +1418,13 @@ h6 {
   display:flex;
   flex-direction: column;
 }
+.bayang{
+    text-shadow: 2px 2px #2f2f2f;
+}
 .row .col hr{
   border-top: 10px solid white;
   width: 14rem;
   opacity: 100;
-  /* color:white; */
 }
 #numbers div{
   padding: 1rem;
@@ -1739,10 +1758,10 @@ h6 {
     gap:1rem;
     display:flex;
 }
-.other-links{
-    margin-left: 75%;
-    margin-top: 5.5rem;
-}
+/* .profil-footer div{
+    display:flex;
+    flex-direction:column;
+} */
 
 #footer .footer-newsletter {
     padding: 50px 0;
