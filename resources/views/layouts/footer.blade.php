@@ -9,9 +9,10 @@
                  <img src="{{ asset('assets/img/lapor.png') }}" style="width: 14rem; object-fit: cover">
              </div>
              <hr style="opacity: 0;">
-             <div class="other-links">
-                 <div class="profil-footer d-flex justify-content-between align-items-center">
-                     <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 20rem; object-fit: cover">
+             <div class="other-links" style="padding:0 4rem;">
+                 <div class="profil-footer d-flex justify-content-between align-items-end flex-row-reverse">
+                     {!!$contact->maps!!}
+                     {{-- <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 20rem; object-fit: cover"> --}}
                      <div class="other-links ">
                          <div class="tnc d-flex flex-col">
                              <p>Aturan Pengguna</p>
@@ -52,3 +53,4 @@
          </div>
      </div>
  </footer>
+

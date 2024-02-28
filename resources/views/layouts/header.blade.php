@@ -61,7 +61,7 @@
 
     <div class="container d-flex align-items-center justify-content-between">
         <a  id="beranda" style="cursor: pointer;" onclick="tes(event)">
-            <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
+            <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 14rem; object-fit: cover">
         </a>
         <nav id="navbar" class="navbar">
             <ul>
@@ -104,4 +104,3 @@
         </nav><!-- .navbar -->
     </div>
 </header>
-
