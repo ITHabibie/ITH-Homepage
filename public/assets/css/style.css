@@ -1382,33 +1382,41 @@ h6 {
 /* ith dalam angka */
 #numbers {
   font-family: 'Roboto Mono', monospace;
-  padding: 2rem;
+  padding: 3rem;
+}
+#numbers .text-center {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 #numbers .container .row .col h4{
   font-family: Calistoga; 
   color:white;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  margin: 0rem;
   animation: countup 2s ease-out;
 }
 #numbers .container .row .col p{
   font-family: Roboto Mono, mono;
   font-weight: bold;
   color:white;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  margin: 0rem 0; /* Menghapus margin pada teks */
+  padding: 0rem; /* Menyesuaikan padding pada teks */
 }
 #numbers .row .col{
   align-items: center;
   display:flex;
   flex-direction: column;
 }
-.row .col hr{
-  border-top: 10px solid white;
-  width: 14rem;
+#numbers .row .col hr{
+  border-top: 2px solid white;
+  width: 7rem;
   opacity: 100;
+  margin: 0.3rem 0;
   /* color:white; */
 }
 #numbers div{
-  padding: 1rem;
+  padding: 5px;
 }
 #numbers h2{
   font-size: 2rem;

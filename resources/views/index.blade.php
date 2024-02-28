@@ -333,41 +333,51 @@
         <!-- End Team Section -->
         <section id="numbers">
             <h2 class="text-center"
-                style="font-family: 'Roboto Mono', monospace; color:white;text-shadow: 2px 2px #2f2f2f;">ITH DALAM
+                style="font-family: 'Roboto Mono', monospace; color:white;">ITH DALAM
                 ANGKA
             </h2>
-            <div
-                class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
+            <div class="container border-light d-flex flex-column justify-content-around border border-4 border-primary">
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="535">0</h4>
+                        <h4 class="count" data-target="2">0</h4>
                         <hr>
-                        <p>Mahasiswa</p>
+                        <p>JURUSAN</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="count" data-target="10">0</h4>
                         <hr>
-                        <p>Program Studi</p>
+                        <p>PROGRAM STUDI</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="535">0</h4>
+                        <hr>
+                        <p>MAHASISWA</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="count" data-target="3">0</h4>
                         <hr>
-                        <p>Guru Besar</p>
+                        <p>DOKTOR</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="4">0</h4>
+                        <h4 class="count" data-target="3">0</h4>
                         <hr>
-                        <p>Doktor</p>
+                        <p>GURU BESAR</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count" data-target="23">0</h4>
+                        <hr>
+                        <p>DOSEN</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col desc-berita text-center angka">
-                        <p style="font-size: 18px; background-color: #0660A6; padding: .5rem; border-radius: 4px"><i
+                        <p style="font-size: 15px; background-color: #0660A6; padding: .6rem; border-radius: 4px;"><i
                                 class="bi bi-book"></i> fakta lain</p>
                     </div>
                 </div>
+            
                 {{-- <div class="row">
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="count"  data-target="3" >0</h4>
