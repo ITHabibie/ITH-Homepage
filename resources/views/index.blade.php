@@ -205,8 +205,8 @@
                             data-aos-delay="100">
                             <div class="member">
                                 <div class="member-img">
-                                    <a href="{{ route('show', $item->slug) }}">
-                                        <img style="height:300px; object-fit: contain;" src="{{ $item->cover }}">
+                                    <a style="width:300px;" href="{{ route('show', $item->slug) }}">
+                                        <img  style=" object-fit: cover; height: 200px;" src="{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
@@ -340,7 +340,8 @@
         <!-- End Team Section -->
         <section id="numbers">
             <h2 class="text-center bayang"
-                style="font-family: 'IBM-Plex-Sans', sans-serif;font-weight: 900; color:white;text-shadow: 2px 2px #2f2f2f;">ITH
+                style="font-family: 'IBM-Plex-Sans', sans-serif;font-weight: 900; color:white;text-shadow: 2px 2px #2f2f2f;">
+                ITH
                 DALAM
                 ANGKA
             </h2>
@@ -348,32 +349,47 @@
                 class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count bayang" data-target="535">0</h4>
-                        <hr>
-                        <p class="bayang">Mahasiswa</p>
+                        <h4  class="count bayang" data-target="2">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang" >Jurusan</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="bayang count" data-target="10">0</h4>
-                        <hr>
-                        <p class="bayang">Program Studi</p>
+                        <h4  class="count bayang" data-target="10">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang" >Program Studi</p>
+                    </div>
+                    {{-- <div class="col counter text-center angka" id="counter">
+                        <h4 class="bayang count" data-target="10">0</h4> --}}
+                        {{-- <hr> --}}
+                        {{-- <p class="bayang">Program Studi</p>
+                    </div> --}}
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="bayang count" data-target="535">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Mahasiswa Baru</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="count bayang" data-target="3">0</h4>
-                        <hr>
+                        {{-- <hr> --}}
+                        <p class="bayang">Doktor</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count bayang" data-target="3">0</h4>
+                        {{-- <hr> --}}
                         <p class="bayang">Guru Besar</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count bayang" data-target="4">0</h4>
-                        <hr>
-                        <p class="bayang">Doktor</p>
+                        <h4 class="count bayang" data-target="23">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Dosen</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col desc-berita text-center angka">
-                        <p style="font-size: 18px; background-color: #0660A6; padding: .5rem; border-radius: 4px"><i
-                                class="bi bi-book"></i> fakta lain</p>
+                        <a style="font-size: 18px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
+                                class="bi bi-book"></i> fakta lain</a>
                     </div>
                 </div>
                 {{-- <div class="row">

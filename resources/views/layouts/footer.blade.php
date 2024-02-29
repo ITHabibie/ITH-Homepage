@@ -11,7 +11,7 @@
              <hr style="opacity: 0;">
              <div class="other-links" style="padding:0 4rem;">
                  <div class="profil-footer d-flex justify-content-between align-items-end flex-row-reverse">
-                     {!!$contact->maps!!}
+                     {{-- {!!$contact->maps!!} --}}
                      {{-- <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 20rem; object-fit: cover"> --}}
                      <div class="other-links ">
                          <div class="tnc d-flex flex-col">
