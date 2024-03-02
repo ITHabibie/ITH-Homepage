@@ -112,8 +112,8 @@
                         </div>
                     </div>
                 </div>
-                <ul >
-                    <li  class="small-navs"><a>Prestasi</a></li>
+                <ul>
+                    <li class="small-navs"><a>Prestasi</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
                     <li class="small-navs"><a><i class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
@@ -186,7 +186,6 @@
         <!-- ======= Header ======= -->
         @include('layouts.mid')
         <!-- End Header -->
-
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
             <section class="adm" style="text-align:center; background:#D9D9D9;">
@@ -206,8 +205,8 @@
                             data-aos-delay="100">
                             <div class="member">
                                 <div class="member-img">
-                                    <a href="{{ route('show', $item->slug) }}">
-                                        <img style="height:300px; object-fit: contain;" src="{{ $item->cover }}">
+                                    <a style="width:300px;" href="{{ route('show', $item->slug) }}">
+                                        <img  style=" object-fit: cover; height: 200px;" src="{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
@@ -247,7 +246,8 @@
                                 </div>
                                 <div class="member-info  text-center">
                                     <a href="{{ route('show', $item->slug) }}">
-                                        <h4 class="judul-berita">{{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
+                                        <h4 class="judul-berita">
+                                            {{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
                                         </h4>
                                     </a>
                                     <span class="desc-berita">
@@ -264,8 +264,8 @@
                     @endforeach
                 </div>
                 <div class="d-flex justify-content-center " style="color: #fff;">
-                    <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event"><i
-                            class="bi bi-archive-fill"></i> Topik utama lainnya</p>
+                    <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                        class="p-2 text-center btn-event"><i class="bi bi-archive-fill"></i> Topik utama lainnya</p>
                 </div>
             </div>
             {{-- event pengumuman --}}
@@ -277,11 +277,13 @@
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart.png') }}" style=" position: absolute; left:-20vw;">
                         @foreach ($postsEvents as $item)
-                            <div class="event p-2 mb-4 shadow-sm" style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
+                            <div class="event p-2 mb-4 shadow-sm"
+                                style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
                                 <p style="color:#040348; margin-bottom: 0; font-size: .9rem;" class="desc-berita">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
-                                <a style="color:#040348" class="judul-berita" href="{{ route('show', $item->slug) }}">
+                                <a style="color:#040348" class="judul-berita"
+                                    href="{{ route('show', $item->slug) }}">
                                     <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
                                     </p>
                                 </a>
@@ -289,8 +291,10 @@
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event">
-                            <i class="bi bi-archive-fill"></i> Kegiatan ITH lainnya</p>
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                            class="p-2 text-center btn-event">
+                            <i class="bi bi-archive-fill"></i> Kegiatan ITH lainnya
+                        </p>
                     </div>
                 </div>
                 <div style="border-left:3px solid #615F5F;height:auto; width: 20px; margin: 4rem 0 1rem 0;"></div>
@@ -300,8 +304,9 @@
                     </div>
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
-                        @foreach ($postsEvents as $item)
-                            <div class="event p-2 mb-4 shadow-sm" style="width: 100%;border-radius: 14px; background:#0660a6">
+                        @foreach ($postsAnnounce as $item)
+                            <div class="event p-2 mb-4 shadow-sm"
+                                style="width: 100%;border-radius: 14px; background:#0660a6">
                                 <p class="desc-berita" style="color:#fff; margin-bottom: 0; font-size: .9rem;">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
@@ -313,8 +318,10 @@
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;" class="p-2 text-center btn-event">
-                            <i class="bi bi-archive-fill"></i> Pengumuman lainnya</p>
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                            class="p-2 text-center btn-event">
+                            <i class="bi bi-archive-fill"></i> Pengumuman lainnya
+                        </p>
                     </div>
                 </div>
 
@@ -332,40 +339,57 @@
         </section>
         <!-- End Team Section -->
         <section id="numbers">
-            <h2 class="text-center"
-                style="font-family: 'Roboto Mono', monospace; color:white;text-shadow: 2px 2px #2f2f2f;">ITH DALAM
+            <h2 class="text-center bayang"
+                style="font-family: 'IBM-Plex-Sans', sans-serif;font-weight: 900; color:white;text-shadow: 2px 2px #2f2f2f;">
+                ITH
+                DALAM
                 ANGKA
             </h2>
             <div
                 class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="535">0</h4>
-                        <hr>
-                        <p>Mahasiswa</p>
+                        <h4  class="count bayang" data-target="2">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang" >Jurusan</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="10">0</h4>
-                        <hr>
-                        <p>Program Studi</p>
+                        <h4  class="count bayang" data-target="10">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang" >Program Studi</p>
+                    </div>
+                    {{-- <div class="col counter text-center angka" id="counter">
+                        <h4 class="bayang count" data-target="10">0</h4> --}}
+                        {{-- <hr> --}}
+                        {{-- <p class="bayang">Program Studi</p>
+                    </div> --}}
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="bayang count" data-target="535">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Mahasiswa</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="3">0</h4>
-                        <hr>
-                        <p>Guru Besar</p>
+                        <h4 class="count bayang" data-target="3">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Doktor</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count" data-target="4">0</h4>
-                        <hr>
-                        <p>Doktor</p>
+                        <h4 class="count bayang" data-target="4">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Guru Besar</p>
+                    </div>
+                    <div class="col counter text-center angka" id="counter">
+                        <h4 class="count bayang" data-target="23">0</h4>
+                        {{-- <hr> --}}
+                        <p class="bayang">Dosen</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col desc-berita text-center angka">
-                        <p style="font-size: 18px; background-color: #0660A6; padding: .5rem; border-radius: 4px"><i
-                                class="bi bi-book"></i> fakta lain</p>
+                        <a style="font-size: 18px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
+                                class="bi bi-book"></i> fakta lain</a>
                     </div>
                 </div>
                 {{-- <div class="row">

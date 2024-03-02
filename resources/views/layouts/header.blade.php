@@ -1,6 +1,8 @@
+
+
 <header id="header" class="">
     
-<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%)">
+<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%); font-size: 12px;">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="useful-links d-flex align-items-center">
@@ -8,6 +10,7 @@
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->mahasiswa}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->alumni}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->staff_dosen}}</a>
+            <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->orangtua}}</a>
         </div>
         <div class="useful-links d-flex align-items-center">
             <div class="lang d-flex">
@@ -26,7 +29,7 @@
             <nav class="navbar" id="navbar">
                 <ul>
                     <li class="dropdown">
-                        <a class="link" href="">{{$topbar->Layanan}} <i class="bi bi-caret-down-fill"></i></a>
+                        <a class="link" style="font-size: 12px;" href="">{{$topbar->Layanan}} <i class="bi bi-caret-down-fill"></i></a>
                         <ul>
                             <li>
                                 <a href="http://lppm-pm.ith.ac.id/">LPPM-PM ITH</a>
@@ -40,6 +43,15 @@
                             <li>
                                 <a href="http://simpel.ith.ac.id/">LMS ITH</a>
                             </li>
+                            <li>
+                                <a href="http://cintasatudata.ith.ac.id/">CINTA Satu Data</a>
+                            </li>
+                            <li>
+                                <a href="http://siakad.ith.ac.id/">SIAKAD</a>
+                            </li>
+                            <li>
+                                <a href="http://sister.kemdikbud.go.id/">SISTER</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -51,8 +63,9 @@
 
 
     <div class="container d-flex align-items-center justify-content-between">
-        <a  id="beranda" style="cursor: pointer;" onclick="tes(event)">
-            <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 15rem; object-fit: cover">
+        {{-- TODO: ubah ini anchornya, kalo dipencet i baru urlnya masih di home, jangan di redirect, nanti baru pindah url baru pindah ke home --}}
+        <a  href="{{route('homepage')}}" style="cursor: pointer;" >
+            <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 14rem; object-fit: cover">
         </a>
         <nav id="navbar" class="navbar">
             <ul>
@@ -95,4 +108,3 @@
         </nav><!-- .navbar -->
     </div>
 </header>
-
