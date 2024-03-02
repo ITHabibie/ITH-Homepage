@@ -42,16 +42,6 @@ counters.forEach(counter => {
 });
 
 
-const url = window.location.href
-        function tes(e){
-            if(url == "http://127.0.0.1:8000/"){
-                console.log("salah")
-            }else{
-                window.location.href = "http://127.0.0.1:8000/"
-            }
-            // console.log(url)
-            // console.log("http://127.0.0.1:8000")
-        }
 (function() {
   "use strict";
 

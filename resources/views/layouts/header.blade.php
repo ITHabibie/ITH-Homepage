@@ -1,3 +1,5 @@
+
+
 <header id="header" class="">
     
 <section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%); font-size: 12px;">
@@ -8,6 +10,7 @@
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->mahasiswa}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->alumni}}</a>
             <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->staff_dosen}}</a>
+            <a href="#" class="link d-flex align-items-center ms-4">{{$topbar->orangtua}}</a>
         </div>
         <div class="useful-links d-flex align-items-center">
             <div class="lang d-flex">
@@ -60,7 +63,8 @@
 
 
     <div class="container d-flex align-items-center justify-content-between">
-        <a  id="beranda" style="cursor: pointer;" onclick="tes(event)">
+        {{-- TODO: ubah ini anchornya, kalo dipencet i baru urlnya masih di home, jangan di redirect, nanti baru pindah url baru pindah ke home --}}
+        <a  href="{{route('homepage')}}" style="cursor: pointer;" >
             <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 14rem; object-fit: cover">
         </a>
         <nav id="navbar" class="navbar">

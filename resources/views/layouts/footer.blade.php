@@ -19,7 +19,7 @@
                              <p>FAQ</p>
                              <p>Hak Cipta</p>
                          </div>
-                         <div class="socmeds d-flex flex-col">
+                         <div class="socmeds d-flex justify-between flex-col">
                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="19" fill="currentColor"
                                  class="bi bi-twitter-x" viewBox="0 0 16 16">
                                  <path

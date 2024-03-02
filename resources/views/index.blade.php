@@ -304,7 +304,7 @@
                     </div>
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
-                        @foreach ($postsEvents as $item)
+                        @foreach ($postsAnnounce as $item)
                             <div class="event p-2 mb-4 shadow-sm"
                                 style="width: 100%;border-radius: 14px; background:#0660a6">
                                 <p class="desc-berita" style="color:#fff; margin-bottom: 0; font-size: .9rem;">
@@ -366,7 +366,7 @@
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="bayang count" data-target="535">0</h4>
                         {{-- <hr> --}}
-                        <p class="bayang">Mahasiswa Baru</p>
+                        <p class="bayang">Mahasiswa</p>
                     </div>
                 </div>
                 <div class="row">
@@ -376,7 +376,7 @@
                         <p class="bayang">Doktor</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count bayang" data-target="3">0</h4>
+                        <h4 class="count bayang" data-target="4">0</h4>
                         {{-- <hr> --}}
                         <p class="bayang">Guru Besar</p>
                     </div>
