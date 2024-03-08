@@ -2,7 +2,7 @@
 
 <header id="header" class="">
     
-<section class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%); font-size: 12px;">
+<section id="topbars" class="top-bar d-flex align-items-center" style="background-color: hsl(197deg 81% 16%); font-size: 12px;">
     <div class="container d-flex justify-content-center justify-content-md-between">
         @isset($topbar)
         <div class="useful-links d-flex align-items-center">
@@ -57,12 +57,10 @@
                 </ul>
             </nav>
         </div>
+        @endisset
     </div>
-    @endisset
 </section>
-
-
-    <div class="container d-flex align-items-center justify-content-between">
+<div class="container d-flex align-items-center justify-content-between">
         {{-- TODO: ubah ini anchornya, kalo dipencet i baru urlnya masih di home, jangan di redirect, nanti baru pindah url baru pindah ke home --}}
         <a  href="{{route('homepage')}}" style="cursor: pointer;" >
             <img src="{{asset('assets/img/LogoITHH.svg')}}" style="width: 14rem; object-fit: cover">

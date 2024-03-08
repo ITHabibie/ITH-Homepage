@@ -29,6 +29,7 @@ Route::get('/register', [App\Http\Controllers\HomeController::class, 'register']
 Route::get('lang/{locale}', [App\Http\Controllers\Controller::class, 'lang'])->name('lang');
 
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('homepage');
+Route::get('/dok', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 
 // Admin Panel
 Route::middleware(['auth'])->group(function () {
@@ -76,4 +77,3 @@ Route::get('post/{slug}', [App\Http\Controllers\FrontController::class, 'show'])
 Route::get('category/{category:slug}', [App\Http\Controllers\FrontController::class, 'category'])->name('category');
 Route::get('/{slug}', [App\Http\Controllers\FrontController::class, 'showNavs'])->name('showNavs');
 Route::get('/{pages?}/{slug}', [App\Http\Controllers\FrontController::class, 'showNav'])->name('showNav');
-// Route::get('/', [App\Http\Controllers\FrontController::class, 'checkSlug']);

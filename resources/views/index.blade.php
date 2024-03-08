@@ -107,17 +107,17 @@
                         <div
                             class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
                             <video id="myVideo" width="1920" height="1080" controls autoplay muted loop>
-                                <source src="{{ asset('assets/ith.mp4') }}"type="video/mp4">
+                                <source src="{{ asset('assets/ithComprezzzz.mp4') }}"type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
                 <ul>
                     <li class="small-navs"><a>Prestasi</a></li>
-                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li class="small-navs"><a><i class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
-                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li class="small-navs"><a>Pembelajaran Daring</a></li>
+                    <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
+                    <li class="small-navs"><a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
+                    <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
+                    <li class="small-navs"><a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;">Pembelajaran Daring</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
                     <li class="small-navs"><a>ITH Care</a></li>
                 </ul>
