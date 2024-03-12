@@ -183,13 +183,13 @@ h6 {
 --------------------------------------------------------------*/
 #header {
     /* hsl(197deg 81% 16%) */
-    background: #0660a6;
+    /* background: #0660a6; */
     /* background: hsl(197deg 82% 26%); */
-    transition: all 0.5s;
-    z-index: 997;
+    /* transition: all 0.5s;
+    z-index: 997; */
     height: 16vh;
     /* color: #fff; */
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); */
 }
 #header.fixed-top {
     height: 110px;
@@ -235,6 +235,32 @@ h6 {
 /**
 * Desktop Navigation
 */
+/* isi dari navbar */
+.isi-konten{ 
+    transform: translate(-50%, -50%);
+    top: 15.2rem;
+    left: 50vw;
+    position: fixed;
+    animation:none !important;
+    background-color:white;
+}
+.isi-konten .container .row .col{
+    display: grid;
+    font-size:14px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .3rem;
+}
+.isi-konten p{
+    position: relative !important;
+}
+.navbar-desktop .show,.navbar-desktop .collapsing{
+    animation: none !important;
+    display:flex !important;
+    width: 60vw !important;
+    height: 17rem !important;
+    padding:1rem 2rem;
+}
+
 .navbar {
     padding: 0;
 }
@@ -304,6 +330,9 @@ h6 {
     color: #fff;
 }
 /* dropdown */
+.bg{
+    background-color:crimson;
+}
 .navigasi ul li ul.menu-container p {
     margin-top: 2.5rem;
 }
@@ -454,20 +483,95 @@ h6 {
 .tombol-mobile {
     display: none;
 }
-@media (max-width: 991px) {
-    .mobile-nav-toggle,
+@media (max-width:864px) and (min-width:768px){
+    .navbar a img{
+        width:8rem !important;
+    }
+    .navbar-toggler{
+        padding:0;
+    }
+    .navbar-desktop .show, .navbar-desktop .collapsing {
+        animation: none !important;
+        display: flex !important;
+        width: 95vw !important;
+        height: 22.5rem !important;
+        padding: 1rem 2rem;
+    }
+}
+@media (min-width:865px) and (max-width:928px){
+    .navbar a img{
+        width:8rem !important;
+    }
+    .navbar-toggler{
+        padding:0;
+    }
+    .navbar-desktop .show, .navbar-desktop .collapsing {
+        animation: none !important;
+        display: flex !important;
+        width: 95vw !important;
+        height: 25.6rem !important;
+        padding: 1rem 2rem;
+    }
+}
+/* @media (min-width: 929px ) and (max-width:1092px){ */
+@media (min-width: 929px ) and (max-width:993px){
+    .navbar-toggler{
+        padding:0;
+    }
+    .navbar a img{
+        width:12rem !important;
+    }
+    .navbar-desktop .show, .navbar-desktop .collapsing {
+        animation: none !important;
+        display: flex !important;
+        width: 90vw !important;
+        height: 23rem !important;
+        padding: 1rem 2rem;
+    }
+
+}
+@media (min-width: 994px ) and (max-width:1081px){
+    .navbar-toggler{
+        padding:0;
+    }
+    .navbar a img{
+        width:12rem !important;
+    }
+    .navbar-desktop .show, .navbar-desktop .collapsing {
+        animation: none !important;
+        display: flex !important;
+        width: 90vw !important;
+        height: 18.3rem !important;
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media (max-width: 993px) {
+    /* .navbar{
+        flex-wrap: nowrap;
+    }
+    .navbar-toggler{
+        padding:0 !important;
+    } */
+    #topbars, .top-bar{
+        display:none;
+        position: absolute;
+        visibility: hidden;
+    } 
+    /* .mobile-nav-toggle,
     .tombol-mobile {
         display: block;
         visibility: visible;
         position: absolute;
-    }
-
+    } */
+/* 
     .navbar ul {
         display: none;
     }
     section .top-bar {
         display: none;
-    }
+    } */
     /* .submenu ul{
     display:flex;
     flex-direction: row;
@@ -1951,9 +2055,9 @@ h6 {
         text-align: center;
         padding: 2px 0;
     }
-    #header{
+    /* #header{
         display:none;
-    }
+    } */
 }
 
 /* tabel */

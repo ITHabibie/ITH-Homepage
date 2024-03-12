@@ -24,9 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
-
+    @livewireStyles
     @include('style')
-
     <!-- Vendor CSS Files -->
     {{-- <link href="{{asset('assets')}}/vendor/aos/aos.css" rel="stylesheet"> --}}
     <link href="{{ asset('assets') }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,10 +55,9 @@
     @endphp
     @if ($page->top_bar == 1)
         <!-- ======= Top Bar ======= -->
-        @include('layouts.topbar')
+        {{-- @include('layouts.topbar') --}}
     @endif
     @include('layouts.header')
-
     @isset($jumbotron)
         @if ($jumbotron->style == 2)
             {{-- <section id="hero" class="d-flex align-items-center">
@@ -104,7 +102,7 @@
             <section id="hero" class="d-flex align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div
+                        <div 
                             class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
                             <video id="myVideo" width="1920" height="1080" controls autoplay muted loop>
                                 <source src="{{ asset('assets/ithComprezzzz.mp4') }}"type="video/mp4">
@@ -185,6 +183,7 @@
 
         <!-- ======= Header ======= -->
         @include('layouts.mid')
+        
         <!-- End Header -->
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
@@ -453,7 +452,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets') }}/js/main.js" type="module"></script>
-
+    @livewireScripts
 </body>
 
 </html>
