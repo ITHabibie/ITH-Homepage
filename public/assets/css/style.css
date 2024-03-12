@@ -330,9 +330,9 @@ h6 {
     color: #fff;
 }
 /* dropdown */
-.bg{
+/* .bg{
     background-color:crimson;
-}
+} */
 .navigasi ul li ul.menu-container p {
     margin-top: 2.5rem;
 }
@@ -529,6 +529,13 @@ h6 {
         padding: 1rem 2rem;
     }
 
+}
+@media (max-width: 575px){
+    .nave-desktop{
+        display:none;
+        position: absolute;
+        visibility: hidden;
+    }
 }
 @media (min-width: 994px ) and (max-width:1081px){
     .navbar-toggler{
