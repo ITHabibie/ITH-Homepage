@@ -313,7 +313,7 @@
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
                         @foreach ($postsAnnounce as $item)
-                            <div style="justify-content:space-between;display:flex;border-radius: 14px; width:100%; background-position: right center; background-color:#0660A6;"
+                            <div style="justify-content:space-between;display:flex;border-radius: 14px; width:100%; background-position: right center; background-color:#0660A6; position:relative"
                                 class="event mb-4 shadow-sm">
                                 <div class="p-2">
                                     <p class="desc-berita"
@@ -334,7 +334,7 @@
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px; z-index:-1 !important"
                             class="p-2 text-center btn-event">
                             <i class="bi bi-archive-fill"></i> Pengumuman lainnya
                         </p>

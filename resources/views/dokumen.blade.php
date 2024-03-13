@@ -59,106 +59,115 @@
         {{-- @include('layouts.topbar') --}}
     @endif
     @include('layouts.header')
-        {{-- <div class="hero text-center">
-            <img src={{ asset('assets/img/new_university.svg') }} alt="">
+    <div class=" hero-docs text-center align" style="margin-top: 6.2rem; ">
+        <div class="hero-text"
+            style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Dokumen Resmi</h1>
             <p>Tentang ITH/Dokumen Resmi</p>
-        </div> --}}
-        {{-- <main class="main-table d-flex">
-            <div class="table">
-                <p>Penggunaan dokumen tunduk kepada <a>Terms of Service of ITH Official Document</a></a></p>
-                <table>
-                    <tr>
-                        <th class="text-center">No. </th>
-                        <th>Judul Dokumen </th>
-                        <th>Tahun </th>
-                        <th>Dokumen Indonesia </th>
-                        <th>Dokumen Inggris </th>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Visi dan Misi Tujuan ITH</td>
-                        <td>-</td>
-                        <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                        <td>1</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="side-table">
-                <nav> --}}
-                    {{-- @foreach ($navbarmenu->whereIn('format',[0,1])->where('view','1')->sortBy('order') as $loop1)
-                        {{$loop1->id}} 
-                    @endforeach --}}
-{{-- 
-                    <ul>
+        </div>
+    </div>
+    <main class="main-table container d-flex">
+        <div class="table">
+            <p>Penggunaan dokumen tunduk kepada <a>Terms of Service of ITH Official Document</a></a></p>
+            <table>
+                <tr>
+                    <th class="text-center">No. </th>
+                    <th>Judul Dokumen </th>
+                    <th>Tahun </th>
+                    <th>Dokumen Indonesia </th>
+                    <th>Dokumen Inggris </th>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Visi dan Misi Tujuan ITH</td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
 
-                    </ul>
-                </nav>
-            </div>
-        </main> --}}
+        {{-- TODO: Fetch datanya dari DB --}}
+        <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
+            <p style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
+                Tentang ITH
+            </p>
+            <nav>
+                <ul>
+                    @foreach ($navbarmenu->whereIn('ops1', 1)->sortBy('order') as $loop1)
+                        <p >
+                            <a style="color:black;" href="{{route('showNav', ['tentang-ith', $loop1->slug])}}">
+                                {{$loop1->indtitle}}
+                            </a>
+                        </p>
+                    @endforeach
+                </ul>
+            </nav>
+        </div>
+    </main>
     {{-- @include('layouts.footer') --}}
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"

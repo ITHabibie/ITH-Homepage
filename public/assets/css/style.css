@@ -814,6 +814,7 @@ h6 {
     line-height: 0;
     margin-right: 8px;
 }
+
 #hero .btn-watch-video:hover {
     color: #106eea;
 }
@@ -2077,8 +2078,8 @@ table{
     border-collapse: collapse;
 }
 .side-table{
-    background-color: #f18516;
-    height: 100%;
+    /* background-color: #f18516; */
+    /* height: 100%; */
 }
 td, th {
     border: 1px solid #dddddd;
