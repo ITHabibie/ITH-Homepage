@@ -270,14 +270,14 @@
             {{-- event pengumuman --}}
             <div class="container d-flex justify-content-evenly" data-aos="fade-up">
                 <div class="event">
-                    <div class="section-title" style="margin-left: 10rem;padding-top: 2rem;">
+                    <div class="section-title" style="margin-left: 0rem;padding-top: 2rem;">
                         <h2 style="color:#040348;">{{ __('cek.event') }}</h2>
                     </div>
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart.png') }}" style=" position: absolute; left:-20vw;">
                         @foreach ($postsEvents as $item)
                             <div class="event p-2 mb-4 shadow-sm"
-                                style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
+                                style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;margin-right:-2.8rem;">
                                 <p style="color:#040348; margin-bottom: 0; font-size: .9rem;" class="desc-berita">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
@@ -290,22 +290,22 @@
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;margin-bottom:3rem;"
                             class="p-2 text-center btn-event">
                             <i class="bi bi-archive-fill"></i> Kegiatan ITH lainnya
                         </p>
                     </div>
                 </div>
-                <div style="border-left:3px solid #615F5F;height:auto; width: 20px; margin: 4rem 0 1rem 0;"></div>
+                <div style="border-left:3px solid #d1d1d1;height:auto; width: 10px; margin:2.5rem 2.5rem 3.2rem 3rem;"></div>
                 <div class="pengumuman">
-                    <div class="section-title" style="padding-top: 2rem; margin-right: 10rem;">
+                    <div class="section-title" style="padding-top: 2rem; margin-right: 0rem;">
                         <h2 style="color:#040348;">{{ __('cek.pengumuman') }}</h2>
                     </div>
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
                         @foreach ($postsAnnounce as $item)
                             <div class="event p-2 mb-4 shadow-sm"
-                                style="width: 100%;border-radius: 14px; background:#0660a6">
+                                style="width: 100%;border-radius: 14px; background:#0660a6;">
                                 <p class="desc-berita" style="color:#fff; margin-bottom: 0; font-size: .9rem;">
                                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                 </p>
