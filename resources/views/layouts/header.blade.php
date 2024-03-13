@@ -115,7 +115,7 @@
     {{-- </div> --}}
 
     {{-- desktop --}}
-    <div style="background-color:#0660a6; padding:0 4rem;" class="nave d-md-block bg d-sm-none d-md-block d-lg-block" style="padding: 0 15rem; animation:none !important;">
+    <div style="background-color:#0660a6; padding:0 4rem;" class="nave nave-desktop d-md-block bg d-sm-none d-md-block d-lg-block" style="padding: 0 15rem; animation:none !important;">
         <nav class="navbar">
             <a href="{{ route('homepage') }}" style="cursor: pointer;">
                 <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 14rem; object-fit: cover">
@@ -235,14 +235,14 @@
                 <i class="bi bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="btn">
-                <ul class="navbar-nav align-items-start ms-auto d-md-none">
+                <ul class="navbar-nav align-items-start ms-auto d-md-none" style="background-color:#FFFFFF">
                     @foreach ($navbarmenu->whereIn('format', [0, 1])->where('view', '1')->sortBy('order') as $loop1)
                         @if ($loop1->format == 1)
-                            <li >
+                            <li style=" width:100%">
                                 <button  class="navbar-toggler nav-judul" type="button" data-bs-toggle="collapse"
                                     data-bs-target={{ "#btn$loop1->id" }} style="font-size:15px !important;">{{ $language == 'id' ? $loop1->indtitle : $loop1->engtitle }}</button>
                                 <i class="bi bi-chevron-right"></i></a>
-                                <div class="collapse navbar-collapse" id={{ "btn$loop1->id" }}>
+                                <div style="background-color:#D9D9D9;" class="collapse navbar-collapse" id={{ "btn$loop1->id" }}>
                                     <ul class="align-items-start" style="padding-left:1.5rem; display:flex; flex-direction:column">
                                         @foreach ($navbarmenu->where('ops1', $loop1->id)->whereIn('format', [2, 3])->where('view', '1')->sortBy('order') as $loop2)
                                             @if ($loop2->format == 3)

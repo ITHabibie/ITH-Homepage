@@ -31,6 +31,8 @@ Route::get('lang/{locale}', [App\Http\Controllers\Controller::class, 'lang'])->n
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('homepage');
 Route::get('/dok', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 Route::get('/profil', [App\Http\Controllers\FrontController::class, 'profil'])->name('profil');
+Route::get('/visi_misi', [App\Http\Controllers\FrontController::class, 'visi_misi'])->name('visi_misi');
+Route::get('/kalender', [App\Http\Controllers\FrontController::class, 'kalender'])->name('kalender');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
 
 // Admin Panel

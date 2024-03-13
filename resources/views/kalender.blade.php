@@ -59,119 +59,16 @@
         {{-- @include('layouts.topbar') --}}
     @endif
     @include('layouts.header')
-    <div class=" hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
-            <h1>Dokumen Resmi</h1>
-            <p>Tentang ITH/Dokumen Resmi</p>
+            <h1>Profil Singkat</h1>
+            <p>Tentang ITH / Profil Singkat</p>
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
-        <div class="table">
-            <p>Penggunaan dokumen tunduk kepada <a>Terms of Service of ITH Official Document</a></a></p>
-            <h3>Dokumen Perencanaan</h3>
-            <table>
-                <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
-                </tr>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td>Renstra</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">2</td>
-                    <td>RKAT</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">3</td>
-                    <td>RKAKL</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">4</td>
-                    <td>Pedoman Renstra</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">5</td>
-                    <td>Pedoman RKT dan Rencana Aksi</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-            </table>
-            <h3>Dokumen Pelaksanaan</h3>
-            <table>
-                <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
-                </tr>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td>Laporan dan Dokumentasi Pelaksanaan Kegiatan</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-            </table>
-            <h3>Dokumen Dokumen Evaluasi</h3>
-            <table>
-                <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
-                </tr>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td>Laporan Kinerja 2023</td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-            </table>
-            <h3>SAKIP</h3>
-            <table>
-                <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
-                </tr>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td>Laporan Kinerja 2023 </td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">2</td>
-                    <td>Laporan Hasil Kinerja SAKIP </td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-            </table>
+        <div class="table-profil" style="text-align: justify;">
+            <img src="assets\img\kalender-akademik.png" align="left" style="width: 900px; height: 1400px;" alt="Kampus 1">
         </div>
 
         {{-- TODO: Fetch datanya dari DB --}}
