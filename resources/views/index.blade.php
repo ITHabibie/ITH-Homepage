@@ -102,7 +102,7 @@
             <section id="hero" class="d-flex align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div 
+                        <div
                             class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
                             <video id="myVideo" width="1920" height="1080" controls autoplay muted loop>
                                 <source src="{{ asset('assets/ithComprezzzz.mp4') }}"type="video/mp4">
@@ -113,9 +113,11 @@
                 <ul>
                     <li class="small-navs"><a>Prestasi</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
-                    <li class="small-navs"><a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
+                    <li class="small-navs"><a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i
+                                class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
-                    <li class="small-navs"><a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;">Pembelajaran Daring</a></li>
+                    <li class="small-navs"><a href="https://www.youtube.com/@ith_idn" target="_blank"
+                            style="color: white;">Pembelajaran Daring</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
                     <li class="small-navs"><a>ITH Care</a></li>
                 </ul>
@@ -183,7 +185,7 @@
 
         <!-- ======= Header ======= -->
         @include('layouts.mid')
-        
+
         <!-- End Header -->
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
@@ -205,7 +207,7 @@
                             <div class="member">
                                 <div class="member-img">
                                     <a style="width:300px;" href="{{ route('show', $item->slug) }}">
-                                        <img  style=" object-fit: cover; height: 200px;" src="{{ $item->cover }}">
+                                        <img style=" object-fit: cover; height: 200px;" src="{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
@@ -276,16 +278,23 @@
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart.png') }}" style=" position: absolute; left:-20vw;">
                         @foreach ($postsEvents as $item)
-                            <div class="event p-2 mb-4 shadow-sm"
-                                style="width:100%;  border-radius: 14px; background:#D9D9D9; z-index: 999999;">
-                                <p style="color:#040348; margin-bottom: 0; font-size: .9rem;" class="desc-berita">
-                                    {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
-                                </p>
-                                <a style="color:#040348" class="judul-berita"
-                                    href="{{ route('show', $item->slug) }}">
-                                    <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
+                            <div style="justify-content:space-between;display:flex;border-radius: 14px; width:100%; background-position: right center; background-color:#0660A6;"
+                                class="event mb-4 shadow-sm">
+                                <div class="p-2">
+                                    <p class="desc-berita"
+                                        style="z-index:999 !important;color:#fff; margin-bottom: 0; font-size: .9rem;">
+                                        {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                     </p>
-                                </a>
+                                    <a style="z-index:999 !important;color:#fff" class="judul-berita"
+                                        href="{{ route('show', $item->slug) }}">
+                                        <p>{{ $language == 'id' ? \Str::words($item->title, 4, '...') : \Str::words($item->engtitle, 7, '...') }}
+                                        </p>
+                                    </a>
+                                </div>
+                                <div style="border-radius: 12px;">
+                                    <img style="object-fit:cover; height:5rem; width:10rem; border-radius: 24px 12px 12px 24px;"
+                                        src={{ $item->cover }} alt="">
+                                </div>
                             </div>
                         @endforeach
                     </div>
@@ -304,20 +313,28 @@
                     <div class="event p-2">
                         <img src="{{ asset('assets/img/bgart2.png') }}" style=" position: absolute; left:80vw;">
                         @foreach ($postsAnnounce as $item)
-                            <div class="event p-2 mb-4 shadow-sm"
-                                style="width: 100%;border-radius: 14px; background:#0660a6">
-                                <p class="desc-berita" style="color:#fff; margin-bottom: 0; font-size: .9rem;">
-                                    {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
-                                </p>
-                                <a style="color:#fff" class="judul-berita" href="{{ route('show', $item->slug) }}">
-                                    <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
+                            <div style="justify-content:space-between;display:flex;border-radius: 14px; width:100%; background-position: right center; background-color:#0660A6; position:relative"
+                                class="event mb-4 shadow-sm">
+                                <div class="p-2">
+                                    <p class="desc-berita"
+                                        style="z-index:999 !important;color:#fff; margin-bottom: 0; font-size: .9rem;">
+                                        {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('F j, Y') }}
                                     </p>
-                                </a>
+                                    <a style="z-index:999 !important;color:#fff" class="judul-berita"
+                                        href="{{ route('show', $item->slug) }}">
+                                        <p>{{ $language == 'id' ? \Str::words($item->title, 7, '...') : \Str::words($item->engtitle, 7, '...') }}
+                                        </p>
+                                    </a>
+                                </div>
+                                <div style="border-radius: 12px;">
+                                    <img style="object-fit:cover; height:5rem; width:10rem; border-radius: 24px 12px 12px 24px;"
+                                        src={{ $item->cover }} alt="">
+                                </div>
                             </div>
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center " style="color: #fff;">
-                        <p style="background-color: #F18516; color: #fff;border-radius: 4px;"
+                        <p style="background-color: #F18516; color: #fff;border-radius: 4px; z-index:-1 !important"
                             class="p-2 text-center btn-event">
                             <i class="bi bi-archive-fill"></i> Pengumuman lainnya
                         </p>
@@ -348,19 +365,19 @@
                 class="container border-light d-flex flex-column justify-content-around   border border-5 border-primary">
                 <div class="row">
                     <div class="col counter text-center angka" id="counter">
-                        <h4  class="count bayang" data-target="2">0</h4>
+                        <h4 class="count bayang" data-target="2">0</h4>
                         {{-- <hr> --}}
-                        <p class="bayang" >Jurusan</p>
+                        <p class="bayang">Jurusan</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4  class="count bayang" data-target="10">0</h4>
+                        <h4 class="count bayang" data-target="10">0</h4>
                         {{-- <hr> --}}
-                        <p class="bayang" >Program Studi</p>
+                        <p class="bayang">Program Studi</p>
                     </div>
                     {{-- <div class="col counter text-center angka" id="counter">
                         <h4 class="bayang count" data-target="10">0</h4> --}}
-                        {{-- <hr> --}}
-                        {{-- <p class="bayang">Program Studi</p>
+                    {{-- <hr> --}}
+                    {{-- <p class="bayang">Program Studi</p>
                     </div> --}}
                     <div class="col counter text-center angka" id="counter">
                         <h4 class="bayang count" data-target="535">0</h4>
@@ -387,7 +404,8 @@
                 </div>
                 <div class="row">
                     <div class="col desc-berita text-center angka">
-                        <a style="font-size: 18px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
+                        <a
+                            style="font-size: 18px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
                                 class="bi bi-book"></i> fakta lain</a>
                     </div>
                 </div>
