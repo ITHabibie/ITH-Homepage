@@ -33,7 +33,50 @@
     <link href="{{ asset('assets') }}/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <style>
+        #hero ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            left: 50%;
+            top: 100%;
+            width: 100vw;
+            position: sticky;
+            transform: translate(-50%, 30%);
+            background: rgba(0, 0, 0, 0.4);
+        }
 
+        section {
+            padding: 0 !important;
+        }
+
+        #hero {
+            width: 100%;
+            height: 81vh;
+            margin-top: 8rem;
+            background: url("../img/kampus.png") bottom left;
+            background-size: cover;
+            position: relative;
+        }
+
+        #myVideo {
+            z-index: -1;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        #footer {
+            position: relative;
+            z-index: 999999;
+        }
+    </style>
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
 
@@ -102,30 +145,59 @@
             <section id="hero" class="d-flex align-items-center">
                 <div class="container">
                     <div class="row">
-                        <div
-                            class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+                        <div class="col-lg-8 col-md-12 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+                            style="position:relative; z-index:11;">
                             <video id="myVideo" width="1920" height="1080" controls autoplay muted loop>
                                 <source src="{{ asset('assets/ithComprezzzz.mp4') }}"type="video/mp4">
                             </video>
                         </div>
                     </div>
                 </div>
-                <ul>
-                    <li class="small-navs"><a>Prestasi</a></li>
+                <ul
+                    style="z-index:11;list-style-type: none;display: flex;justify-content: center;padding: 1rem;left: 50%;top: 100%;width: 100vw;position: sticky;transform: translate(-50%, 30%);background: rgba(0, 0, 0, 0.4);">
+                    <li class="small-navs"
+                        style="font-size: 14px;
+  font-weight: 600;
+  font-family: Roboto Mono, monospace;
+  color: white;
+  margin-right: 1rem;
+  position: relative;">
+                        <a>Prestasi</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
-                    <li class="small-navs"><a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i
+                    <li class="small-navs"
+                        style="font-size: 14px;
+  font-weight: 600;
+  font-family: Roboto Mono, monospace;
+  color: white;
+  margin-right: 1rem;
+  position: relative;">
+                        <a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i
                                 class="bi bi-youtube mt-4"></i> Kanal Youtube</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
-                    <li class="small-navs"><a href="https://www.youtube.com/@ith_idn" target="_blank"
-                            style="color: white;">Pembelajaran Daring</a></li>
+                    <li class="small-navs"
+                        style="font-size: 14px;
+  font-weight: 600;
+  font-family: Roboto Mono, monospace;
+  color: white;
+  margin-right: 1rem;
+  position: relative;">
+                        <a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;">Pembelajaran
+                            Daring</a></li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li class="small-navs"><a>ITH Care</a></li>
+                    <li class="small-navs"
+                        style="font-size: 14px;
+  font-weight: 600;
+  font-family: Roboto Mono, monospace;
+  color: white;
+  margin-right: 1rem;
+  position: relative;">
+                        <a>ITH Care</a></li>
                 </ul>
             </section>
         @endif
     @endisset
 
-    <main id="main">
+    <main id="main" style="z-index:11; position:relative;">
         <!-- ======= Header ======= -->
         {{-- @include('layouts.top') --}}
         <!-- End Header -->
@@ -189,25 +261,28 @@
         <!-- End Header -->
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
-            <section class="adm" style="text-align:center; background:#D9D9D9;">
+            <section class="adm" style="text-align:center; background:#D9D9D9;padding:60px !important;">
                 <a href="https://admission.ith.ac.id">
                     <img src="{{ asset('assets/img/admm.png') }}" style="width: 32rem; object-fit: cover">
                 </a>
             </section>
             <div class="container" data-aos="fade-up">
-                <div class="section-title" style="padding-top: 2rem">
-                    <h2 style="color:#040348;">{{ __('cek.berita-1') }}</h2>
+                <div class="section-title" style="padding-top: 2rem;">
+                    <h2
+                        style="color:#040348; background:none; text-decoration:underline; text-underline-offset:1rem; font-size:24px;">
+                        {{ __('cek.berita-1') }}</h2>
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 {{-- <div class="row"> --}}
-                <div class="berita">
+                <div class="berita" style="display:flex; justify-content:space-evenly;">
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
                             <div class="member">
                                 <div class="member-img">
                                     <a style="width:300px;" href="{{ route('show', $item->slug) }}">
-                                        <img style=" object-fit: cover; height: 200px;" src="{{ $item->cover }}">
+                                        <img style=" object-fit: cover; height: 200px; width:400px;"
+                                            src="{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
