@@ -1546,7 +1546,7 @@ h6 {
 /* ith dalam angka */
 #numbers {
     /* font-family: 'IBM-Plex-Sans', sans-serif; */
-    padding: 0.5rem;
+    padding: 2rem;
 }
 #numbers .container .row .col h4 {
     font-family: "IBM-Plex-Sans", sans-serif;
@@ -2077,6 +2077,12 @@ table{
     width: 100%;
     border-collapse: collapse;
 }
+.table-profil {
+    margin: rem 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
 .side-table{
     /* background-color: #f18516; */
     /* height: 100%; */

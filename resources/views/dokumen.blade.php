@@ -26,7 +26,35 @@
 
     @livewireStyles
     @include('style')
+	
+    <style>
+        .main-table {
+            padding: 4rem;
+        }
 
+        table {
+            margin: 2rem 0;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .side-table {
+            /* background-color: #f18516; */
+            /* height: 100%; */
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px !important;
+}
+    </style>
     <!-- Vendor CSS Files -->
     {{-- <link href="{{asset('assets')}}/vendor/aos/aos.css" rel="stylesheet"> --}}
     <link href="{{ asset('assets') }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -69,14 +97,14 @@
     <main class="main-table container d-flex" style="gap:2rem;">
         <div class="table">
             <p>Penggunaan dokumen tunduk kepada <a>Terms of Service of ITH Official Document</a></a></p>
-            <h3>Dokumen Perencanaan</h3>
             <table>
+                <th colspan="5">Dokumen Perencanaan</th>
                 <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
+                    <td class="text-center">No. </td>
+                    <td>Judul Dokumen </td>
+                    <td>Tahun </td>
+                    <td>Dokumen Indonesia </td>
+                    <td>Dokumen Inggris </td>
                 </tr>
                 <tr>
                     <td class="text-center">1</td>
@@ -113,15 +141,14 @@
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
                 </tr>
-            </table>
-            <h3>Dokumen Pelaksanaan</h3>
-            <table>
+                <th colspan="5">Dokumen Pelaksanaan</th>
+
                 <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
+                    <td class="text-center">No. </td>
+                    <td>Judul Dokumen </td>
+                    <td>Tahun </td>
+                    <td>Dokumen Indonesia </td>
+                    <td>Dokumen Inggris </td>
                 </tr>
                 <tr>
                     <td class="text-center">1</td>
@@ -130,15 +157,13 @@
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
                 </tr>
-            </table>
-            <h3>Dokumen Dokumen Evaluasi</h3>
-            <table>
+                <th colspan="5"> Dokumen Evaluasi</th>
                 <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
+                    <td class="text-center">No. </td>
+                    <td>Judul Dokumen </td>
+                    <td>Tahun </td>
+                    <td>Dokumen Indonesia </td>
+                    <td>Dokumen Inggris </td>
                 </tr>
                 <tr>
                     <td class="text-center">1</td>
@@ -147,15 +172,13 @@
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
                 </tr>
-            </table>
-            <h3>SAKIP</h3>
-            <table>
+                <th colspan="5">SAKIP</th>
                 <tr>
-                    <th class="text-center">No. </th>
-                    <th>Judul Dokumen </th>
-                    <th>Tahun </th>
-                    <th>Dokumen Indonesia </th>
-                    <th>Dokumen Inggris </th>
+                    <td class="text-center">No. </td>
+                    <td>Judul Dokumen </td>
+                    <td>Tahun </td>
+                    <td>Dokumen Indonesia </td>
+                    <td>Dokumen Inggris </td>
                 </tr>
                 <tr>
                     <td class="text-center">1</td>
@@ -176,17 +199,18 @@
 
         {{-- TODO: Fetch datanya dari DB --}}
         <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
-            <p style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
+            <p
+                style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
                 <i class="bi bi-chevron-left"></i>
                 Tentang ITH
             </p>
             <nav>
                 <ul>
                     @foreach ($navbarmenu->whereIn('ops1', 1)->sortBy('order') as $loop1)
-                    <p >
-                        <a style="color:black;" href="{{route('showNav', ['tentang-ith', $loop1->slug])}}">
-                            <i class="bi bi-chevron-right"></i>
-                                {{$loop1->indtitle}}
+                        <p>
+                            <a style="color:black;" href="{{ route('showNav', ['tentang-ith', $loop1->slug]) }}">
+                                <i class="bi bi-chevron-right"></i>
+                                {{ $loop1->indtitle }}
                             </a>
                         </p>
                     @endforeach
