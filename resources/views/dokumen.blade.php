@@ -49,6 +49,11 @@
             text-align: left;
             padding: 8px;
         }
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px !important;
+}
     </style>
     <!-- Vendor CSS Files -->
     {{-- <link href="{{asset('assets')}}/vendor/aos/aos.css" rel="stylesheet"> --}}
