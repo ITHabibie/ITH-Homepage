@@ -29,7 +29,7 @@ Route::get('/register', [App\Http\Controllers\HomeController::class, 'register']
 Route::get('lang/{locale}', [App\Http\Controllers\Controller::class, 'lang'])->name('lang');
 
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('homepage');
-Route::get('/dok', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
+Route::get('/dokumen-resmi', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
 
 // Admin Panel
