@@ -8,6 +8,16 @@
         font-size: 14px;
         /* width: 100vw; */
     }
+    @media(max-width:768px){
+        .footer-left{
+            display:none !important;
+        }
+        .terms, .icons{
+            display:flex !important;
+            flex-direction: row !important;
+        }
+        
+    }
 </style>
 
 <!-- ======= Footer ======= -->

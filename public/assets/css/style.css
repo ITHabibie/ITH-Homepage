@@ -553,7 +553,39 @@ h6 {
     }
 
 }
+@media (max-width: 768px) {
+    .img-container img{
+        width:8rem !important; 
+    }
+    #footer .img-container {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
+    .tnc {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #footer div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .berita,
+    .event-pengumuman {
+        display: flex;
+        flex-direction: column
+    }
+
+    /* .bg-art,
+    #myVideo {
+        position: absolute;
+        display: none;
+        visibility: hidden
+    } */
+}
 @media (max-width: 993px) {
     /* .navbar{
         flex-wrap: nowrap;

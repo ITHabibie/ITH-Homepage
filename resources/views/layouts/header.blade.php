@@ -203,7 +203,7 @@
                         style="display:flex !important; flex-direction:row; gap:.5rem; ">
                         @foreach ($navbarmenu->whereIn('format', [0, 1])->where('view', '1')->sortBy('order') as $loop1)
                             @if ($loop1->format == 1)
-                                <li >
+                                <li>
                                     <button style="color:white; font-size:15px;" onclick="tes(this)" class="navbar-toggler" type="button"
                                         data-bs-toggle="collapse"
                                         data-bs-target={{ "#btn$loop1->id" }}>{{ $language == 'id' ? $loop1->indtitle : $loop1->engtitle }}</button>
@@ -245,7 +245,6 @@
                                                                                     href="{{ route('showNav', [$loop1->slug, $loop3->slug]) }}">
                                                                                     {{ $language == 'id' ? $loop3->indtitle : $loop3->engtitle }}
                                                                                     <i class="bi bi-chevron-right"></i>
-    
                                                                                 </a>
                                                                             </li>
                                                                         @endforeach
@@ -255,7 +254,8 @@
                                                         @else
                                                             <a href="{{ route('showNav', [$loop1->slug, $loop2->slug]) }}"
                                                                 style="border-bottom: 1px solid black">
-                                                                {{ $loop2->indtitle }}
+                                                                {{ $language == 'id' ? $loop2->indtitle : $loop2->engtitle }}
+                                                                {{-- {{ $loop2->indtitle }} --}}
                                                                 <i class="bi bi-chevron-right"></i>
                                                             </a>
                                                         @endif

@@ -141,6 +141,21 @@ tbody, td, tfoot, th, thead, tr {
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
                 </tr>
+                <th colspan="5">SAKIP</th>
+                <tr>
+                    <td class="text-center">No. </td>
+                    <td>Judul Dokumen </td>
+                    <td>Tahun </td>
+                    <td>Dokumen Indonesia </td>
+                    <td>Dokumen Inggris </td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Laporan Hasil Kinerja SAKIP </td>
+                    <td>-</td>
+                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
+                    <td>-</td>
+                </tr>
                 <th colspan="5">Dokumen Pelaksanaan</th>
 
                 <tr>
@@ -172,24 +187,9 @@ tbody, td, tfoot, th, thead, tr {
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
                 </tr>
-                <th colspan="5">SAKIP</th>
-                <tr>
-                    <td class="text-center">No. </td>
-                    <td>Judul Dokumen </td>
-                    <td>Tahun </td>
-                    <td>Dokumen Indonesia </td>
-                    <td>Dokumen Inggris </td>
-                </tr>
                 <tr>
                     <td class="text-center">1</td>
-                    <td>Laporan Kinerja 2023 </td>
-                    <td>-</td>
-                    <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td class="text-center">2</td>
-                    <td>Laporan Hasil Kinerja SAKIP </td>
+                    <td>Laporan Kinerja 2024</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
                     <td>-</td>
