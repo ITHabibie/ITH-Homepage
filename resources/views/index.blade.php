@@ -224,7 +224,7 @@
                 top: 50%;
                 transform: translate(-50%,
                         -72%) !important;
-               
+
                 width: 100vh !important;
                 height: 100vh !important;
             }
@@ -619,7 +619,7 @@
                     </div>
                     <div class="event p-2">
                         <img class="bg-art" src="{{ asset('assets/img/bgart2.png') }}"
-                            style=" position: absolute; left:80vw;">
+                            style=" position: absolute; right:0vw;">
                         @foreach ($postsAnnounce as $item)
                             <div style="justify-content:space-between;display:flex;border-radius: 14px; width:100%; background-position: right center; background-color:#0660A6; position:relative"
                                 class="event mb-4 shadow-sm">

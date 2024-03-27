@@ -12,7 +12,7 @@
     }
     .isi-konten {
        
-      transform: translate(-50%, -53%);
+      transform: translate(-50%, -50%);
       top: 15.75rem;
       left: 50vw;
       position: fixed;
@@ -417,8 +417,8 @@
             let isiKonten = document.getElementsByClassName('isi-konten');
     if (browserName == 'Opera') {
         for (let i = 0; i < isiKonten.length; i++) {
-            isiKonten[i].style.transform = 'translate(-50%, -53%)';
-            isiKonten[i].style.setProperty('transform', 'translate(-50%, -53%)', 'important');
+            isiKonten[i].style.transform = 'translate(-50%, -50%)';
+            isiKonten[i].style.setProperty('transform', 'translate(-50%, -50%)', 'important');
         }
     }
         }
