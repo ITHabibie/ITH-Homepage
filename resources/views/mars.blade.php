@@ -45,6 +45,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body>
@@ -62,23 +63,71 @@
     <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
-            <h1>Profil Singkat</h1>
-            <p>Tentang ITH / Profil Singkat</p>
+            <h1>Hymne & Mars</h1>
+            <p>Tentang ITH / Hymne & Mars</p>
         </div>
     </div>
+    
     <main class="main-table container d-flex" style="gap:2rem;">
-        <div class="table-profil" style="text-align: justify;">
-            <img src="{{asset('assets\img\kampus1.png')}}" align="left" style="width: 18.75rem; height: 15.3125rem; padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.625rem;" alt="Kampus 1">
-            <p>Institut Teknologi Bacharuddin Jusuf Habibie (ITH) sebuah perguruan tinggi di Parepare, Sulawesi Selatan, Indonesia. Institut ini dinamai sesuai dengan nama tokoh besar Indonesia, yaitu Prof. Dr. Ing. Bacharuddin Jusuf Habibie Presiden Republik Indonesia ke -3 yang juga merupakan seorang insinyur terkemuka.
-            </p><p>ITH memiliki visi untuk menjadi institut yang unggul, memiliki daya saing, dan berstandar tinggi. Institut Teknologi Bachruddin Jusuf Habibie memberikan peranan penting dalam bidang pengetahuan, teknologi dan seni untuk kemajuan masyarakat dan pembangunan.</p><p>
-            ITH didirikan berdasarkan Peraturan Presiden Nomor 152 Tahun 2014 tentang Pendirian Institut Teknologi Bachruddin Jusuf Habibie. Rektor saat ini adalah Prof. Dr. Ir. Ansar Suyuti, SH, MT, IPU, ASEAN.Eng., yang dilantik pada tanggal 4 Oktober 2021 untuk masa bakti 2021-2025. ITH hadir sebagai satu-satunya Institut
-            Teknologi Negeri di wilayah Timur Indonesia, sebagai upaya pemerintah Indonesia untuk memfasilitasi warga negara khususnya wilayah timur untuk mendapatkan pendidikan tinggi.
-            <img src="{{asset('assets\img\kampus2.png')}}" align="right" style="width: 18.75rem; height: 14.9375rem; padding-left: 0.9375rem; padding-top: 0.9375rem;" alt="Kampus 2"></p><p>
-            Saat ini ITH memiliki jumlah 535 mahasiswa, 3 dosen doktor , 3 guru besar dan 23 dosen muda milenial. ITH menawarkan berbagai program studi dan jurusan. Yang saat ini memiliki dua jurusan yaitu Jurusan Sains yang terdiri dari lima prodi diantarany Matematika, Sains Aktuaria, Sains Data, Biokteknologi serta Sains Informasi
-            dan Jurusan Teknologi Produksi & Industri yang terdiri dari lima prodi diantaranya Ilmu komputer, Teknologi Pangan, Teknik Metalurgi, Teknik Sistem Energi, dan Teknik Sipil. Almamater ITH memiliki warna dasar jingga dengan logo ITH berbentuk gerigi. Melalui kepemimpinan yang kuat, ITH bertujuan untuk menghasilkan sarjana
-            muda yang ahli di bidang engineering.</p>
+        <div class="table-profil scroller" style="text-align: justify; scrollbar-color: rgb(239, 164, 44) #dedede;">
+            <p>Institut Teknologi Bacharuddin Jusuf Habibie memiliki Lagu Hymne dan Mars yang masih digunakan hingga saat ini. Berikut lirik lagu hymne dan Mars ITH :</p>
+            <br>
+            <h2>Hymne ITH</h2>
+            <br>
+            <div>
+                <img src="{{asset('assets\img\hymne.png')}}" align="right" style="width: 20rem; height: 12.5rem; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem;" alt="hymne">
+            </div>
+            <div style="width: 30rem; height: 18.75rem; overflow: auto;">
+                <p>Bapak teknologi bangsa</p>
+                <p>Menjadi panutan bersama</p>
+                <p>Sebagai patriot teknoktrat bangsa</p>
+                <p>Kembangkan teknologi dengan makna cinta</p>
+                <br>
+                <p>Almamater ITH tercinta</p>
+                <p>Di tanganmulah kebangkitan bangsa</p>
+                <p>Cita-cita mulia</p>
+                <p>Membangun peradaban jaya</p>
+                <br>
+                <p>Institut teknologi B.J Habibie</p>
+                <p>Dari kota cinta membangun bakti</p>
+                <p>Menyatukan ilmu dan amal</p>
+                <p>Demi kejayaan bersama</p>
+                <br>
+                <p>Institut Teknologi B.J Habibie</p>
+                <p>Bersamamu kami mengabdi</p>
+                <p>Institut Teknologi B.J Habibie</p>
+                <p>Bersamamu kami berbakti</p>
+            </div>
+            <br><br>
+            <h2>Mars ITH</h2>
+            <br>
+            <div>
+                <img src="{{asset('assets\img\mars.png')}}" align="right" style="width: 20rem; height: 12.5rem; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem;" alt="mars">
+            </div>
+            <div style="width: 30rem; height: 18.75rem; overflow: auto;">
+                <p>Institut Teknologi B.J Habibie</p>
+                <p>Menjunjung tinggi martabat kemanusiaan</p>
+                <p>Berwawasan lingkungan berjiwa enterpteneur</p>
+                <p>Berlandaskan cinta membangun nusa bangsa</p>
+                <br>
+                <p>Institut Teknologi B.J Habibie</p>
+                <p>Kembangkan jiwa teknologi dengan cinta</p>
+                <p>Mewujudkan semangat B.J Habibie</p>
+                <p>Bapak teknologi bangsa</p>
+                <br>
+                <p>Menghasilkan lulusan unggul dan inovatif</p>
+                <p>Berkarakter dan beradab</p>
+                <p>Hasilkan karya nyata ilmu pengetahuan</p>
+                <p>Bermanfaat bagi nusa dan bangsa</p>
+                <br>
+                <p>Jayalah... ITH</p>
+                <p>Kembangkan ilmu dan teknologi</p>
+                <p>Majulah... ITH</p>
+                <p>Jadi kebanggaan Indonesia</p>
+                <p>Institut Teknologi B.J Habibie</p>
+            </div>
         </div>
-
+        
         {{-- TODO: Fetch datanya dari DB --}}
         <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
             <p style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
@@ -99,6 +148,7 @@
             </nav>
         </div>
     </main>
+    
     @include('layouts.footer')
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
