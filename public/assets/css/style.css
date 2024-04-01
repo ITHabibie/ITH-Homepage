@@ -257,7 +257,7 @@ h6 {
     animation: none !important;
     display:flex !important;
     width: 60vw !important;
-    height: 17rem !important;
+    height: 17rem ;
     padding:1rem 2rem;
 }
 
@@ -483,7 +483,7 @@ h6 {
 .tombol-mobile {
     display: none;
 }
-@media (max-width:864px) and (min-width:768px){
+@media (max-width:992px) and (min-width:768px){
     .navbar a img{
         width:8rem !important;
     }
@@ -498,7 +498,7 @@ h6 {
         padding: 1rem 2rem;
     }
 }
-@media (min-width:865px) and (max-width:928px){
+@media (min-width:865px) and (max-width:992px){
     .navbar a img{
         width:8rem !important;
     }
@@ -548,14 +548,14 @@ h6 {
         animation: none !important;
         display: flex !important;
         width: 90vw !important;
-        height: 18.3rem !important;
+        height: 18.3rem ;
         padding: 1rem 2rem;
     }
 
 }
 @media (max-width: 768px) {
     .img-container img{
-        width:8rem !important; 
+        width:8rem; 
     }
     #footer .img-container {
         display: flex !important;
@@ -1572,7 +1572,7 @@ h6 {
     font-weight: 400;
 }
 .adm {
-    padding: 3rem 0 4rem 0;
+    /* padding: 3rem 0 4rem 0; */
 }
 
 /* ith dalam angka */
@@ -1580,16 +1580,16 @@ h6 {
     /* font-family: 'IBM-Plex-Sans', sans-serif; */
     padding: 2rem;
 }
-#numbers .container .row .col h4 {
-    font-family: "IBM-Plex-Sans", sans-serif;
+/* #numbers .container .row .col h4 {
+    font-family: "IBM Plex Sans", sans-serif;
     font-weight: bold;
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
 
     animation: countup 2s ease-out;
-}
+} */
 #numbers .container .row .col p {
-    font-family: "IBM-Plex-Sans", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     font-weight:600;
     color: white;
     font-size: 1.6rem;
@@ -1612,7 +1612,7 @@ h6 {
     padding: 0.5rem;
 }
 #numbers h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 #numbers {
     position: relative;

@@ -68,7 +68,7 @@
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
         <div class="table-profil" style="text-align: justify;">
-            <img src="assets\img\kalender-akademik.png" align="left" style="width: 900px; height: 1400px;" alt="Kampus 1">
+            <img src="{{asset('assets\img\kalender-akademik.png')}}" align="left" style="width: 900px; height: 1400px;" alt="Kampus 1">
         </div>
 
         {{-- TODO: Fetch datanya dari DB --}}

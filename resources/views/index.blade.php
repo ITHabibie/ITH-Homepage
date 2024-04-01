@@ -34,6 +34,18 @@
     <link href="{{ asset('assets') }}/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <style>
+        .img-container img {
+            width: 13rem;
+        }
+
+        #numbers .container .row .col p {
+            border-top: 2px solid white !important;
+            margin-top: -.6rem;
+            font-size: 1.42rem !important;
+        }
+
+        #numbers .container .row .col h4 {}
+
         #carouselExample {
             display: none;
         }
@@ -112,7 +124,7 @@
         }
 
         section {
-            padding: 0 !important;
+            padding: 0;
         }
 
         #hero {
@@ -122,6 +134,10 @@
             background: url("../img/kampus.png") bottom left;
             background-size: cover;
             position: relative;
+        }
+
+        .adm-img {
+            width: 32rem;
         }
 
         .section-title h2 {
@@ -158,7 +174,7 @@
         .adm {
             text-align: center;
             background: #D9D9D9;
-            padding: 60px !important;
+            padding: 60px;
         }
 
         .member-img a img {
@@ -198,7 +214,27 @@
             }
         } */
 
-        @media (max-width: 768px) {
+        @media (max-width: 394px) {
+            .img-container img {
+                width: 6rem;
+            }
+
+            .adm-img {
+                width: 8rem;
+            }
+        }
+
+        @media (max-width: 405px) {
+            .adm-img {
+                width: 15rem !important;
+            }
+        }
+
+        @media (max-width: 990px) {
+            .berita div {
+                width: 100%;
+            }
+
             .footer-left {
                 display: none !important;
             }
@@ -250,8 +286,130 @@
                 display: none;
             }
 
+
+
+            #footer .img-container {
+                display: flex !important;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+
+            .tnc {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            #footer div {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .berita,
+            .event-pengumuman {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            /* .bg-art,
+            #myVideo {
+                position: absolute;
+                display: none;
+                visibility: hidden
+            } */
+        }
+
+        #numbers .container .row .col h4 {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 4rem;
+            animation: countup 2s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .angka a {
+                font-size: 10px !important;
+            }
+
+            #numbers .container .row .col h4 {
+                font-family: "IBM Plex Sans", sans-serif;
+                font-weight: bold;
+                color: white;
+                font-size: 2rem;
+                animation: countup 2s ease-out;
+            }
+
+            #numbers .container .row .col p {
+                border-top: 2px solid white !important;
+                margin-top: -.6rem;
+                font-size: .8rem !important;
+            }
+
+            .footer-left {
+                display: none !important;
+            }
+
+            .terms,
+            .icons {
+                display: flex !important;
+                flex-direction: row !important;
+            }
+
+            .adm-img {
+                width: 22rem;
+            }
+
+            #hero {
+                height: 38vh;
+            }
+
+            .adm {
+                padding: 32px;
+            }
+
+            .tnc {
+                margin-top: 3vh !important;
+            }
+
+            #hero {
+                height: 56vh !important;
+            }
+
+            #myVideo {
+                z-index: -1;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,
+                        -64%) !important;
+
+                width: 100vh !important;
+                height: 100vh !important;
+            }
+
+            #hero .small-navs {
+                display: none !important;
+            }
+
+            .section-title {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .topic-img {
+                widows: 100% !important;
+            }
+
+            .bg-art {
+                display: none;
+            }
+
             .img-container img {
-                width: 8rem !important;
+                width: 8rem;
             }
 
             #footer .img-container {
@@ -289,29 +447,26 @@
                 flex-wrap: wrap;
             }
 
-            .img-container img {
-                width: 9rem !important;
-            }
 
             #hero .small-navs {
                 display: none !important;
             }
 
             #hero {
-                height: 33vh !important;
+                height: 33vh;
             }
 
             #myVideo {
-                transform: translate(-50%, -82%) !important;
-                width: 70vh !important;
+                transform: translate(-50%, -67%);
+                width: 47vh;
             }
 
             .adm {
-                padding: 23px !important;
+                padding: 23px;
             }
 
             .adm-img {
-                width: 23rem !important;
+                width: 23rem;
             }
 
             .bg-art {
@@ -396,28 +551,19 @@
                     </div>
                 </div>
                 <ul class="small-navs"
-                    style="z-index:11;list-style-type: none;display: flex;justify-content: center;padding: 1rem;left: 50%;top: 100%;width: 100vw;position: sticky;transform: translate(-50%, 30%);background: rgba(0, 0, 0, 0.4);">
+                    style="z-index:11;list-style-type: none;display: flex;justify-content: center;padding: 1rem;left: 50%;top: 100%;width: 50vw;position: sticky;transform: translate(-100%, 30%);background: rgba(0, 0, 0, 0.4);">
                     <li class="small-navs"
                         style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
-                        <a>Prestasi</a>
+                        <a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;"><i
+                            class="bi bi-youtube mt-4"></i> Kanal Youtube</a>
                     </li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
                     <li class="small-navs"
-                        style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
-                        <a href="https://simpel.ith.ac.id" target="_blank" style="color: white;"><i
-                                class="bi bi-youtube mt-4"></i> Kanal Youtube</a>
-                    </li>
-                    <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
-                    <li class="small-navs"
-                        style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
-                        <a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;">Pembelajaran
+                    style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
+                    <a href="https://simpel.ith.ac.id" target="_blank" style="color: white;">Pembelajaran
                             Daring</a>
                     </li>
-                    <div style="border-left:3px solid #fff;height:auto; width: 20px"></div>
-                    <li class="small-navs"
-                        style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
-                        <a>ITH Care</a>
-                    </li>
+
                 </ul>
 
             </section>
@@ -489,8 +635,7 @@
         <section id="team" class="team section-bg">
             <section class="adm">
                 <a href="https://admission.ith.ac.id">
-                    <img class="adm-img" src="{{ asset('assets/img/admm.png') }}"
-                        style="width: 32rem; object-fit: cover">
+                    <img class="adm-img" src="{{ asset('assets/img/admm.png') }}" style=" object-fit: cover">
                 </a>
             </section>
             <div class="container " data-aos="fade-up">
@@ -501,7 +646,7 @@
                     {{-- <h3><span style="color: {{$page->alt1}}">{{__('cek.berita-2')}}</span>.</h3> --}}
                 </div>
                 {{-- <div class="row"> --}}
-                <div class="berita" style="display:flex; justify-content:space-evenly;">
+                <div class="berita" style="display:flex; justify-content:space-evenly; margin-top:1rem;">
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
@@ -664,7 +809,7 @@
         <!-- End Team Section -->
         <section id="numbers">
             <h2 class="text-center bayang"
-                style="font-family: 'IBM-Plex-Sans', sans-serif;font-weight: 900; color:white;text-shadow: 2px 2px #2f2f2f;">
+                style="font-family: 'IBM Plex Sans', sans-serif;font-weight: 900; color:white;text-shadow: 2px 2px #2f2f2f;">
                 ITH
                 DALAM
                 ANGKA
@@ -711,10 +856,16 @@
                     </div>
                 </div>
                 <div class="row" style="padding:0.5rem;">
-                    <div class="col desc-berita text-center angka">
+                    <div class="flex desc-berita text-center angka">
                         <a
-                            style="font-size: 18px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
+                            style="font-size: 14px; background-color: #0660A6; padding: .5rem;color: white; border-radius: 4px"><i
                                 class="bi bi-book"></i> fakta lain</a>
+                        <a
+                            style="font-size: 14px; background-color: #fff; padding: .5rem;color: black; border-radius: 4px">Pindai
+                            IKU</a>
+                        <a
+                            style="font-size: 14px; background-color: #ec436d; padding: .5rem;color: white; border-radius: 4px">Pindai
+                            PT</a>
                     </div>
                 </div>
                 {{-- <div class="row">

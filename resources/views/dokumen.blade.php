@@ -188,7 +188,7 @@ tbody, td, tfoot, th, thead, tr {
                     <td>-</td>
                 </tr>
                 <tr>
-                    <td class="text-center">1</td>
+                    <td class="text-center">2</td>
                     <td>Laporan Kinerja 2024</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>

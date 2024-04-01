@@ -8,38 +8,71 @@
         font-size: 14px;
         /* width: 100vw; */
     }
-    @media(max-width:768px){
-        .footer-left{
-            display:none !important;
+
+    @media(max-width:1110px) {
+        .footer-left {
+            display: none !important;
         }
-        .terms, .icons{
-            display:flex !important;
+
+        .terms,
+        .icons {
+            display: flex !important;
             flex-direction: row !important;
         }
-        
+
+    }
+
+    @media(max-width:767px) {
+        .img-container img {
+            width: 8rem;
+        }
+    }
+
+    @media(max-width:768px) {
+
+
+
+        .footer-left {
+            display: none !important;
+        }
+
+        .terms,
+        .icons {
+            display: flex !important;
+            flex-direction: row !important;
+        }
+    }
+
+    @media(max-width:415px) {
+        .img-container img {
+            width: 6rem;
+        }
     }
 </style>
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
-    <div class="d-flex justify-content-around ">
-        <div class="footer-left ">
-            <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 12rem; object-fit: cover">
-            <hr>
+    <div class="d-flex" style="justify-content:center; align-items:center; flex-wrap:wrap;">
+        {{-- <div class="footer-left ">
             <p>Telepon : (0421) 2924000</p>
             <p>Email : rektorat@ith.ac.id</p>
             <p>Kampus 1 : Jl. Balai Kota No. 1 Parepare</p>
             <p>Kampus 2 : Jl. Pemuda No. 6 Parepare</p>
-        </div>
+        </div> --}}
         {{-- <div class="col footer-links"> --}}
-        <div class="img">
-            <div class="img-container gap-4 d-flex">
-                <img src="{{ asset('assets/img/ithare.png') }}" style="width: 13rem;">
-                <img src="{{ asset('assets/img/Infpub.png') }}" style="width: 13rem;">
-                <img src="{{ asset('assets/img/itvt.png') }}" style="width: 13rem;">
-                <img src="{{ asset('assets/img/lapor.png') }}" style="width: 13rem;">
+        <div class="img" style="width:80%">
+            <div class="img-container gap-4 d-flex" style="justify-content: space-evenly; flex-wrap:wrap">
+                <img src="{{ asset('assets/img/Infpub.png') }}">
+                <img src="{{ asset('assets/img/ithare.png') }}">
+                <img src="{{ asset('assets/img/itvt.png') }}">
+                <img src="{{ asset('assets/img/lapor.png') }}">
             </div>
-            <div class="tnc d-flex flex-row-reverse">
+            <div class="tnc d-flex flex-row justify-content-between">
+                <div class="logo" style="display:flex; align-items:center;">
+                    <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 12rem; object-fit: cover">
+                </div>
+
+
                 <div class="tncs">
                     <div class="terms d-flex gap-4">
                         <p>Aturan Pengguna</p>
