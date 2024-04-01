@@ -62,21 +62,26 @@
     <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
-            <h1>Profil Singkat</h1>
-            <p>Tentang ITH / Profil Singkat</p>
+            <h1>Sejarah</h1>
+            <p>Tentang ITH / Sejarah</p>
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
         <div class="table-profil" style="text-align: justify;">
-            <img src="{{asset('assets\img\kampus1.png')}}" align="left" style="width: 18.75rem; height: 15.3125rem; padding-top: 0.625rem; padding-right: 1.25rem; padding-bottom: 0.625rem;" alt="Kampus 1">
-            <p>Institut Teknologi Bacharuddin Jusuf Habibie (ITH) sebuah perguruan tinggi di Parepare, Sulawesi Selatan, Indonesia. Institut ini dinamai sesuai dengan nama tokoh besar Indonesia, yaitu Prof. Dr. Ing. Bacharuddin Jusuf Habibie Presiden Republik Indonesia ke -3 yang juga merupakan seorang insinyur terkemuka.
-            </p><p>ITH memiliki visi untuk menjadi institut yang unggul, memiliki daya saing, dan berstandar tinggi. Institut Teknologi Bachruddin Jusuf Habibie memberikan peranan penting dalam bidang pengetahuan, teknologi dan seni untuk kemajuan masyarakat dan pembangunan.</p><p>
-            ITH didirikan berdasarkan Peraturan Presiden Nomor 152 Tahun 2014 tentang Pendirian Institut Teknologi Bachruddin Jusuf Habibie. Rektor saat ini adalah Prof. Dr. Ir. Ansar Suyuti, SH, MT, IPU, ASEAN.Eng., yang dilantik pada tanggal 4 Oktober 2021 untuk masa bakti 2021-2025. ITH hadir sebagai satu-satunya Institut
-            Teknologi Negeri di wilayah Timur Indonesia, sebagai upaya pemerintah Indonesia untuk memfasilitasi warga negara khususnya wilayah timur untuk mendapatkan pendidikan tinggi.
-            <img src="{{asset('assets\img\kampus2.png')}}" align="right" style="width: 18.75rem; height: 14.9375rem; padding-left: 0.9375rem; padding-top: 0.9375rem;" alt="Kampus 2"></p><p>
-            Saat ini ITH memiliki jumlah 535 mahasiswa, 3 dosen doktor , 3 guru besar dan 23 dosen muda milenial. ITH menawarkan berbagai program studi dan jurusan. Yang saat ini memiliki dua jurusan yaitu Jurusan Sains yang terdiri dari lima prodi diantarany Matematika, Sains Aktuaria, Sains Data, Biokteknologi serta Sains Informasi
-            dan Jurusan Teknologi Produksi & Industri yang terdiri dari lima prodi diantaranya Ilmu komputer, Teknologi Pangan, Teknik Metalurgi, Teknik Sistem Energi, dan Teknik Sipil. Almamater ITH memiliki warna dasar jingga dengan logo ITH berbentuk gerigi. Melalui kepemimpinan yang kuat, ITH bertujuan untuk menghasilkan sarjana
-            muda yang ahli di bidang engineering.</p>
+            <img src="{{asset('assets\img\sejarah.png')}}" align="right" style="width: 31.25rem; height: 40.625rem; padding-left: 1.25rem; padding-top: 0rem;" alt="Sejarah">
+            <p>Berdirinya Institut Teknologi B.J. Habibie (ITH) di Kota Parepare melalui perjuangan panjang Bapak Walikota Parepare (Dr. H.M. Taupan Pawe) dan Tim  yang menjawab keraguan orang akan lahirnya Perguruan Tinggi Negeri di Kota Parepare.</p>
+            <p>Ide pendirian ITH, bermula ketika Presiden Republik Indonesia ke 6  Bapak Susilo Bambang Yudoyono berkunjung ke Kota Parepare,  pada hari Kamis tanggal 20 Februari 2014 lalu.  Bapak Presiden bermalam di Rumah Jabatan Walikota  dan ditempat  itulah Bapak Walikota Parepare berdiskusi dengan beliau dan melontarkan ide-ide cemerlang untuk menjadikan B.J.Habibie sebagai sumber inspirasi, kemudian tercetuslah keinginan Bapak Walikota (H.M. Taupan Pawe) untuk mendirikan Institut Teknologi Habibie ditempat kelahirannya. Inisiatif itu sambut baik oleh Bapak Presiden dan memanggil Menteri Pendidikan dan Kebudayaan RI (Prof. Dr. Muhammad Nuh) untuk menindaklanjuti keinginan Walikota Parepare.</p>
+            <p>Berdirilah INSTITUT TEKNOLOGI B.J. HABIBIE (ITH), kemudian berubah nama menjadi INSTITUT TEKNOLOGI  BACHARUDDIN JUSUF HABIBIE (ITBH)  melalui Peraturan Presisden Nomor 152 Tahun 2014, tanggal 17 Oktober 2014 yang ditandatangani oleh Presiden  H. Susilo Bambang Yudoyono.</p>
+            <p>Setelah melalui proses yang panjang dalam izin operasionalnya, maka terbitlah peraturan kelembagaan dan tata kerja melalui Peraturan Menteri Menteri Pendidikan, Kebudayaan, Riset dan Teknologi Republik Indonesia, Nomor 21 Tahun 2021 pada tanggal 4 Agustus 2021,  Organisasi dan Tata Kerja. Maka mulai tanggal 14 Agustus 2021 secara resmi Institut Teknologi B.J. Habibie mulai beroperasi.</p>
+            <p>Unggul dalam pengembangan ilmu pengetahuan dan teknologi terapan berstandar internasional yang berwawasan lingkungan dan berbasis enterpreneurship, merupakan inti dari visi Institut Teknologi B.J. Habibie di Kota Parepare.</p>
+            <p>Institut Teknologi B.J. Habibie (ITBH)  merupakan  Perguruan  Tinggi  Negeri  (PTN)  penyelenggara pendidikan  Akademis  berlokasi  di  Kota  Parepare Provinsi Sulawesi Selatan. Izin pendirian berdasarkan Peraturan Presiden Nomor 152 Tahun 2014,  tanggal 17 Oktober 2014.</p>
+            <p>Penetapan Rektor melalui Keputusan Menteri Pendidikan, Kebudayaan, Riset dan Teknologi Republik Indonesi, Nomor 67373/MPK.A/KP.07.00/2021, tentang Pengangkatan Rektor Institut Teknologi Bacharuddin Jusuf Habibie Periode 2021-2025. Tanggal 04 Oktober 2021.</p>
+            <p>Pada awal operasionalnya ITBH menyelenggarakan pendidikan strata satu (S1) bergelar akademik sarjana sesuai dengan keilmuannya. Saat ini Institut Teknologi B.J. Habibie memiliki 3(tiga) program studi, yaitu Program Studi Matematika, Program Studi Teknik Informatika dan Program Studi Sistem Informasi serta mengembangkan program studi baru.</p>
+            <p>Kampus ITBH saat ini  berdiri di atas tanah seluas 8,16 Ha yang merupakan  Gedung DPRD dan Gedung Pemuda yang dialihkan menjadi Kampus ITBH berlantai dua dan telah dilengkapi dengan fasilitas memadai, terdiri dari ruang Rektorat, ruang  kuliah, laboratorium Komputer, Perpustkaaan dan fasilitas penunjang lainnya. Persiapan kampus terpadu dilokasi pengembagan ke 3 seluas 34 ha.</p>
+            <p>Dalam melaksanakan fungsinya, maka ITBH membekali mahasiswa dengan sikap, pengetahuan dan keterampilan dan kecakapan hidup,  sesuai dengan capaian pembelajaran yang ditetapkan. Proses belajar mengajar mengacu kurikulum berbasis KKNI yang menitikberatkan pada pendalaman keilmuan dan memberikan  pengalaman  belajar baik didalam negeri maupun diluar negeri sesuai  capaian  pembelajaran yang dituju dan membekali juga lulusan untuk berwirausaha.</p>
+            <p>AKU DATANG DENGAN CINTA MENUNTUT ILMU DAN TEKNOLOGI, AKU BELAJAR TEKUN,  AKU BERHASIL MENJADI SARJANA PRODUKTIF YANG UNGGUL DAN ENTREPNEURSHIP</p>
+            <p>Jadilah mata air jernih yang memberikan kehidupan kepada sekitarmu</p>
+            <p>(B.J. Habibie)</p>
         </div>
 
         {{-- TODO: Fetch datanya dari DB --}}
