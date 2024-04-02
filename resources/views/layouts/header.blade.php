@@ -4,7 +4,7 @@
         animation: none !important;
         display: flex !important;
         width: 60vw !important;
-        height: 18.1rem;
+        height: 18.1rem !important;
         padding: 1rem;
     }
 
