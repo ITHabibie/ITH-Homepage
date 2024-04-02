@@ -67,13 +67,13 @@
                 <img src="{{ asset('assets/img/itvt.png') }}">
                 <img src="{{ asset('assets/img/lapor.png') }}">
             </div>
-            <div class="tnc d-flex flex-row justify-content-between">
+            <div class="tnc d-flex flex-row justify-content-between" style="margin-left:3rem;margin-right:3rem;">
                 <div class="logo" style="display:flex; align-items:center;">
                     <img src="{{ asset('assets/img/LogoITHH.svg') }}" style="width: 12rem; object-fit: cover">
                 </div>
 
 
-                <div class="tncs">
+                <div class="tncs" >
                     <div class="terms d-flex gap-4">
                         <p>Aturan Pengguna</p>
                         <p>FAQ</p>
