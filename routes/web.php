@@ -39,6 +39,11 @@ Route::get('/tentang-ith/sejarah', [App\Http\Controllers\FrontController::class,
 Route::get('/tentang-ith/himne', [App\Http\Controllers\FrontController::class, 'mars'])->name('mars');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
 
+// topbar
+Route::get('/calon-mahasiswa', [App\Http\Controllers\FrontController::class, 'camaba'])->name('camaba');
+
+
+
 // Akademik 
 Route::get('/akademik/Kalender-Akademik', [App\Http\Controllers\FrontController::class, 'kalender'])->name('kalender');
 // Kehidupan Kampus 

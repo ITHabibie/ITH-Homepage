@@ -214,11 +214,15 @@
         <div class="container d-flex justify-content-center justify-content-md-between">
             @isset($topbar)
                 <div class="useful-links d-flex align-items-center">
-                    <a href="#" class="link d-flex align-items-center ms-4">{{ $topbar->calonMahasiswa }}</a>
-                    <a href="#" class="link d-flex align-items-center ms-4">{{ $topbar->mahasiswa }}</a>
-                    <a href="#" class="link d-flex align-items-center ms-4">{{ $topbar->alumni }}</a>
-                    <a href="#" class="link d-flex align-items-center ms-4">{{ $topbar->staff_dosen }}</a>
-                    <a href="#" class="link d-flex align-items-center ms-4">{{ $topbar->orangtua }}</a>
+                    <a href="{{ url('/calon-mahasiswa') }}"
+                        class="link d-flex align-items-center ms-4">{{ $topbar->calonMahasiswa }}</a>
+                    <a href="{{ url('/mahasiswa') }}"
+                        class="link d-flex align-items-center ms-4">{{ $topbar->mahasiswa }}</a>
+                    <a href="{{ url('/alumni') }}" class="link d-flex align-items-center ms-4">{{ $topbar->alumni }}</a>
+                    <a href="{{ url('/staff-dosen') }}"
+                        class="link d-flex align-items-center ms-4">{{ $topbar->staff_dosen }}</a>
+                    <a href="{{ url('/orangtua') }}"
+                        class="link d-flex align-items-center ms-4">{{ $topbar->orangtua }}</a>
                 </div>
                 <div class="useful-links d-flex align-items-center">
                     <div class="lang d-flex">
