@@ -7,19 +7,33 @@
         }
 
         .table-profil img {
-            object-fit: cover;
+            object-fit: contain;
             width: 53vw;
+            max-width: 106%;
+        }
+
+        .lirik {
+            object-fit: contain;
+            max-width: 100%;
         }
 
         @media (min-width: 502px) and (max-width:768px) {
             .table-profil img {
                 width: 27rem;
+                max-width: 100%;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
         @media(min-width:404px) and (max-width:501px) {
             .table-profil img {
                 width: 22rem;
+                max-width: 100%;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -27,6 +41,10 @@
         @media (min-width:337px) and (max-width:403px) {
             .table-profil img {
                 width: 17rem;
+                max-width: 100%;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -35,11 +53,17 @@
             .hero-docs {
                 margin-top: 2rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
 
         @media(min-width:508px) and (max-width:767px) {
             .hero-docs {
                 margin-top: 8rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -47,13 +71,17 @@
             .hero-docs {
                 margin-top: 4.2rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
 
             .table-profil img {
                 width: 12rem;
+                max-width: 100%;
             }
         }
     </style>
-    <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class="hero-docs text-center align" style="">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Hymne & Mars</h1>
@@ -70,7 +98,7 @@
             <div>
                 <img src="{{asset('assets\img\hymne.png')}}" align="right" style="width: 20rem; height: 12.5rem; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem;" alt="hymne">
             </div>
-            <div style="width: 30rem; height: 18.75rem; overflow: auto;">
+            <div class="lirik" style="width: 30rem; height: 18.75rem; overflow: auto;">
                 <p>Bapak teknologi bangsa</p>
                 <p>Menjadi panutan bersama</p>
                 <p>Sebagai patriot teknoktrat bangsa</p>
@@ -97,7 +125,7 @@
             <div>
                 <img src="{{asset('assets\img\mars.png')}}" align="right" style="width: 20rem; height: 12.5rem; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 1.25rem;" alt="mars">
             </div>
-            <div style="width: 30rem; height: 18.75rem; overflow: auto;">
+            <div class="lirik" style="width: 30rem; height: 18.75rem; overflow: auto;">
                 <p>Institut Teknologi B.J Habibie</p>
                 <p>Menjunjung tinggi martabat kemanusiaan</p>
                 <p>Berwawasan lingkungan berjiwa enterpteneur</p>

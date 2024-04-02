@@ -7,13 +7,18 @@
         }
 
         .table-profil img {
-            object-fit: cover;
+            object-fit: contain;
             width: 53vw;
+            max-height: 22rem;
+            max-width: 107%;
         }
 
         @media (min-width: 502px) and (max-width:768px) {
             .table-profil img {
                 width: 27rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -21,12 +26,18 @@
             .table-profil img {
                 width: 22rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
 
 
         @media (min-width:337px) and (max-width:403px) {
             .table-profil img {
                 width: 17rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -51,18 +62,21 @@
             .table-profil img {
                 width: 12rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
     </style>
-    <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class="hero-docs text-center align" style="">
         <div class="hero-text"
-            style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
+            style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem; color:white;">
             <h1>Sejarah</h1>
             <p>Tentang ITH / Sejarah</p>
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
         <div class="table-profil" style="text-align: justify;">
-            <img src="{{asset('assets\img\sejarah.png')}}" align="right" style="width: 31.25rem; height: 40.625rem; padding-left: 1.25rem; padding-top: 0rem;" alt="Sejarah">
+            <img src="{{asset('assets\img\sejarah.png')}}" align="right" style="width: 27.25rem; height: 36.625rem; padding-left: 1.25rem; padding-top: 0rem;" alt="Sejarah">
             <p>Berdirinya Institut Teknologi B.J. Habibie (ITH) di Kota Parepare melalui perjuangan panjang Bapak Walikota Parepare (Dr. H.M. Taupan Pawe) dan Tim  yang menjawab keraguan orang akan lahirnya Perguruan Tinggi Negeri di Kota Parepare.</p>
             <p>Ide pendirian ITH, bermula ketika Presiden Republik Indonesia ke 6  Bapak Susilo Bambang Yudoyono berkunjung ke Kota Parepare,  pada hari Kamis tanggal 20 Februari 2014 lalu.  Bapak Presiden bermalam di Rumah Jabatan Walikota  dan ditempat  itulah Bapak Walikota Parepare berdiskusi dengan beliau dan melontarkan ide-ide cemerlang untuk menjadikan B.J.Habibie sebagai sumber inspirasi, kemudian tercetuslah keinginan Bapak Walikota (H.M. Taupan Pawe) untuk mendirikan Institut Teknologi Habibie ditempat kelahirannya. Inisiatif itu sambut baik oleh Bapak Presiden dan memanggil Menteri Pendidikan dan Kebudayaan RI (Prof. Dr. Muhammad Nuh) untuk menindaklanjuti keinginan Walikota Parepare.</p>
             <p>Berdirilah INSTITUT TEKNOLOGI B.J. HABIBIE (ITH), kemudian berubah nama menjadi INSTITUT TEKNOLOGI  BACHARUDDIN JUSUF HABIBIE (ITBH)  melalui Peraturan Presisden Nomor 152 Tahun 2014, tanggal 17 Oktober 2014 yang ditandatangani oleh Presiden  H. Susilo Bambang Yudoyono.</p>

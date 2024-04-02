@@ -7,13 +7,18 @@
         }
 
         .table-profil img {
-            object-fit: cover;
+            object-fit: contain;
             width: 53vw;
+            max-width: 106%;
+            text-align: center;
         }
 
         @media (min-width: 502px) and (max-width:768px) {
             .table-profil img {
                 width: 27rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -21,12 +26,18 @@
             .table-profil img {
                 width: 22rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
 
 
         @media (min-width:337px) and (max-width:403px) {
             .table-profil img {
                 width: 17rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -51,9 +62,12 @@
             .table-profil img {
                 width: 12rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
     </style>
-    <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class="hero-docs text-center align" style="">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Profil Singkat</h1>

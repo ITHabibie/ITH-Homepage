@@ -70,6 +70,9 @@
             .side-table {
                 display: none;
             }
+            table {
+                font-size: 50%;
+            }
         }
 
         @media(min-width:769px) and (max-width:992px) {
@@ -77,18 +80,30 @@
             .hero-docs {
                 margin-top: 2rem;
             }
+            table {
+                font-size: 50%;
+            }
+        
         }
 
         @media(min-width:508px) and (max-width:767px) {
             .hero-docs {
                 margin-top: 8rem;
             }
+            table {
+                font-size: 50%;
+            }
+        
         }
 
         @media (max-width:336px) {
             .hero-docs {
                 margin-top: 4.2rem;
             }
+            table {
+                font-size: 50%;
+            }
+        
 
             .table-profil img {
                 width: 12rem;

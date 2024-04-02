@@ -15,11 +15,17 @@
             .table-profil img {
                 width: 27rem;
             }
+            .table-profil {
+                font-size: 80%;
+            }
         }
 
         @media(min-width:404px) and (max-width:501px) {
             .table-profil img {
                 width: 22rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -27,6 +33,9 @@
         @media (min-width:337px) and (max-width:403px) {
             .table-profil img {
                 width: 17rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
 
@@ -50,6 +59,9 @@
 
             .table-profil img {
                 width: 12rem;
+            }
+            .table-profil {
+                font-size: 80%;
             }
         }
     </style>
