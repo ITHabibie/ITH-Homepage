@@ -654,7 +654,8 @@
                                 <div class="member-img">
                                     <a style="width:300px;" href="{{ route('show', $item->slug) }}">
                                         <img class="topic-img" style=" object-fit: cover; height: 200px; width:100%;"
-                                            src="{{ $item->cover }}">
+                                            {{-- src="{{ $item->cover }}"> --}}
+                                            src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}">
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
