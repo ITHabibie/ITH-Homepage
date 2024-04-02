@@ -42,7 +42,6 @@
         }
 
         @media(min-width:769px) and (max-width:992px) {
-
             .hero-docs {
                 margin-top: 2rem;
             }
