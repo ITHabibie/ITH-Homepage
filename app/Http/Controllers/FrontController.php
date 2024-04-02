@@ -49,7 +49,7 @@ class FrontController extends Controller
             'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
         ];
 
-        return view('dokumen', $data);
+        return view('tentangITH.dokumen', $data);
     }
     public function profil()
     {
@@ -70,7 +70,28 @@ class FrontController extends Controller
             'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
         ];
 
-        return view('profil', $data);
+        return view('tentangITH.profil', $data);
+    }
+    public function fasilitas()
+    {
+        $data = [
+            'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
+            'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
+            'pmb' => PmbLink::first(),
+            'jumbotron' => Jumbotron::first(),
+            'postsNews' => Post::where('category_id', 3)->latest()->limit(3)->get(),
+            'postsEvents' => Post::where('category_id', 4)->latest()->limit(5)->get(),
+            'postsAnnounce' => Post::where('category_id', 5)->latest()->limit(5)->get(),
+            'page' => Page::first(),
+            'navbarmenu' => FrontNavbar::get(),
+            'link' => Link::get(),
+            'top' => typesatu::where('status', 1)->where('alt3', 1)->first(),
+            'mid' => typesatu::where('status', 1)->where('alt3', 2)->first(),
+            'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
+        ];
+
+        return view('kehidupanKampus.fasilitas', $data);
     }
     public function visi_misi()
     {
@@ -91,7 +112,7 @@ class FrontController extends Controller
             'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
         ];
 
-        return view('visi_misi', $data);
+        return view('tentangITH.visi_misi', $data);
     }
 
     public function kalender()
@@ -113,7 +134,7 @@ class FrontController extends Controller
             'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
         ];
 
-        return view('kalender', $data);
+        return view('akademik.kalender', $data);
     }
     public function kontakku()
     {

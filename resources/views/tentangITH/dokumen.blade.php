@@ -26,7 +26,7 @@
 
     @livewireStyles
     @include('style')
-	
+
     <style>
         .main-table {
             padding: 4rem;
@@ -49,11 +49,51 @@
             text-align: left;
             padding: 8px;
         }
-tbody, td, tfoot, th, thead, tr {
-    border-color: inherit;
-    border-style: solid;
-    border-width: 1px !important;
-}
+
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        tr {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 1px !important;
+        }
+
+        .hero-docs {
+            margin-top: 6rem;
+        }
+
+        @media (max-width:768px) {
+
+            .side-table {
+                display: none;
+            }
+        }
+
+        @media(min-width:769px) and (max-width:992px) {
+
+            .hero-docs {
+                margin-top: 2rem;
+            }
+        }
+
+        @media(min-width:508px) and (max-width:767px) {
+            .hero-docs {
+                margin-top: 8rem;
+            }
+        }
+
+        @media (max-width:336px) {
+            .hero-docs {
+                margin-top: 4.2rem;
+            }
+
+            .table-profil img {
+                width: 12rem;
+            }
+        }
     </style>
     <!-- Vendor CSS Files -->
     {{-- <link href="{{asset('assets')}}/vendor/aos/aos.css" rel="stylesheet"> --}}
@@ -87,7 +127,7 @@ tbody, td, tfoot, th, thead, tr {
         {{-- @include('layouts.topbar') --}}
     @endif
     @include('layouts.header')
-    <div class=" hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class=" hero-docs text-center align" style=" ">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Dokumen Resmi</h1>
@@ -111,35 +151,35 @@ tbody, td, tfoot, th, thead, tr {
                     <td>Renstra</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <tr>
                     <td class="text-center">2</td>
                     <td>RKAT</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <tr>
                     <td class="text-center">3</td>
                     <td>RKAKL</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <tr>
                     <td class="text-center">4</td>
                     <td>Pedoman Renstra</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <tr>
                     <td class="text-center">5</td>
                     <td>Pedoman RKT dan Rencana Aksi</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <th colspan="5">SAKIP</th>
                 <tr>
@@ -154,7 +194,7 @@ tbody, td, tfoot, th, thead, tr {
                     <td>Laporan Hasil Kinerja SAKIP </td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <th colspan="5">Dokumen Pelaksanaan</th>
 
@@ -170,7 +210,7 @@ tbody, td, tfoot, th, thead, tr {
                     <td>Laporan dan Dokumentasi Pelaksanaan Kegiatan</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <th colspan="5"> Dokumen Evaluasi</th>
                 <tr>
@@ -185,14 +225,14 @@ tbody, td, tfoot, th, thead, tr {
                     <td>Laporan Kinerja 2023</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
                 <tr>
                     <td class="text-center">2</td>
                     <td>Laporan Kinerja 2024</td>
                     <td>-</td>
                     <td><a href={{ asset('assets/a.html') }} download>Unduh</a></td>
-                    <td>-</td>
+                    <td><a href="{{ asset('assets/a.html') }}" download>Download</a></td>
                 </tr>
             </table>
         </div>

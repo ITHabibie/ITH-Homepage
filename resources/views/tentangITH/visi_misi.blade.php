@@ -37,7 +37,52 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
+    <style>
+        main div p {
+            font-family: 'roboto', sans-serif;
+        }
 
+        @media (max-width:768px) {
+
+            .side-table {
+                display: none;
+            }
+        }
+
+        .hero-docs {
+            margin-top: 6rem;
+        }
+
+        @media (max-width:768px) {
+
+            .side-table {
+                display: none;
+            }
+        }
+
+        @media(min-width:769px) and (max-width:992px) {
+
+            .hero-docs {
+                margin-top: 2rem;
+            }
+        }
+
+        @media(min-width:508px) and (max-width:767px) {
+            .hero-docs {
+                margin-top: 8rem;
+            }
+        }
+
+        @media (max-width:336px) {
+            .hero-docs {
+                margin-top: 4.2rem;
+            }
+
+            .table-profil img {
+                width: 12rem;
+            }
+        }
+    </style>
     <script></script>
     <!-- =======================================================
   * Template Name: BizLand - v3.6.0
@@ -59,7 +104,7 @@
         {{-- @include('layouts.topbar') --}}
     @endif
     @include('layouts.header')
-    <div class="hero-docs text-center align" style="margin-top: 6.2rem; ">
+    <div class="hero-docs text-center align" style="">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Visi & Misi</h1>
@@ -67,30 +112,36 @@
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:5rem;">
-        <div class="table-profil" style="text-align: justify;">
+        <div class="table-profil" style="text-align: justify; border-top:3px solid #F18516;padding:1rem;">
             <h1>Visi :</h1>
-            <p style="padding-left: 50px;">Menjadi Institut yang unggul, memiliki daya saing, berstandar internasional yang menjunjung tinggi martabat kemanusiaan, berwawasan lingkungan dan berbasis enterpreneurship.</p>
+            <p style="padding-left: 50px;">Menjadi Institut yang unggul, memiliki daya saing, berstandar internasional
+                yang menjunjung tinggi martabat kemanusiaan, berwawasan lingkungan dan berbasis enterpreneurship.</p>
             <h1>Misi :</h1>
-            <p style="padding-left: 50px;">1. Menghasilkan lulusan yang profesional, berjiwa wirausaha, berkarakter dan berstandar Internasional.</p>
-            <p style="padding-left: 50px;">2. Menghasilkan karya nyata bidang ilmu pengetahuan yang inovatif dan berguna bagi masyarakat.</p>
+            <p style="padding-left: 50px;">1. Menghasilkan lulusan yang profesional, berjiwa wirausaha, berkarakter dan
+                berstandar Internasional.</p>
+            <p style="padding-left: 50px;">2. Menghasilkan karya nyata bidang ilmu pengetahuan yang inovatif dan berguna
+                bagi masyarakat.</p>
             <p style="padding-left: 50px;">3. Menyelengarakan pendidikan teknologi yang berkualitas.</p>
-            <p style="padding-left: 50px;">4. Terciptanya manajemen yang handal untuk tatakelola transparan dan terpercaya.</p>
-            <p style="padding-left: 50px;">5. Melakukan Pembinaan sumberdaya manusia yang berkesinambungan dalam menunjang pengembangan profesionalisme.</p>
+            <p style="padding-left: 50px;">4. Terciptanya manajemen yang handal untuk tatakelola transparan dan
+                terpercaya.</p>
+            <p style="padding-left: 50px;">5. Melakukan Pembinaan sumberdaya manusia yang berkesinambungan dalam
+                menunjang pengembangan profesionalisme.</p>
         </div>
 
         {{-- TODO: Fetch datanya dari DB --}}
         <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
-            <p style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
+            <p
+                style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
                 <i class="bi bi-chevron-left"></i>
                 Tentang ITH
             </p>
             <nav>
                 <ul>
                     @foreach ($navbarmenu->whereIn('ops1', 1)->sortBy('order') as $loop1)
-                    <p >
-                        <a style="color:black;" href="{{route('showNav', ['tentang-ith', $loop1->slug])}}">
-                            <i class="bi bi-chevron-right"></i>
-                                {{$loop1->indtitle}}
+                        <p>
+                            <a style="color:black;" href="{{ route('showNav', ['tentang-ith', $loop1->slug]) }}">
+                                <i class="bi bi-chevron-right"></i>
+                                {{ $loop1->indtitle }}
                             </a>
                         </p>
                     @endforeach

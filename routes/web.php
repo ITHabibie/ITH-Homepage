@@ -14,6 +14,7 @@ use App\Models\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 
 
@@ -31,10 +32,14 @@ Route::get('lang/{locale}', [App\Http\Controllers\Controller::class, 'lang'])->n
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index'])->name('homepage');
 // Route::get('/dok', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 Route::get('/tentang-ith/profil', [App\Http\Controllers\FrontController::class, 'profil'])->name('profil');
-Route::get('/tentang-ith/visi_misi', [App\Http\Controllers\FrontController::class, 'visi_misi'])->name('visi_misi');
-Route::get('/tentang-ith/kalender', [App\Http\Controllers\FrontController::class, 'kalender'])->name('kalender');
+Route::get('/tentang-ith/visi-misi', [App\Http\Controllers\FrontController::class, 'visi_misi'])->name('visi_misi');
 Route::get('/tentang-ith/dokumen-resmi', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
+
+// Akademik 
+Route::get('/akademik/Kalender-Akademik', [App\Http\Controllers\FrontController::class, 'kalender'])->name('kalender');
+// Kehidupan Kampus 
+Route::get('/Kehidupan-kampus/Fasil-kampus', [App\Http\Controllers\FrontController::class, 'fasilitas'])->name('fasilitas');
 
 // Admin Panel
 Route::middleware(['auth'])->group(function () {
@@ -58,9 +63,9 @@ Route::middleware(['auth'])->group(function () {
         Route::post('destroyLink', [App\Http\Controllers\TagController::class, 'destroyLink'])->name('destroyLink');
 
         // Manage Posts
-        Route::get('posts/trash', [App\Http\Controllers\PostController::class , 'trash'])->name('posts.trash');
-        Route::post('posts/trash/{id}/restore', [App\Http\Controllers\PostController::class , 'restore'])->name('posts.restore');
-        Route::delete('posts/{id}/delete-permanent', [App\Http\Controllers\PostController::class,'deletePermanent'])->name('posts.deletePermanent');
+        Route::get('posts/trash', [App\Http\Controllers\PostController::class, 'trash'])->name('posts.trash');
+        Route::post('posts/trash/{id}/restore', [App\Http\Controllers\PostController::class, 'restore'])->name('posts.restore');
+        Route::delete('posts/{id}/delete-permanent', [App\Http\Controllers\PostController::class, 'deletePermanent'])->name('posts.deletePermanent');
         Route::resource('posts', App\Http\Controllers\PostController::class);
 
         // Manage Page
