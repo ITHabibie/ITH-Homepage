@@ -66,7 +66,8 @@
           <div class="card shadow p-3 mb-5 bg-white rounded" style="">
             <div class="overflow-hidden text-center">
                 @if ($post->cover)
-                <img src="{{ asset('storage/'.$post->cover) }}" class="card-img-top" style="width: 70%; max-height: 900px">
+                {{-- kode dibawah ini nanti akan diubah ngikut pas kerja backendnya  --}}
+                {{-- <img src="{{ asset('storage/'.$post->cover) }}" class="card-img-top" style="width: 70%; max-height: 900px"> --}}
                 @endif
             </div>
             <div class="card-body" style="">
@@ -128,7 +129,6 @@
   {{-- <script src="{{asset('assets')}}/vendor/php-email-form/validate.js"></script> --}}
   {{-- <script src="{{asset('assets')}}/vendor/purecounter/purecounter.js"></script>
   <script src="{{asset('assets')}}/vendor/swiper/swiper-bundle.min.js"></script> --}}
-
   <!-- Template Main JS File -->
   <script src="{{asset('assets')}}/js/main.js"></script>
 
