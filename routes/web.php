@@ -52,6 +52,9 @@ Route::get('/akademik/Program-sarjana', [App\Http\Controllers\FrontController::c
 Route::get('/akademik/Beasiswa', [App\Http\Controllers\FrontController::class, 'beasiswa'])->name('beasiswa');
 // Kehidupan Kampus 
 Route::get('/Kehidupan-kampus/Fasil-kampus', [App\Http\Controllers\FrontController::class, 'fasilitas'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/kantin', [App\Http\Controllers\FrontController::class, 'kantin'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/peta-kampus', [App\Http\Controllers\FrontController::class, 'peta'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/ukm', [App\Http\Controllers\FrontController::class, 'ukm'])->name('fasilitas');
 
 // Admin Panel
 Route::middleware(['auth'])->group(function () {
