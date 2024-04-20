@@ -639,7 +639,7 @@
                 </a>
             </section>
             <div class="container " data-aos="fade-up">
-                <div class="section-title" style="padding-top: ;">
+                <div class="section-title" style="padding-top: 2rem;">
                     <h2
                         style="color:#040348; background:none; text-decoration:underline; text-underline-offset:1rem; font-size:24px;">
                         {{ __('cek.berita-1') }}</h2>
