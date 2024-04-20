@@ -56,7 +56,7 @@
     <div class="hero-docs text-center align" style="">
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
-            <h1>Profil Singkat</h1>
+            <h1>Kalender Akademik</h1>
             <p>Akademik / Kalender Akademik</p>
         </div>
     </div>
