@@ -46,8 +46,10 @@ Route::get('/calon-mahasiswa', [App\Http\Controllers\FrontController::class, 'ca
 
 // Akademik 
 Route::get('/akademik/Kalender-Akademik', [App\Http\Controllers\FrontController::class, 'kalender'])->name('kalender');
-Route::get('/akademik/Akreditasi-Program-Studi', [App\Http\Controllers\FrontController::class, 'akreditasi'])->name('kalender');
-Route::get('/akademik/Seleksi-masuk', [App\Http\Controllers\FrontController::class, 'seleksi'])->name('kalender');
+Route::get('/akademik/Akreditasi-Program-Studi', [App\Http\Controllers\FrontController::class, 'akreditasi'])->name('akreditasi');
+Route::get('/akademik/Seleksi-masuk', [App\Http\Controllers\FrontController::class, 'seleksi'])->name('seleksi');
+Route::get('/akademik/Program-sarjana', [App\Http\Controllers\FrontController::class, 'programSarjana'])->name('programSarjana');
+Route::get('/akademik/Beasiswa', [App\Http\Controllers\FrontController::class, 'beasiswa'])->name('beasiswa');
 // Kehidupan Kampus 
 Route::get('/Kehidupan-kampus/Fasil-kampus', [App\Http\Controllers\FrontController::class, 'fasilitas'])->name('fasilitas');
 
