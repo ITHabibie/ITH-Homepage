@@ -50,6 +50,9 @@ Route::get('/akademik/Akreditasi-Program-Studi', [App\Http\Controllers\FrontCont
 Route::get('/akademik/Seleksi-masuk', [App\Http\Controllers\FrontController::class, 'seleksi'])->name('kalender');
 // Kehidupan Kampus 
 Route::get('/Kehidupan-kampus/Fasil-kampus', [App\Http\Controllers\FrontController::class, 'fasilitas'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/kantin', [App\Http\Controllers\FrontController::class, 'kantin'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/peta-kampus', [App\Http\Controllers\FrontController::class, 'peta'])->name('fasilitas');
+Route::get('/Kehidupan-kampus/ukm', [App\Http\Controllers\FrontController::class, 'ukm'])->name('fasilitas');
 
 // Admin Panel
 Route::middleware(['auth'])->group(function () {
