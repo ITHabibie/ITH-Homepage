@@ -63,7 +63,7 @@
         <div class="hero-text"
             style="background-color: rgba(0, 0, 0, 0.8);background-position:center;background-image:url({{ asset('assets/img/new_university.svg') }}); padding:2rem 1.5rem 2rem .5rem;color:white;">
             <h1>Sejarah</h1>
-            <p>Tentang ITH / Sejarah</p>
+            <p>Tentang ITH / Sejara</p>
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
