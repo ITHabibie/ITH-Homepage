@@ -37,6 +37,7 @@ Route::get('/tentang-ith/visi-misi', [App\Http\Controllers\FrontController::clas
 Route::get('/tentang-ith/dokumen-resmi', [App\Http\Controllers\FrontController::class, 'dokumen'])->name('dok');
 Route::get('/tentang-ith/sejarah', [App\Http\Controllers\FrontController::class, 'sejarah'])->name('sejarah');
 Route::get('/tentang-ith/himne', [App\Http\Controllers\FrontController::class, 'mars'])->name('mars');
+Route::get('/tentang-ith/profil-lulusan', [App\Http\Controllers\FrontController::class, 'profileJurusan'])->name('profileJurusan');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
 
 // topbar
@@ -55,6 +56,7 @@ Route::get('/Kehidupan-kampus/Fasil-kampus', [App\Http\Controllers\FrontControll
 Route::get('/Kehidupan-kampus/kantin', [App\Http\Controllers\FrontController::class, 'kantin'])->name('fasilitas');
 Route::get('/Kehidupan-kampus/peta-kampus', [App\Http\Controllers\FrontController::class, 'peta'])->name('fasilitas');
 Route::get('/Kehidupan-kampus/ukm', [App\Http\Controllers\FrontController::class, 'ukm'])->name('fasilitas');
+
 
 // Admin Panel
 Route::middleware(['auth'])->group(function () {
@@ -102,3 +104,4 @@ Route::get('post/{slug}', [App\Http\Controllers\FrontController::class, 'show'])
 Route::get('category/{category:slug}', [App\Http\Controllers\FrontController::class, 'category'])->name('category');
 Route::get('/{slug}', [App\Http\Controllers\FrontController::class, 'showNavs'])->name('showNavs');
 Route::get('/{pages?}/{slug}', [App\Http\Controllers\FrontController::class, 'showNav'])->name('showNav');
+
