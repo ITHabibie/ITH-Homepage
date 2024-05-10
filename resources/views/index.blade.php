@@ -824,7 +824,7 @@
                         <p class="bayang">Jurusan</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count bayang" data-target="10">0</h4>
+                        <h4 class="count bayang" data-target="11">0</h4>
                         {{-- <hr> --}}
                         <p class="bayang">Program Studi</p>
                     </div>
@@ -851,7 +851,7 @@
                         <p class="bayang">Guru Besar</p>
                     </div>
                     <div class="col counter text-center angka" id="counter">
-                        <h4 class="count bayang" data-target="33">0</h4>
+                        <h4 class="count bayang" data-target="43">0</h4>
                         {{-- <hr> --}}
                         <p class="bayang">Dosen</p>
                     </div>

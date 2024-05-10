@@ -208,8 +208,7 @@
     <p><strong>Multimedia Developer</strong></p>
 
     <p>
-        Lulusan yang dapat bekerja dengan merancang, mengembangkan dan mengelola fiture multimedia, seperti teks, suara, grafis, foto digital, pemodelan dimensi/3 Dimensi , animasi dan video untuk membuat produk-produk seperti website, aplikasi mobile atau program komputer multimedia
-
+        Lulusan yang dapat bekerja dengan merancang, mengembangkan dan mengelola fiture multimedia, seperti teks, suara, grafis, foto digital, pemodelan dimensi/3 Dimensi , animasi dan video untuk membuat produk-produk seperti website, aplikasi mobile atau program komputer multimedia.
     </p>
 
     <p><strong>Mobile Application Programmer</strong></p>
