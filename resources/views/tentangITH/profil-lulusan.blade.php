@@ -131,7 +131,26 @@
 <p>
     Mampu mengelola proyek secara profesional dan bertanggung jawab dan mengembangkan usaha jasa di bidang teknik sipil, serta penerapan keilmuan dalam merekayasa/desain kekuatan bangunan berdasarkan Norma, Standar, Pedoman dan Ketentuan (NSPK) yang berlaku serta kemajuan teknologi di bidang teknik sipil
 </p>
+
+<p><h3><strong><li>Profil Lulusan Program Studi Teknik Arsitektur Yaitu:</li></strong></h3></p>
+<p><strong>Konsultan Arsitektur</strong></p>
+<p>
+    Mampu melakukan perencanaan, pengawasan konstruksi bangunan tropis/vernakular/etnis. Mampu melakukan perencanaan kota maritim berbasis teknologi. Mampu melakukan organisasi/manajemen proyek.
+</p>
+
+<p><strong>Desain Interior</strong></p>
+<p>
+    Mampu merancang ruang dalam dengan bahan dan ramah lingkungan, dan menerapkan konsep efisiensi energi. Mampu menerapkan nilai-nilai desain nusantara/vernakular/etnis dan mengintegrasikan pada desain interior
+</p>
+
+
+<p><strong>Desain Lansekap</strong></p>
+<p>
+    Mampu merancang ruang luar dengan mempergunakan material lokal, dan mengintegrasikan elemen perancangan dengan lingkungan alam sekitar. Mampu menerapkan konsep tematik lokal dengan mempergunakan elemen tradisional untuk memberi ciri khas yang kreatif dan autentik
+</p>
+
 </ol>
+
 
 <h1>Jurusan Sains</h1>
 <ol>
