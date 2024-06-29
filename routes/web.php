@@ -38,6 +38,8 @@ Route::get('/tentang-ith/dokumen-resmi', [App\Http\Controllers\FrontController::
 Route::get('/tentang-ith/sejarah', [App\Http\Controllers\FrontController::class, 'sejarah'])->name('sejarah');
 Route::get('/tentang-ith/himne', [App\Http\Controllers\FrontController::class, 'mars'])->name('mars');
 Route::get('/tentang-ith/profil-lulusan', [App\Http\Controllers\FrontController::class, 'profileJurusan'])->name('profileJurusan');
+Route::get('/tentang-ith/Organisasi', [App\Http\Controllers\FrontController::class, 'organisasi'])->name('organisasi');
+Route::get('/tentang-ith/Prestasi', [App\Http\Controllers\FrontController::class, 'prestasi'])->name('prestasi');
 // FIXME: kerja backendnya, pelajari backendnya kalo sudah diperbaiki frontend dan responsiovenya 
 
 // topbar
