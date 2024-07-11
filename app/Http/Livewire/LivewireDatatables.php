@@ -16,20 +16,19 @@ class LivewireDatatables extends LivewireDatatable
 
     public function builder()
     {
-            return Post::query()->orderByDesc('posts.created_at');
+        return Post::query()->orderByDesc('posts.created_at');
     }
-
     function columns()
     {
-    	return [
-    		Column::name('title')->label('title')->truncate('50')->unsortable()->searchable(),
-    		Column::name('engtitle')->label('engtitle')->truncate('50')->unsortable(),
-    		Column::name('category.name')->label('Category')->searchable(),
-    		// Column::name('gender')->label('Gender'),
-    		// DateColumn::name('created_at')->label('Creation Date')
+        return [
+            Column::name('title')->label('title')->truncate('50')->unsortable()->searchable(),
+            Column::name('engtitle')->label('engtitle')->truncate('50')->unsortable(),
+            Column::name('category.name')->label('Category')->searchable(),
+            // Column::name('gender')->label('Gender'),
+            // DateColumn::name('created_at')->label('Creation Date')
             Column::callback(['id'], function ($id) {
                 return view('livewire.livewire-datatables', ['id' => $id]);
             })->unsortable()
-    	];
+        ];
     }
 }

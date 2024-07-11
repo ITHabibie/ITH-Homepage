@@ -27,10 +27,16 @@
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('') }}plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="{{ asset('') }}plugins/summernote/summernote-bs4.min.css">
+    {{-- <link rel="stylesheet" href="{{ asset('') }}plugins/summernote/summernote-bs4.min.css"> --}}
+    {{-- another summernote --}}
+
     {{-- <script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script> --}}
-    <script src="https://cdn.tiny.cloud/1/ph5bdq50cdvc583xl3wzf159f774s68x9dmri7uedzip5g6f/tinymce/5/tinymce.min.js"
-        referrerpolicy="origin"></script>
+    {{-- <script src="https://cdn.tiny.cloud/1/ph5bdq50cdvc583xl3wzf159f774s68x9dmri7uedzip5g6f/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script> --}}
+
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+
+
     @stack('style')
 
     @livewireStyles
@@ -271,7 +277,9 @@
     <!-- Tempusdominus Bootstrap 4 -->
     <script src="{{ asset('') }}plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- Summernote -->
-    <script src="{{ asset('') }}plugins/summernote/summernote-bs4.min.js"></script>
+    {{-- <script src="{{ asset('') }}plugins/summernote/summernote-bs4.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
     <!-- overlayScrollbars -->
     <script src="{{ asset('') }}plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
@@ -279,7 +287,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('') }}dist/js/demo.js"></script>
     <!-- Summernote -->
-    <script src="{{ asset('') }}plugins/summernote/summernote-bs4.min.js"></script>
+    {{-- <script src="{{ asset('') }}plugins/summernote/summernote-bs4.min.js"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     {{-- <script src="{{asset('')}}/dist/js/pages/dashboard.js"></script> --}}
     @stack('scripts')
@@ -288,7 +296,7 @@
         $(".imgAdd").click(function() {
             $(this).closest(".row").find('.imgAdd').before(
                 '<div class="col-sm-2 imgUp"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fa fa-times del"></i></div>'
-                );
+            );
         });
         $(document).on("click", "i.del", function() {
             // 	to remove card
@@ -301,7 +309,7 @@
                 var uploadFile = $(this);
                 var files = !!this.files ? this.files : [];
                 if (!files.length || !window.FileReader)
-            return; // no file selected, or no FileReader support
+                    return; // no file selected, or no FileReader support
 
                 if (/^image/.test(files[0].type)) { // only image file
                     var reader = new FileReader(); // instance of the FileReader

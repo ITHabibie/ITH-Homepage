@@ -19,6 +19,11 @@ class PostController extends Controller
         $posts = Post::all();
         return view('posts.index', ['posts' => $posts]);
     }
+    // public function index()
+    // {
+    //     $posts = Post::with('user')->paginate(10); // Eager loading relasi 'user' dan pagination
+    //     return view('posts.index', ['posts' => $posts]);
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -29,7 +34,7 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $tags       = Tag::all();
-        return view('posts.create', compact('categories','tags'));
+        return view('posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -50,13 +55,13 @@ class PostController extends Controller
 
         if ($validator->fails()) {
             return redirect()->back()
-                        ->withErrors($validator)
-                        ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
         $post               = new Post();
 
         $cover              = $request->file('cover');
-        if($cover){
+        if ($cover) {
             $cover_path     = $cover->store('images/blog', 'public');
             $post->cover    = $cover_path;
         }
@@ -99,7 +104,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $categories = Category::all();
         $tags = Tag::all();
-        return view('posts.edit',compact('post','categories','tags'));
+        return view('posts.edit', compact('post', 'categories', 'tags'));
     }
 
     /**
@@ -112,7 +117,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            "title"     => "required|unique:posts,title,".$id,
+            "title"     => "required|unique:posts,title," . $id,
             "desc"      => "required",
             "category"  => "required",
             "tags"      => "array|required",
@@ -121,8 +126,8 @@ class PostController extends Controller
 
         if ($validator->fails()) {
             return redirect()->back()
-                        ->withErrors($validator)
-                        ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
 
         $post = Post::findOrFail($id);
@@ -130,23 +135,23 @@ class PostController extends Controller
         $new_cover = $request->file('cover');
         if ($request->hapusgambar) {
             $post->cover = null;
-            if($post->cover && file_exists(storage_path('app/public/' . $post->cover))){
-                \Storage::delete('public/'. $post->cover);
+            if ($post->cover && file_exists(storage_path('app/public/' . $post->cover))) {
+                \Storage::delete('public/' . $post->cover);
             }
         } else {
-            if($new_cover){
-                if($post->cover && file_exists(storage_path('app/public/' . $post->cover))){
-                    \Storage::delete('public/'. $post->cover);
+            if ($new_cover) {
+                if ($post->cover && file_exists(storage_path('app/public/' . $post->cover))) {
+                    \Storage::delete('public/' . $post->cover);
                 }
-    
+
                 $new_cover_path = $new_cover->store('images/blog', 'public');
                 $post->cover = $new_cover_path;
             }
         }
-        
-        if($new_cover){
-            if($post->cover && file_exists(storage_path('app/public/' . $post->cover))){
-                \Storage::delete('public/'. $post->cover);
+
+        if ($new_cover) {
+            if ($post->cover && file_exists(storage_path('app/public/' . $post->cover))) {
+                \Storage::delete('public/' . $post->cover);
             }
 
             $new_cover_path = $new_cover->store('images/blog', 'public');
@@ -182,46 +187,48 @@ class PostController extends Controller
 
         $post->delete();
 
-        return redirect()->route('posts.index')->with('success','Data moved to trash');
+        return redirect()->route('posts.index')->with('success', 'Data moved to trash');
     }
 
-    public function trash(){
+    public function trash()
+    {
         $posts = Post::onlyTrashed()->get();
 
         return view('posts.trash', compact('posts'));
     }
 
-    public function restore($id) {
+    public function restore($id)
+    {
         $post = Post::withTrashed()->findOrFail($id);
 
         if ($post->trashed()) {
             $post->restore();
-            return redirect()->back()->with('success','Data successfully restored');
-        }else {
-            return redirect()->back()->with('error','Data is not in trash');
+            return redirect()->back()->with('success', 'Data successfully restored');
+        } else {
+            return redirect()->back()->with('error', 'Data is not in trash');
         }
     }
 
-    public function deletePermanent($id){
+    public function deletePermanent($id)
+    {
 
         $post = Post::withTrashed()->findOrFail($id);
 
         if (!$post->trashed()) {
 
-            return redirect()->back()->with('error','Data is not in trash');
-
-        }else {
+            return redirect()->back()->with('error', 'Data is not in trash');
+        } else {
 
             $post->tags()->detach();
 
 
-            if($post->cover && file_exists(storage_path('app/public/' . $post->cover))){
-                \Storage::delete('public/'. $post->cover);
+            if ($post->cover && file_exists(storage_path('app/public/' . $post->cover))) {
+                \Storage::delete('public/' . $post->cover);
             }
 
-        $post->forceDelete();
+            $post->forceDelete();
 
-        return redirect()->back()->with('success', 'Data deleted successfully');
+            return redirect()->back()->with('success', 'Data deleted successfully');
         }
     }
 }

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use App\Models\{Topbar, Category, Tag, Post, Page, FrontNavbar, typesatu, Contact, Jumbotron, Link, PmbLink};
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class FrontController extends Controller
 {
-
     public function index()
     {
         $data = [
@@ -30,6 +29,7 @@ class FrontController extends Controller
 
         return view('index', $data);
     }
+
     public function dokumen()
     {
         $data = [
@@ -51,6 +51,7 @@ class FrontController extends Controller
 
         return view('tentangITH.dokumen', $data);
     }
+
     public function profil()
     {
         $data = [
@@ -72,6 +73,7 @@ class FrontController extends Controller
 
         return view('tentangITH.profil', $data);
     }
+
     public function fasilitas()
     {
         $data = [
@@ -115,6 +117,7 @@ class FrontController extends Controller
 
         return view('kehidupanKampus.kantin', $data);
     }
+
     public function peta()
     {
         $data = [
@@ -136,6 +139,7 @@ class FrontController extends Controller
 
         return view('kehidupanKampus.peta-kampus', $data);
     }
+
     public function ukm()
     {
         $data = [
@@ -156,6 +160,49 @@ class FrontController extends Controller
         ];
 
         return view('kehidupanKampus.peta-kampus', $data);
+    }
+    public function pkm()
+    {
+        $data = [
+            'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
+            'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
+            'pmb' => PmbLink::first(),
+            'jumbotron' => Jumbotron::first(),
+            'postsNews' => Post::where('category_id', 3)->latest()->limit(3)->get(),
+            'postsEvents' => Post::where('category_id', 4)->latest()->limit(5)->get(),
+            'postsAnnounce' => Post::where('category_id', 5)->latest()->limit(5)->get(),
+            'page' => Page::first(),
+            'navbarmenu' => FrontNavbar::get(),
+            'link' => Link::get(),
+            'top' => typesatu::where('status', 1)->where('alt3', 1)->first(),
+            'mid' => typesatu::where('status', 1)->where('alt3', 2)->first(),
+            'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
+        ];
+
+        return view('penelitian.pkm', $data);
+    }
+
+    public function perpustakaan()
+    {
+        $data = [
+            'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
+            'contact' => Contact::first(),
+            'topbar' => Topbar::first(),
+            'pmb' => PmbLink::first(),
+            'jumbotron' => Jumbotron::first(),
+            'postsNews' => Post::where('category_id', 3)->latest()->limit(3)->get(),
+            'postsEvents' => Post::where('category_id', 4)->latest()->limit(5)->get(),
+            'postsAnnounce' => Post::where('category_id', 5)->latest()->limit(5)->get(),
+            'page' => Page::first(),
+            'navbarmenu' => FrontNavbar::get(),
+            'link' => Link::get(),
+            'top' => typesatu::where('status', 1)->where('alt3', 1)->first(),
+            'mid' => typesatu::where('status', 1)->where('alt3', 2)->first(),
+            'bottom' => typesatu::where('status', 1)->where('alt3', 3)->first()
+        ];
+
+        return view('kehidupanKampus.perpustakaan', $data);
     }
 
     public function profileJurusan()
@@ -180,8 +227,6 @@ class FrontController extends Controller
         return view('tentangITH.profil-lulusan', $data);
     }
 
-
-    
     public function visi_misi()
     {
         $data = [
@@ -225,6 +270,7 @@ class FrontController extends Controller
 
         return view('akademik.kalender', $data);
     }
+
     public function akreditasi()
     {
         $data = [
@@ -246,6 +292,7 @@ class FrontController extends Controller
 
         return view('akademik.akreditasi', $data);
     }
+
     public function seleksi()
     {
         $data = [
@@ -267,7 +314,8 @@ class FrontController extends Controller
 
         return view('akademik.seleksiMasuk', $data);
     }
-public function beasiswa()
+
+    public function beasiswa()
     {
         $data = [
             'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
@@ -288,7 +336,8 @@ public function beasiswa()
 
         return view('akademik.beasiswa', $data);
     }
-public function programSarjana()
+
+    public function programSarjana()
     {
         $data = [
             'postsInfo' => Post::where('category_id', 1)->latest()->limit(4)->get(),
@@ -310,10 +359,6 @@ public function programSarjana()
         return view('akademik.programSarjana', $data);
     }
 
-
-    
-
-
     public function kontakku()
     {
         $data = [
@@ -326,6 +371,7 @@ public function programSarjana()
 
         return view('contact', $data);
     }
+
     public function mars()
     {
         $data = [
@@ -369,6 +415,7 @@ public function programSarjana()
 
         return view('tentangITH.sejarah', $data);
     }
+
     public function camaba()
     {
         $data = [
@@ -403,7 +450,6 @@ public function programSarjana()
 
         return view('contact', $data);
     }
-
 
     public function show($slug)
     {
@@ -565,6 +611,7 @@ public function programSarjana()
         ];
         return view('showSearch', $data);
     }
+
     public function checkSlug(Request $request)
     {
         $halo = 'halo';
