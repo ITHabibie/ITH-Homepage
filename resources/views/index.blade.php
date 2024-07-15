@@ -517,7 +517,7 @@
                 </section> --}}
             <section id="hero" class="d-flex align-items-center">
                 <img src="">
-                <p>halo</p>
+                {{--<p>halo</p>--}}
                 {{-- <div class="container">
                     <div class="row">
                         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 aos-init aos-animate"
