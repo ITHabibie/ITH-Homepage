@@ -149,7 +149,11 @@
                     </button>
                 </div>
             </div>
+            <div>
+            <p>Bingung cari kost-kostan di area kampus? <a href="{{asset('assets/dokumen/DAFTAR_KOST.pdf')}} " download>Klik Disini </a> untuk daftar kost di area sekitar kampus!</p>
+            </div>
         </div>
+
         <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
             <p
                 style="font-size:2rem; padding:.5rem; font-size:1.5rem; color:white;background-color: hsl(197deg 81% 16%);border-radius:2px; ">
