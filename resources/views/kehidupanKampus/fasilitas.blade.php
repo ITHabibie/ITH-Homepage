@@ -4,7 +4,12 @@
         .main-table {
             width: 70%;
         }
+            .kos{
+                margin-top: 2rem;
+                width: 100%;
+                height:50%;
 
+            }
         @media(max-width:391px) {
             .hero-docs {
                 margin-top: 4rem;
@@ -150,6 +155,8 @@
                 </div>
             </div>
             <div>
+                            {{--<img src="{{ asset('assets/img/corousel/Gambar WhatsApp 2024-02-29 pukul 20.12 1.png') }}"--}}
+                            <a href="{{'assets/dokumen/DAFTAR_KOST.pdf'}}" download><img src="{{asset('assets/img/kost.png')}}" class="kos"></a>
             <p>Bingung cari kost-kostan di area kampus? <a href="{{asset('assets/dokumen/DAFTAR_KOST.pdf')}} " download>Klik Disini </a> untuk daftar kost di area sekitar kampus!</p>
             </div>
         </div>
