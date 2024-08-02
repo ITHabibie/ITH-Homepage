@@ -135,7 +135,7 @@
         </div>
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
-        <div class="table">
+        {{-- <div class="table">
             <p>Penggunaan dokumen tunduk kepada <a>Terms of Service of ITH Official Document</a></a></p>
             <table>
                 <th colspan="5">Dokumen Perencanaan</th>
@@ -236,7 +236,89 @@
                 </tr>
             </table>
         </div>
+ --}}
+        <div class="table">
+            <p class="card">
+                <button
+                    style="align-self: auto; text-align: start; background-color: white; color: black; font-family: Fira sans"
+                    class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Dokumen Perencanaan
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample" style="font-family: Fira Sans">
+                <div class="card card-body">
+                    <ul>
+                        <li>Renstra <a href="{{ asset('assets/a.html') }}" download>Klik Disini</a></li>
+                        <li>RKAT <a href="{{ asset('assets/a.html') }}" download>Klik Disini</a></li>
+                        <li>RKAKL <a href="{{ asset('assets/a.html') }}" download>Klik Disini </a></li>
+                        <li>Pedoman Renstra <a href="{{ asset('assets/a.html') }}" download>Klik Disini </a></li>
+                        <li>Pedoman RKT dan Rencana Aksi <a href="{{ asset('assets/a.html') }}" download>Klik Disini
+                            </a></li>
+                        <li>Perjanjian Kinerja 2023 <a href="{{ asset('assets/a.html') }}" download>Klik Disini </a>
+                        </li>
+                        <ul>
+                            <li>Perjanjian Kinerja Awal 2023 <a href="{{ asset('assets/awal2023.pdf') }}" download>Klik
+                                    Disini </a>
+                            </li>
+                            <li>Perjanjian Kinerja Akhir 2023 <a href="{{ asset('assets/awal2023.pdf') }}"
+                                    download>Klik Disini </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <p class="card">
+                <button
+                    style="align-self: auto; text-align: start; background-color: white; color: black; font-family: Fira sans"
+                    class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#SakipExample"
+                    aria-expanded="false" aria-controls="SakipExample">
+                    SAKIP
+                </button>
+            </p>
+            <div class="collapse" id="SakipExample" style="font-family: Fira Sans">
+                <div class="card card-body">
+                    <ul>
+                        <li>Laporan Hasil Kinerja SAKIP <a href="{{ asset('assets/a.html') }}" download>Klik Disini</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="card">
+                <button
+                    style="align-self: auto; text-align: start; background-color: white; color: black; font-family: Fira sans"
+                    class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#PelaksanaanExample" aria-expanded="false" aria-controls="PelaksanaanExample">
+                    Dokumen Pelaksanaan
+                </button>
+            </p>
+            <div class="collapse" id="PelaksanaanExample" style="font-family: Fira Sans">
+                <div class="card card-body">
+                    <ul>
+                        <li>Laporan dan Dokumentasi Pelaksanaan Kegiatan <a href="{{ asset('assets/a.html') }}"
+                                download>Klik Disini</a></li>
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+            <p class="card">
+                <button
+                    style="align-self: auto; text-align: start; background-color: white; color: black; font-family: Fira sans"
+                    class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#EvaluasiExample"
+                    aria-expanded="false" aria-controls="EvaluasiExample">
+                    Dokumen Evaluasi
+                </button>
+            </p>
+            <div class="collapse" id="EvaluasiExample" style="font-family: Fira Sans">
+                <div class="card card-body">
+                    <ul>
+                        <li>Laporan Kinerja 2023 <a href="{{ asset('assets/a.html') }}" download>Klik Disini</a></li>
+                        <li>Laporan Kinerja 2024 <a href="{{ asset('assets/a.html') }}" download>Klik Disini</a></li>
+                    </ul>
+                </div>
+            </div>
 
+        </div>
         {{-- TODO: Fetch datanya dari DB --}}
         <div class="side-table" style="width:30%; font-family:Fira Sans, sans;">
             <p

@@ -155,40 +155,40 @@
     {{--     }); --}}
     {{-- </script> --}}
 
-<script>
-  $(document).ready(function() {
-    $('.summernote').each(function(i, obj) {
-      $(obj).summernote({
-        placeholder: 'Hello Bootstrap 4',
-        tabsize: 2,
-        height: 100,
-        callbacks: {
-          onBlur: function() {
-            var id = $(obj).data('id');
-            var sHTML = $(obj).summernote('code');
-            {{--alert(sHTML);--}}
-          }
-        }
-      });
-    });
-  });
-</script>
-{{-- <script> --}}
-{{--   $('#summernote').each(function(i, obj) { --}}
-{{--     $(obj).summernote({ --}}
-{{--       placeholder: 'Hello Bootstrap 4', --}}
-{{--       tabsize: 2, --}}
-{{--       height: 100, --}}
-{{--       callbacks: { --}}
-{{--         onBlur: function(e) { --}}
-{{--           var id = $(obj).data('id'); --}}
-{{--           var sHTML = $(obj).summernote('code'); --}}
-{{--           alert(sHTML); --}}
-{{--         } --}}
-{{--       } --}}
-{{--     }); --}}
-{{--   }); --}}
-{{-- </script> --}}
+    <script>
+        $(document).ready(function() {
+            $('.summernote').each(function(i, obj) {
+                $(obj).summernote({
+                    placeholder: 'Hello Bootstrap 4',
+                    tabsize: 2,
+                    height: 100,
+                    callbacks: {
+                        onBlur: function() {
+                            var id = $(obj).data('id');
+                            var sHTML = $(obj).summernote('code');
+                            {{-- alert(sHTML); --}}
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    {{-- <script> --}}
+    {{--   $('#summernote').each(function(i, obj) { --}}
+    {{--     $(obj).summernote({ --}}
+    {{--       placeholder: 'Hello Bootstrap 4', --}}
+    {{--       tabsize: 2, --}}
+    {{--       height: 100, --}}
+    {{--       callbacks: { --}}
+    {{--         onBlur: function(e) { --}}
+    {{--           var id = $(obj).data('id'); --}}
+    {{--           var sHTML = $(obj).summernote('code'); --}}
+    {{--           alert(sHTML); --}}
+    {{--         } --}}
+    {{--       } --}}
+    {{--     }); --}}
+    {{--   }); --}}
+    {{-- </script> --}}
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
@@ -241,8 +241,8 @@
     </script>
     <script>
         /*  ==========================================
-                                                        SHOW UPLOADED IMAGE
-                                                    * ========================================== */
+                                                            SHOW UPLOADED IMAGE
+                                                        * ========================================== */
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
