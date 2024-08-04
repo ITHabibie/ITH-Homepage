@@ -517,7 +517,7 @@
                 </section> --}}
             <section id="hero" class="d-flex align-items-center">
                 <img src="">
-                {{--<p>halo</p>--}}
+                {{-- <p>halo</p> --}}
                 {{-- <div class="container">
                     <div class="row">
                         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 aos-init aos-animate"
@@ -555,12 +555,12 @@
                     <li class="small-navs"
                         style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
                         <a href="https://www.youtube.com/@ith_idn" target="_blank" style="color: white;"><i
-                            class="bi bi-youtube mt-4"></i> Kanal Youtube</a>
+                                class="bi bi-youtube mt-4"></i> Kanal Youtube</a>
                     </li>
                     <div style="border-left:3px solid #fff;height:auto; width: 20px;"></div>
                     <li class="small-navs"
-                    style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
-                    <a href="https://simpel.ith.ac.id" target="_blank" style="color: white;">Pembelajaran
+                        style="font-size: 14px;font-weight: 600;font-family: Roboto Mono, monospace;color: white;margin-right: 1rem;position: relative;">
+                        <a href="https://simpel.ith.ac.id" target="_blank" style="color: white;">Pembelajaran
                             Daring</a>
                     </li>
 
@@ -650,12 +650,12 @@
                     @foreach ($postsNews as $item)
                         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                             data-aos-delay="100">
-                            <div class="member">
+                            <div class="member" style="width: 100%;">
                                 <div class="member-img">
                                     <a style="width:300px;" href="{{ route('show', $item->slug) }}">
                                         <img class="topic-img" style=" object-fit: cover; height: 200px; width:100%;"
-                                            {{-- src="{{ $item->cover }}"> --}}
-                                            src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}">
+                                            src="{{ asset('storage/' . $item->cover) }}">
+                                        {{-- src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}"> --}}
                                         {{-- <div
                                             style="height: 300px; background-image: url({{ asset('storage/' . $item->cover) }}); background-size: cover">
                                         </div> --}}
@@ -696,17 +696,17 @@
                                 <div class="member-info  text-center">
                                     <a href="{{ route('show', $item->slug) }}">
                                         <h4 class="judul-berita">
-                                            {{ $language == 'id' ? \Str::words($item->title) : \Str::words($item->engtitle) }}
+                                            {{ $language == 'id' ? \Str::words($item->title, 8, '...') : \Str::words($item->engtitle, 8, '...') }}
                                         </h4>
                                     </a>
-                                    <span class="desc-berita">
+                                    {{-- <span class="desc-berita">
                                         @if ($language == 'id')
-                                            {!! \Str::words($item->desc, 20) !!}
+                                            {!! \Str::words($item->desc, 10, '...') !!}
                                         @else
                                             {!! \Str::words($item->eng, 20) !!}
                                         @endif
-                                    </span>
-                                    <hr class="mt-4">
+                                    </span> --}}
+                                    <hr class="mt-4" style="opacity: 0">
                                 </div>
                             </div>
                         </div>
@@ -744,7 +744,7 @@
                                 </div>
                                 <div style="border-radius: 12px;">
                                     <img style="object-fit:cover; height:5rem; width:10rem; border-radius: 24px 12px 12px 24px;"
-                                        src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}" alt="">
+                                        src="{{ asset('storage/' . $item->cover) }}" alt="">
                                 </div>
                             </div>
                         @endforeach
@@ -782,7 +782,8 @@
                                 </div>
                                 <div style="border-radius: 12px;">
                                     <img style="object-fit:cover; height:5rem; width:10rem; border-radius: 24px 12px 12px 24px;"
-                                        src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}" alt="">
+                                        {{-- src="{{ asset('assets/img/berita/') }}/{{ $item->cover }}" alt=""> --}} src="{{ asset('storage/' . $item->cover) }}"
+                                        alt="">
                                 </div>
                             </div>
                         @endforeach

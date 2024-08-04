@@ -249,13 +249,13 @@
             <div class="collapse" id="collapseExample" style="font-family: Fira Sans">
                 <div class="card card-body">
                     <ul>
-                        <li>Rencana Strategis ISI Denpasar 2024 <a href="{{ asset('assets/a.html') }}" download>Klik
+                        <li>Rencana Strategis ITH 2024 <a href="{{ asset('assets/a.html') }}" download>Klik
                                 Disini</a></li>
-                        <li>Rencana Strategis ISI Denpasar 2023-2024<a href="{{ asset('assets/a.html') }}"
-                                download>Klik Disini</a></li>
-                        <li>Definisi Operasional Renstra ISI Denpasar <a href="{{ asset('assets/a.html') }}"
-                                download>Klik Disini </a></li>
-                        <li>SK Rencana Strategis Institut Seni Indonesia Denpasar 2023-2024 <a
+                        <li>Rencana Strategis ITH 2023-2024<a href="{{ asset('assets/a.html') }}" download>Klik
+                                Disini</a></li>
+                        <li>Definisi Operasional Renstra ITH <a href="{{ asset('assets/a.html') }}" download>Klik
+                                Disini </a></li>
+                        <li>SK Rencana Strategis Institut Teknologi Bacharuddin Jusuf Habibie 2023-2024 <a
                                 href="{{ asset('assets/a.html') }}" download>Klik Disini </a></li>
                     </ul>
                 </div>
