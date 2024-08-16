@@ -62,7 +62,8 @@
     </div>
     <main class="main-table container d-flex" style="gap:2rem;">
         <div class="table-profil" style="text-align: justify;">
-            <img src="{{ asset('assets\img\kalender-akademik.png') }}" align="left" alt="Kampus 1">
+            {{--<img src="{{ asset('assets\img\kalender-akademik.png') }}" align="left" alt="Kampus 1">--}}
+            <embed src="{{asset('assets\dokumen\kal-akd.pdf')}}" width="100%" height="500">
         </div>
 
         {{-- TODO: Fetch datanya dari DB --}}

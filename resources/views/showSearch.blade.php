@@ -72,7 +72,6 @@
   </style>
 
 </head>
-
 <body>
     @php
         $language = __('cek.lang');
